@@ -23,8 +23,9 @@ const router = express.Router();
 const corsOptions = {
     // Authorized header to the client
     allowedHeaders: "Accept,Content-Type,Accept-Charset,Authorization",
-    exposedHeaders: 'Authorization',
+    optionsSuccessStatus: 200,
     methods: "GET,PUT,POST",
+    exposedHeaders: TOKEN,
     "origin": "*",
 };
 app.use(cors(corsOptions));
@@ -35,7 +36,7 @@ app.use(bodyParser.urlencoded());
 const feedbackRoutes = require('./routes/feedback');
 
 // Setting general model route
-router.use('FEEDBACK_SERVICE_ROUTES_PATH', feedbackRoutes);
+router.use(FEEDBACK_SERVICE_ROUTES_PATH, feedbackRoutes);
 
 // Append /api for our http requests
 app.use('/service', router);

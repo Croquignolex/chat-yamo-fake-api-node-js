@@ -1,6 +1,4 @@
 // General
-const TOKEN = 'token';
-const TIMEZONE = 'timezone';
+const TOKEN = 'Authorization';
 
 module.exports.TOKEN = TOKEN;
-module.exports.TIMEZONE = TIMEZONE;
