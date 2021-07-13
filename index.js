@@ -33,9 +33,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 
 // Routes
+const authRoutes = require('./routes/auth');
 const feedbackRoutes = require('./routes/feedback');
 
 // Setting general model route
+router.use('', authRoutes);
 router.use(FEEDBACK_SERVICE_ROUTES_PATH, feedbackRoutes);
 
 // Append /api for our http requests
