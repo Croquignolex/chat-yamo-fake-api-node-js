@@ -5,12 +5,13 @@ const {INVALID_TOKEN_ERROR, UNAUTHORIZED_REQUEST_ERROR} = require('../constants/
 
 module.exports.tokenMiddleware = function(req, res, next) {
     // Check token existence
-    const token = req.header(TOKEN);
-    if(!token) return res.status(401).send({message: UNAUTHORIZED_REQUEST_ERROR});
+    const bearToken = req.header(TOKEN);
+    if(!bearToken) return res.status(401).send({message: UNAUTHORIZED_REQUEST_ERROR});
 
     try {
         // Verify user token in header
-        const jwtData = jwt.verify(token, process.env.TOKEN_SECRET);
+        const token = bearToken.split(' ');
+        const jwtData = jwt.verify(token[1], process.env.TOKEN_SECRET);
         req.userId = jwtData.userId;
         // For manual database token blacklist
         req.token = token;

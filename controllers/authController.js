@@ -13,6 +13,7 @@ const {
 module.exports.login = async function(req, res) {
     // Form data
     const {login, password} = req.body;
+
     // Form checker
     if(requiredChecker(login) && requiredChecker(password)) {
         // User dummy information
