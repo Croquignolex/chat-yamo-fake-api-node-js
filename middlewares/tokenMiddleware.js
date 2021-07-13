@@ -6,7 +6,7 @@ const {INVALID_TOKEN_ERROR, UNAUTHORIZED_REQUEST_ERROR} = require('../constants/
 module.exports.tokenMiddleware = function(req, res, next) {
     // Check token existence
     const token = req.header(TOKEN);
-    if(!token) return res.status(401).send({status: false, message: UNAUTHORIZED_REQUEST_ERROR, data: null});
+    if(!token) return res.status(401).send({message: UNAUTHORIZED_REQUEST_ERROR});
 
     try {
         // Verify user token in header
@@ -16,6 +16,6 @@ module.exports.tokenMiddleware = function(req, res, next) {
         req.token = token;
         next();
     } catch (e) {
-        res.status(500).send({status: false, message: INVALID_TOKEN_ERROR, data: null});
+        res.status(500).send({message: INVALID_TOKEN_ERROR});
     }
 };
