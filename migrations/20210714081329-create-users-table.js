@@ -4,9 +4,25 @@ let seed;
 
 const TABLE = 'users';
 
-const TABLE_COLUMNS = ['name'];
+const TABLE_COLUMNS = [
+    'name',
+    'age',
+    'gender',
+    'city',
+    'country',
+    'continent',
+    'greetingText',
+    'province',
+    'homeCountry',
+    'verified'
+];
 const TABLE_ROWS = [
-  ['Croquignolex']
+  ['Croquignolex', 20, 'Male', 'Douala', 'CAMEROON', 'AFRICA', 'Hello world', 'Littoral', 'CAMEROON', true],
+  ['Jyresciale', 21, 'Male', 'Roma', 'ITALY', 'EUROPE', 'Partouzard', 'West', 'EGYPT', true],
+  ['Abelito', 15, 'Male', 'Tokyo', 'JAPAN', 'ASIA', 'Zounzibard', 'South', 'MALI', true],
+  ['Rasta', 33, 'Female', 'New york', 'USA', 'AMERICA', 'Tintamard', 'East', 'SENEGAL', true],
+  ['Noufele', 26, 'Female', 'Paris', 'FRANCE', 'EUROPE', 'Nguinsseur', 'Center', 'GHANA', true],
+  ['Camillio', 23, 'Male', 'Djamena', 'TCHAD', 'AFRICA', 'La ménace', 'Littoral', 'CAMEROON', true],
 ];
 
 /**
@@ -24,6 +40,16 @@ exports.up = function(db) {
     columns: {
       id: {type: 'int', unsigned: true, notNull: true, primaryKey: true, autoIncrement: true},
       name: {type: 'string', notNull: true},
+      age: {type: 'int', notNull: true},
+      gender: {type: 'string', notNull: true},
+      city: {type: 'string', notNull: true},
+      country: {type: 'string', notNull: true},
+      continent: {type: 'string', notNull: true},
+      greetingText: {type: 'string', notNull: true},
+      province: {type: 'string', notNull: true},
+      homeCountry: {type: 'string', notNull: true},
+      verified: {type: 'boolean', notNull: true, default: false},
+      isPremium: {type: 'boolean', notNull: true, default: false},
     },
     ifNotExists: true
   }, function (error) {
