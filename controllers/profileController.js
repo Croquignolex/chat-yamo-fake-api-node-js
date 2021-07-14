@@ -5,7 +5,7 @@ module.exports.details = async function(req, res) {
     // Params data
     const {userId} = req.params;
     // Query
-    const selectSqlQuery = `SELECT * FROM users WHERE userId = ?`;
+    const selectSqlQuery = `SELECT * FROM users WHERE userId = ? LIMIT 1`;
     const mysqlDatabaseResponse = await mysqlDatabaseConnection(selectSqlQuery, [userId]);
     // Response
     if(mysqlDatabaseResponse.status) {

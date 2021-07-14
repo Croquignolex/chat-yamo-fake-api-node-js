@@ -43,7 +43,7 @@ function buildFeedbackResponseData(feedback) {
         authorId: feedback.authorId,
         messageId: feedback.messageId,
         createdAt: feedback.createdAt,
-    }
+    };
 }
 
 // Format response
