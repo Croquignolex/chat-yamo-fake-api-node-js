@@ -7,7 +7,8 @@ const bodyParser = require('body-parser');
 // Constants
 const {TOKEN} = require('./constants/generalConstants');
 const {
-    FEEDBACK_SERVICE_ROUTES_PATH,
+    PROFILE_SERVICE_ROUTES_PATH,
+    FEEDBACK_SERVICE_ROUTES_PATH
 } = require('./constants/pathConstants');
 
 // .env config
@@ -33,10 +34,12 @@ app.use(bodyParser.json());
 
 // Routes
 const authRoutes = require('./routes/auth');
+const profileRoutes = require('./routes/profile');
 const feedbackRoutes = require('./routes/feedback');
 
 // Setting general model route
 router.use('', authRoutes);
+router.use(PROFILE_SERVICE_ROUTES_PATH, profileRoutes);
 router.use(FEEDBACK_SERVICE_ROUTES_PATH, feedbackRoutes);
 
 // Append /api for our http requests
