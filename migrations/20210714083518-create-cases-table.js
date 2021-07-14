@@ -4,9 +4,11 @@ let seed;
 
 const TABLE = 'cases';
 
-const TABLE_COLUMNS = ['name'];
+const TABLE_COLUMNS = ['name', 'status', 'userId'];
 const TABLE_ROWS = [
-  ['Croquignolex']
+  ['Dummy case 1 name', 'OPEN', 1],
+  ['Dummy case 2 name', 'OPEN', 2],
+  ['Dummy case 3 name', 'OPEN', 3]
 ];
 
 /**
@@ -24,6 +26,18 @@ exports.up = function(db) {
     columns: {
       id: {type: 'int', unsigned: true, notNull: true, primaryKey: true, autoIncrement: true},
       name: {type: 'string', notNull: true},
+      createdAt: {type: 'timestamp', notNull: true, defaultValue: String('CURRENT_TIMESTAMP')},
+      status: {type: 'string', notNull: true},
+      closedAt: {type: 'timestamp', notNull: false},
+      userId: {
+        type: 'int', unsigned: true, notNull: true,
+        foreignKey: {
+          name: 'cases_users_userId_fk',
+          table: 'users',
+          rules: {onDelete: 'CASCADE'},
+          mapping: 'id'
+        }
+      },
     },
     ifNotExists: true
   }, function (error) {

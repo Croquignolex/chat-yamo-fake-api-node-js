@@ -17,12 +17,9 @@ const TABLE_COLUMNS = [
     'verified'
 ];
 const TABLE_ROWS = [
-  ['Croquignolex', 20, 'Male', 'Douala', 'CAMEROON', 'AFRICA', 'Hello world', 'Littoral', 'CAMEROON', true],
-  ['Jyresciale', 21, 'Male', 'Roma', 'ITALY', 'EUROPE', 'Partouzard', 'West', 'EGYPT', true],
-  ['Abelito', 15, 'Male', 'Tokyo', 'JAPAN', 'ASIA', 'Zounzibard', 'South', 'MALI', true],
-  ['Rasta', 33, 'Female', 'New york', 'USA', 'AMERICA', 'Tintamard', 'East', 'SENEGAL', true],
-  ['Noufele', 26, 'Female', 'Paris', 'FRANCE', 'EUROPE', 'Nguinsseur', 'Center', 'GHANA', true],
-  ['Camillio', 23, 'Male', 'Djamena', 'TCHAD', 'AFRICA', 'La ménace', 'Littoral', 'CAMEROON', true],
+  ['Dummy user 1 name', 10, 'Male', 'Dummy user 1 city', 'Dummy user 1 country', 'Dummy user 1 continent', 'Dummy user 1 greeting text', 'Dummy user 1 province', 'Dummy user 1 home country', true, true],
+  ['Dummy user 2 name', 20, 'Female', 'Dummy user 2 city', 'Dummy user 2 country', 'Dummy user 2 continent', 'Dummy user 2 greeting text', 'Dummy user 2 province', 'Dummy user 2 home country', true],
+  ['Dummy user 3 name', 30, 'Male', 'Dummy user 3 city', 'Dummy user 3 country', 'Dummy user 3 continent', 'Dummy user 3 greeting text', 'Dummy user 3 province', 'Dummy user 3 home country']
 ];
 
 /**
@@ -48,8 +45,8 @@ exports.up = function(db) {
       greetingText: {type: 'string', notNull: true},
       province: {type: 'string', notNull: true},
       homeCountry: {type: 'string', notNull: true},
-      verified: {type: 'boolean', notNull: true, default: false},
-      isPremium: {type: 'boolean', notNull: true, default: false},
+      verified: {type: 'boolean', notNull: true, defaultValue: false},
+      isPremium: {type: 'boolean', notNull: true, defaultValue: false},
     },
     ifNotExists: true
   }, function (error) {
