@@ -4,9 +4,11 @@ let seed;
 
 const TABLE = 'medias';
 
-const TABLE_COLUMNS = ['medias'];
+const TABLE_COLUMNS = ['name'];
 const TABLE_ROWS = [
-  ['Croquignolex']
+  ['Dummy media 1 name'],
+  ['Dummy media 2 name'],
+  ['Dummy media 3 name'],
 ];
 
 /**
