@@ -2,13 +2,13 @@ let dbm;
 let type;
 let seed;
 
-const TABLE = 'medias';
+const TABLE = 'messages';
 
 const TABLE_COLUMNS = ['name'];
 const TABLE_ROWS = [
-  ['Dummy media 1 name'],
-  ['Dummy media 2 name'],
-  ['Dummy media 3 name'],
+  ['Dummy message 1 name'],
+  ['Dummy message 2 name'],
+  ['Dummy message 3 name'],
 ];
 
 /**

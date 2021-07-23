@@ -63,7 +63,7 @@ io.on('connection', (socket) => {
  */
 
 // Server listening request port
-const appPort = process.env.SERVER_PORT || 4000;
+// const appPort = process.env.SERVER_PORT || 4000;
 
 // Express server listen
-server.listen(appPort, () => console.log(`LISTENING ON PORT ${appPort}`));
+server.listen(80, () => console.log(`LISTENING ON PORT ${appPort}`));
