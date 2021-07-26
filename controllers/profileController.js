@@ -8,7 +8,6 @@ module.exports.details = async function(req, res) {
     // Query
     const selectSqlQuery = `SELECT * FROM users WHERE id = ? LIMIT 1`;
     const mysqlDatabaseResponse = await mysqlDatabaseConnection(selectSqlQuery, [userId]);
-    console.log({mysqlDatabaseResponse})
     // Response
     if(mysqlDatabaseResponse.status) {
         if(mysqlDatabaseResponse.data.length > 0) {
