@@ -1,3 +1,4 @@
+const {mysqlDateForResponse} = require("../helpers/functionsHelper");
 const {mysqlDatabaseConnection} = require("../helpers/mysqlDatabaseHelper");
 
 // GET: feedback messages
@@ -45,8 +46,8 @@ function buildFeedbackCaseMessagesResponseData(userCase, feedbacks) {
         status: userCase.status,
         userId: userCase.userId,
         closedAt: userCase.closedAt,
-        createdAt: userCase.createdAt,
         messages: sharedFeedbackMessages(feedbacks),
+        createdAt: mysqlDateForResponse(userCase.createdAt),
     };
 }
 
@@ -62,7 +63,7 @@ function sharedFeedbackMessages(feedbacks) {
             content: feedback.content,
             authorId: feedback.authorId,
             messageId: feedback.messageId,
-            createdAt: feedback.createdAt,
+            createdAt: mysqlDateForResponse(feedback.createdAt),
         })
     });
 
