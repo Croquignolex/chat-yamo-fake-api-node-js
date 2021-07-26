@@ -8,7 +8,7 @@ module.exports.messages = async function(req, res) {
     // Response
     if(mysqlDatabaseResponse.status) {
         const messages = mysqlDatabaseResponse.data;
-        res.send(buildFeedbackResponseData(messages));
+        res.send(buildFeedbackMessagesResponseData(messages));
     } else res.status(400).send({message: mysqlDatabaseResponse.message});
 };
 
@@ -28,40 +28,45 @@ module.exports.userCase = async function(req, res) {
         // Response
         if(mysqlDatabaseResponse.status) {
             const userCaseMessages = mysqlDatabaseResponse.data;
-            res.send(buildFeedbackCaseResponseData(userCase, userCaseMessages));
+            res.send(buildFeedbackCaseMessagesResponseData(userCase, userCaseMessages));
         } else res.status(400).send({message: mysqlDatabaseResponse.message});
     } else res.status(400).send({message: mysqlDatabaseResponse.message});
 };
 
 // Format response
-function buildFeedbackResponseData(feedback) {
-    return {
-        userId: feedback.userId,
-        caseId: feedback.caseId,
-        mediaId: feedback.mediaId,
-        content: feedback.content,
-        authorId: feedback.authorId,
-        messageId: feedback.messageId,
-        createdAt: feedback.createdAt,
-    };
+function buildFeedbackMessagesResponseData(feedbacks) {
+    return sharedFeedbackMessages(feedbacks);
 }
 
 // Format response
-function buildFeedbackCaseResponseData(userCase, feedbacks) {
-    let messages = [];
-
-    feedbacks.forEach(feedback => {
-        messages.push(buildFeedbackResponseData(feedback))
-    });
-
+function buildFeedbackCaseMessagesResponseData(userCase, feedbacks) {
     return {
-        messages,
         name: userCase.name,
         status: userCase.status,
         userId: userCase.userId,
         closedAt: userCase.closedAt,
         createdAt: userCase.createdAt,
+        messages: sharedFeedbackMessages(feedbacks),
     };
+}
+
+// Shared feedback messages
+function sharedFeedbackMessages(feedbacks) {
+    let messages = [];
+
+    feedbacks.forEach(feedback => {
+        messages.push({
+            userId: feedback.userId,
+            caseId: feedback.caseId,
+            mediaId: feedback.mediaId,
+            content: feedback.content,
+            authorId: feedback.authorId,
+            messageId: feedback.messageId,
+            createdAt: feedback.createdAt,
+        })
+    });
+
+    return messages;
 }
 
 
