@@ -1,3 +1,4 @@
+const {USER_NOT_FOUND} = require("../constants/reponseConstants");
 const {mysqlDatabaseConnection} = require("../helpers/mysqlDatabaseHelper");
 
 // GET: profile details
@@ -5,12 +6,15 @@ module.exports.details = async function(req, res) {
     // Params data
     const {userId} = req.params;
     // Query
-    const selectSqlQuery = `SELECT * FROM users WHERE userId = ? LIMIT 1`;
+    const selectSqlQuery = `SELECT * FROM users WHERE id = ? LIMIT 1`;
     const mysqlDatabaseResponse = await mysqlDatabaseConnection(selectSqlQuery, [userId]);
+    console.log({mysqlDatabaseResponse})
     // Response
     if(mysqlDatabaseResponse.status) {
-        const user = mysqlDatabaseResponse.data;
-        res.send(buildUserResponseData(user));
+        if(mysqlDatabaseResponse.data.length > 0) {
+            const user = mysqlDatabaseResponse.data[0];
+            res.send(buildUserResponseData(user));
+        } else res.status(400).send({message: USER_NOT_FOUND});
     } else res.status(400).send({message: mysqlDatabaseResponse.message});
 };
 
