@@ -36,3 +36,4 @@ module.exports.login = async function(req, res) {
 module.exports.logout = async function(req, res) {
     res.send({message: USER_LOGGED_OUT});
 }
+

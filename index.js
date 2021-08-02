@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 // Constants
 const {TOKEN} = require('./constants/generalConstants');
 const {
+    AUTH_SERVICE_ROUTES_PATH,
     MEDIA_SERVICE_ROUTES_PATH,
     PROFILE_SERVICE_ROUTES_PATH,
     FEEDBACK_SERVICE_ROUTES_PATH,
@@ -40,7 +41,7 @@ const profileRoutes = require('./routes/profile');
 const feedbackRoutes = require('./routes/feedback');
 
 // Setting general model route
-router.use('', authRoutes);
+router.use(AUTH_SERVICE_ROUTES_PATH, authRoutes);
 router.use(MEDIA_SERVICE_ROUTES_PATH, mediaRoutes);
 router.use(PROFILE_SERVICE_ROUTES_PATH, profileRoutes);
 router.use(FEEDBACK_SERVICE_ROUTES_PATH, feedbackRoutes);
