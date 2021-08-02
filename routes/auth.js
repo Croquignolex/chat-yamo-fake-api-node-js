@@ -1,12 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const {login} = require('../controllers/authController');
-const {logout} = require('../controllers/authController');
 const {tokenMiddleware} = require("../middlewares/tokenMiddleware");
+const {login, logout, profile} = require('../controllers/authController');
 
 router.post('/login', login);
 router.post('/logout', tokenMiddleware, logout);
-router.post('/profile', tokenMiddleware, profile);
+router.get('/profile', tokenMiddleware, profile);
 
 module.exports = router;
