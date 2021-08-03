@@ -55,7 +55,7 @@ function buildFeedbackCaseMessagesResponseData(userCase, feedbacks) {
 function sharedFeedbackMessages(feedbacks) {
     let messages = [];
 
-    feedbacks.forEach(feedback => {
+    for(const feedback of feedbacks) {
         messages.push({
             userId: feedback.userId,
             caseId: feedback.caseId,
@@ -65,7 +65,7 @@ function sharedFeedbackMessages(feedbacks) {
             messageId: feedback.messageId,
             createdAt: mysqlDateForResponse(feedback.createdAt),
         })
-    });
+    }
 
     return messages;
 }

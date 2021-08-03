@@ -18,7 +18,19 @@ module.exports.details = async function(req, res) {
 
 // GET: Users profile
 module.exports.users = async function(req, res) {
-
+    // Query
+    const selectSqlQuery = `SELECT * FROM users`;
+    const mysqlDatabaseResponse = await mysqlDatabaseConnection(selectSqlQuery);
+    // Response
+    if(mysqlDatabaseResponse.status) {
+        const users = [];
+        // Build data
+        for(const data of mysqlDatabaseResponse.data) {
+            users.push(buildUserResponseData(data))
+        }
+        // Response
+        res.send(users);
+    } else res.status(400).send({message: mysqlDatabaseResponse.message});
 };
 
 // Format response
