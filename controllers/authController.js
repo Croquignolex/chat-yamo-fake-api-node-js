@@ -1,44 +1,42 @@
 const jwt = require('jsonwebtoken');
 
 const {requiredChecker} = require('../helpers/formCheckerHelper');
-const {PASSWORD, LOGIN} = require("../constants/generalConstants");
+const {mysqlDatabaseConnection} = require("../helpers/mysqlDatabaseHelper");
 const {
     AUTH_FAILED,
+    USER_NOT_FOUND,
     USER_LOGGED_OUT,
     FORM_DATA_ERROR,
-    USER_AUTHENTICATED, USER_NOT_FOUND,
+    USER_AUTHENTICATED,
 } = require('../constants/reponseConstants');
-const {mysqlDatabaseConnection} = require("../helpers/mysqlDatabaseHelper");
 
-// Login check
+// Admin login
 module.exports.login = async function(req, res) {
     // Form data
     const {login, password} = req.body;
-
     // Form checker
     if(requiredChecker(login) && requiredChecker(password)) {
-        // User dummy information
-        const dummyUser = {
-            id: process.env.USER_ID,
-            name: process.env.USER_NAME
-        };
-        // Auth
-        const auth = (login === LOGIN && password === PASSWORD);
-        if(auth) {
-            // Generate user token according to his username
-            const token = jwt.sign({userId: dummyUser.id}, process.env.TOKEN_SECRET);
-            // Response
-            res.send({token, user: dummyUser, message: USER_AUTHENTICATED});
-        } else res.status(400).send({message: AUTH_FAILED});
+        // Fetch user into database
+        const adminResponse = await getAdminByLogin(login);
+        if(adminResponse.status) {
+            const admin = adminResponse.data;
+            // Check login and password match
+            if((login === admin.login) && (password === admin.password)) {
+                // Generate user token according to his login since is an unique field
+                const token = jwt.sign({login: admin.login}, process.env.TOKEN_SECRET);
+                // Response
+                res.send({token, message: USER_AUTHENTICATED});
+            } else res.status(400).send({message: AUTH_FAILED});
+        } else res.status(400).send({message: adminResponse.message});
     } else res.status(400).send({message: FORM_DATA_ERROR});
 };
 
-// User logout
+// Admin logout
 module.exports.logout = async function(req, res) {
     res.send({message: USER_LOGGED_OUT});
 }
 
-// User profile
+// Admin profile
 module.exports.profile = async function(req, res) {
     // Params data
     const userId = req.userId;
@@ -54,7 +52,19 @@ module.exports.profile = async function(req, res) {
     } else res.status(400).send({message: mysqlDatabaseResponse.message});
 };
 
-// Format response
+// Get admin by login
+async function getAdminByLogin(login) {
+    const selectSqlQuery = `SELECT * FROM admins WHERE login = ? LIMIT 1`;
+    const mysqlDatabaseResponse = await mysqlDatabaseConnection(selectSqlQuery, [login]);
+    // Response
+    if(mysqlDatabaseResponse.status) {
+        return mysqlDatabaseResponse.data.length > 0
+            ? {status: true, data: mysqlDatabaseResponse.data[0]}
+            : {status: false, message: USER_NOT_FOUND};
+    } else return {status: false, message: mysqlDatabaseResponse.message};
+}
+
+// Format admin response
 function buildUserResponseData(user) {
     return {
         name: user.name,
