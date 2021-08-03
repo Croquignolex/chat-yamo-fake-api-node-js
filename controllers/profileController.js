@@ -10,10 +10,9 @@ module.exports.details = async function(req, res) {
     const mysqlDatabaseResponse = await mysqlDatabaseConnection(selectSqlQuery, [userId]);
     // Response
     if(mysqlDatabaseResponse.status) {
-        if(mysqlDatabaseResponse.data.length > 0) {
-            const user = mysqlDatabaseResponse.data[0];
-            res.send(buildUserResponseData(user));
-        } else res.status(400).send({message: USER_NOT_FOUND});
+        return mysqlDatabaseResponse.data.length > 0
+            ? {status: true, data: buildUserResponseData(mysqlDatabaseResponse.data[0])}
+            : {status: false, message: USER_NOT_FOUND};
     } else res.status(400).send({message: mysqlDatabaseResponse.message});
 };
 
