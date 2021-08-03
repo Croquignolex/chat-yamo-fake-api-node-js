@@ -5,6 +5,8 @@ let seed;
 const TABLE = 'admins';
 
 const TABLE_COLUMNS = [
+  'login',
+  'password',
   'name',
   'gender',
   'phone',
@@ -13,7 +15,8 @@ const TABLE_COLUMNS = [
   'description'
 ];
 const TABLE_ROWS = [
-  ['Dummy backoffice user 1 name', 'Male', '677777777', 'exemple@domain.com', 'Dummy backoffice user 1 address', 'Dummy backoffice user 1 description']
+  ['croquignolex', 'croquignolex', 'Croquignolex', 'Male', '677777777', 'exemple@domain.com', 'Bijou MAKEPE', 'Just make it to be fun'],
+  ['patrissol', 'patrissol', 'Patrissol', 'Male', '699999999', 'dash@domain.com', 'Bijou MAKEPE', 'Overflow skills']
 ];
 
 /**
@@ -30,6 +33,8 @@ exports.up = function(db) {
   return db.createTable(TABLE, {
     columns: {
       id: {type: 'int', unsigned: true, notNull: true, primaryKey: true, autoIncrement: true},
+      login: {type: 'string', notNull: true, unique: true},
+      password: {type: 'string', notNull: true},
       name: {type: 'string', notNull: true},
       gender: {type: 'string', notNull: true},
       phone: {type: 'string', notNull: true},

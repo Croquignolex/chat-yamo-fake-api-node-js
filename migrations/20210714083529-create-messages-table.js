@@ -6,9 +6,9 @@ const TABLE = 'messages';
 
 const TABLE_COLUMNS = ['name'];
 const TABLE_ROWS = [
-  ['Dummy message 1 name'],
-  ['Dummy message 2 name'],
-  ['Dummy message 3 name'],
+  ['I can access to my math profiles'],
+  ['I need help on my account'],
+  ['Good morning team'],
 ];
 
 /**

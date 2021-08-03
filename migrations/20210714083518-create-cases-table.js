@@ -4,11 +4,11 @@ let seed;
 
 const TABLE = 'cases';
 
-const TABLE_COLUMNS = ['name', 'status', 'userId'];
+const TABLE_COLUMNS = ['status', 'userId'];
 const TABLE_ROWS = [
-  ['Dummy case 1 name', 'OPEN', 1],
-  ['Dummy case 2 name', 'OPEN', 2],
-  ['Dummy case 3 name', 'OPEN', 3]
+  ['I can access to my math profiles', 'OPEN', 1],
+  ['I need help on my account', 'OPEN', 2],
+  ['Good morning team', 'OPEN', 3]
 ];
 
 /**

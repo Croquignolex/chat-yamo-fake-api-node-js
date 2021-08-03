@@ -18,9 +18,11 @@ const TABLE_COLUMNS = [
     'isPremium'
 ];
 const TABLE_ROWS = [
-  ['Dummy user 1 name', 10, 'Male', 'Dummy user 1 city', 'Dummy user 1 country', 'Dummy user 1 continent', 'Dummy user 1 greeting text', 'Dummy user 1 province', 'Dummy user 1 home country', true, true],
-  ['Dummy user 2 name', 20, 'Female', 'Dummy user 2 city', 'Dummy user 2 country', 'Dummy user 2 continent', 'Dummy user 2 greeting text', 'Dummy user 2 province', 'Dummy user 2 home country', true, false],
-  ['Dummy user 3 name', 30, 'Male', 'Dummy user 3 city', 'Dummy user 3 country', 'Dummy user 3 continent', 'Dummy user 3 greeting text', 'Dummy user 3 province', 'Dummy user 3 home country', false, false]
+    ['Joseph NANA', 30, 'Male', 'PARIS', 'FRANCE', 'AUROPE', 'Hi Joseph', 'PARIS', 'CAMEROON', true, true],
+    ['Rose KENE', 22, 'Female', 'YAOUNDE', 'CAMEROON', 'AFRICA', 'Hi Rose', 'CENTER', 'FRANCE', true, false],
+    ['Cedric EKEMA', 18, 'Male', 'NEW YORK', 'USA', 'AMERICA', 'Hi Cedric', 'NEW YORK', 'NIGERIA', true, true],
+    ['Anne RAMANOV', 21, 'Female', 'SAINT PETERSBOURG', 'RUSSIA', 'EUROPE', 'Hi Anne', 'SAINT PETERSBOURG', 'UK', false, false],
+    ['Ina YAMAMOTO', 19, 'Female', 'TOKYO', 'JAPAN', 'ASIA', 'Hi Ina', 'TOKYO', 'CHINA', true, true],
 ];
 
 /**

@@ -6,9 +6,7 @@ const TABLE = 'feedbacks';
 
 const TABLE_COLUMNS = ['content', 'userId', 'authorId', 'messageId', 'caseId', 'mediaId'];
 const TABLE_ROWS = [
-  ['Dummy feedback 1 content', 1, 1, 1, 1, 1],
-  ['Dummy feedback 1 content', 2, 2, 2, 2, 2],
-  ['Dummy feedback 1 content', 3, 3, 3, 3, 3],
+  ['Dummy feedback content', 1, 1, 1, 1, 1]
 ];
 
 /**
