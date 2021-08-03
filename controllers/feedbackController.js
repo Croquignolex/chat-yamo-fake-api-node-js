@@ -1,7 +1,7 @@
 const {mysqlDateForResponse} = require("../helpers/functionsHelper");
 const {mysqlDatabaseConnection} = require("../helpers/mysqlDatabaseHelper");
 
-// GET: feedback messages
+// GET: Feedback messages
 module.exports.messages = async function(req, res) {
     // Query
     const selectSqlQuery = `SELECT * FROM feedbacks ORDER BY createdAt DESC`;

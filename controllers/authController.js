@@ -10,7 +10,7 @@ const {
     USER_AUTHENTICATED,
 } = require('../constants/reponseConstants');
 
-// Admin login
+// POST: Admin login
 module.exports.login = async function(req, res) {
     // Form data
     const {login, password} = req.body;
@@ -31,12 +31,12 @@ module.exports.login = async function(req, res) {
     } else res.status(400).send({message: FORM_DATA_ERROR});
 };
 
-// Admin logout
+// POST: Admin logout
 module.exports.logout = async function(req, res) {
     res.send({message: USER_LOGGED_OUT});
 }
 
-// Admin profile
+// GET: Admin profile
 module.exports.profile = async function(req, res) {
     // Params data
     const login = req.login;
