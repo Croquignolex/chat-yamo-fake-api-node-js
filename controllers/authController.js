@@ -39,17 +39,13 @@ module.exports.logout = async function(req, res) {
 // Admin profile
 module.exports.profile = async function(req, res) {
     // Params data
-    const userId = req.userId;
-    // Query
-    const selectSqlQuery = `SELECT * FROM admins WHERE id = ? LIMIT 1`;
-    const mysqlDatabaseResponse = await mysqlDatabaseConnection(selectSqlQuery, [userId]);
-    // Response
-    if(mysqlDatabaseResponse.status) {
-        if(mysqlDatabaseResponse.data.length > 0) {
-            const user = mysqlDatabaseResponse.data[0];
-            res.send(buildUserResponseData(user));
-        } else res.status(400).send({message: USER_NOT_FOUND});
-    } else res.status(400).send({message: mysqlDatabaseResponse.message});
+    const login = req.login;
+    // Fetch user into database
+    const adminResponse = await getAdminByLogin(login);
+    if(adminResponse.status) {
+        const admin = adminResponse.data;
+        res.send(buildUserResponseData(admin));
+    } else res.status(400).send({message: adminResponse.message});
 };
 
 // Get admin by login
@@ -69,6 +65,7 @@ function buildUserResponseData(user) {
     return {
         name: user.name,
         userId: user.id,
+        login: user.login,
         phone: user.phone,
         email: user.email,
         gender: user.gender,

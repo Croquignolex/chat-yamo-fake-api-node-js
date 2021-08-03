@@ -12,7 +12,7 @@ module.exports.tokenMiddleware = function(req, res, next) {
         // Verify user token in header
         const token = bearToken.split(' ');
         const jwtData = jwt.verify(token[1], process.env.TOKEN_SECRET);
-        req.userId = jwtData.userId;
+        req.login = jwtData.login;
         // For manual database token blacklist
         req.token = token;
         next();
