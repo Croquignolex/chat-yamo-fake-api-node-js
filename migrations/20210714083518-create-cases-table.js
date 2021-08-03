@@ -4,7 +4,7 @@ let seed;
 
 const TABLE = 'cases';
 
-const TABLE_COLUMNS = ['status', 'userId'];
+const TABLE_COLUMNS = ['name', 'status', 'userId'];
 const TABLE_ROWS = [
   ['I can access to my math profiles', 'OPEN', 1],
   ['I need help on my account', 'OPEN', 2],

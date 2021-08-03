@@ -18,7 +18,7 @@ const TABLE_COLUMNS = [
     'isPremium'
 ];
 const TABLE_ROWS = [
-    ['Joseph NANA', 30, 'Male', 'PARIS', 'FRANCE', 'AUROPE', 'Hi Joseph', 'PARIS', 'CAMEROON', true, true],
+    ['Joseph NANA', 30, 'Male', 'PARIS', 'FRANCE', 'EUROPE', 'Hi Joseph', 'PARIS', 'CAMEROON', true, true],
     ['Rose KENE', 22, 'Female', 'YAOUNDE', 'CAMEROON', 'AFRICA', 'Hi Rose', 'CENTER', 'FRANCE', true, false],
     ['Cedric EKEMA', 18, 'Male', 'NEW YORK', 'USA', 'AMERICA', 'Hi Cedric', 'NEW YORK', 'NIGERIA', true, true],
     ['Anne RAMANOV', 21, 'Female', 'SAINT PETERSBOURG', 'RUSSIA', 'EUROPE', 'Hi Anne', 'SAINT PETERSBOURG', 'UK', false, false],
