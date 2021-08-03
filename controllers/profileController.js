@@ -1,7 +1,7 @@
 const {USER_NOT_FOUND} = require("../constants/reponseConstants");
 const {mysqlDatabaseConnection} = require("../helpers/mysqlDatabaseHelper");
 
-// GET: profile details
+// GET: User profile details
 module.exports.details = async function(req, res) {
     // Params data
     const {userId} = req.params;
@@ -14,6 +14,11 @@ module.exports.details = async function(req, res) {
             ? {status: true, data: buildUserResponseData(mysqlDatabaseResponse.data[0])}
             : {status: false, message: USER_NOT_FOUND};
     } else res.status(400).send({message: mysqlDatabaseResponse.message});
+};
+
+// GET: Users profile
+module.exports.users = async function(req, res) {
+
 };
 
 // Format response
