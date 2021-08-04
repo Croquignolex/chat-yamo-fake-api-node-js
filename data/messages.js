@@ -15,7 +15,7 @@ module.exports.MESSAGES = [
         authorId: 2,
         content: '',
         caseId: `2:${process.env.BACKOFFICE_USER_ID}`,
-        mediaId: 1
+        mediaId: 3
     },
     {
         messageId: 3,

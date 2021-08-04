@@ -1,7 +1,7 @@
 const {CASES} = require("../data/cases");
 const {USERS} = require("../data/users");
 const {MESSAGES} = require("../data/messages");
-const {CASE_NOT_FOUND, USER_NOT_FOUND, MESSAGES_NOT_FAILED} = require("../constants/reponseConstants");
+const {CASE_NOT_FOUND, USER_NOT_FOUND, MESSAGES_NOT_FOUND} = require("../constants/reponseConstants");
 
 // Get case by user id with messages
 module.exports.getCaseByUserIdWithMessages = (id) => {
@@ -33,7 +33,7 @@ module.exports.getCasesWithLastMessage = () => {
                 const lastMessage = messages[messagesLength - 1]
                 // Push
                 caseBuilder.push({...item, user: needleUserData, lastMessage})
-            } else return {status: false, message: MESSAGES_NOT_FAILED}
+            } else return {status: false, message: MESSAGES_NOT_FOUND}
         } else return {status: false, message: USER_NOT_FOUND}
     }
     // response

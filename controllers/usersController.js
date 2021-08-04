@@ -1,7 +1,7 @@
 const {getUsers, getUserById} = require("../helpers/usersHelper");
 
 // GET: User profile details
-module.exports.details = async function(req, res) {
+module.exports.details = function(req, res) {
     // Params data
     const {userId} = req.params;
     // Fetch backoffice user by login

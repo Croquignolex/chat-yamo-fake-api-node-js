@@ -3,7 +3,7 @@ const {requiredChecker} = require("../helpers/formCheckerHelper");
 const {FORM_DATA_ERROR} = require("../constants/reponseConstants");
 
 // POST: Backoffice user new message (can also be use from user to backoffice user)
-module.exports.newMessage = async function(req, res) {
+module.exports.newMessage = function(req, res) {
     // Params data
     const receiverId = req.params.userId;
     const sendId = req.params.backofficeUserid;

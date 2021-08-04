@@ -1,20 +1,12 @@
-// const {mysqlDatabaseConnection} = require("../helpers/mysqlDatabaseHelper");
-//
-// // GET: user main image
-// module.exports.image = async function(req, res) {
-//     // Params data
-//     const {userId} = req.params;
-//     // Query
-//     const selectSqlQuery = `SELECT * FROM medias WHERE userId = ? LIMIT 1`;
-//     const mysqlDatabaseResponse = await mysqlDatabaseConnection(selectSqlQuery, [userId]);
-//     // Response
-//     if(mysqlDatabaseResponse.status) {
-//         const media = mysqlDatabaseResponse.data;
-//         res.send(buildMediaResponseData(media));
-//     } else res.status(400).send({message: mysqlDatabaseResponse.message});
-// };
-//
-// // Format response
-// function buildMediaResponseData(feedback) {
-//     return [];
-// }
+const {getUserMainImageById} = require("../helpers/mediasHelper");
+
+// GET: User main image
+module.exports.userMainImage = async function(req, res) {
+    // Params data
+    const {userId} = req.params;
+    // Fetch backoffice user by login
+    const imageResponse = await getUserMainImageById(userId);
+    // Response
+    if(imageResponse.status) res.send(imageResponse.data);
+    else res.status(400).send({message: imageResponse.message});
+};
