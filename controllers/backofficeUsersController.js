@@ -15,7 +15,7 @@ module.exports.login = function(req, res) {
     const {login, password} = req.body;
     // Form checker
     if(requiredChecker(login) && requiredChecker(password)) {
-        // Fetch user into database
+        // Fetch backoffice users
         const backofficeUserResponse = getBackofficeUserByLogin(login);
         if(backofficeUserResponse.status) {
             const backofficeUserData = backofficeUserResponse.data;

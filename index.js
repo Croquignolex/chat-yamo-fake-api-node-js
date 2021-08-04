@@ -1,16 +1,15 @@
 const http = require('http');
 const cors = require('cors');
 const express = require('express');
-// const socketIO = require('socket.io');
 const bodyParser = require('body-parser');
 
 // Constants
 const {TOKEN} = require('./constants/generalConstants');
 const {
-    AUTH_SERVICE_ROUTES_PATH,
     MEDIA_SERVICE_ROUTES_PATH,
-    PROFILE_SERVICE_ROUTES_PATH,
+    USERS_SERVICE_ROUTES_PATH,
     FEEDBACK_SERVICE_ROUTES_PATH,
+    BACKOFFICE_USERS_SERVICE_ROUTES_PATH,
 } = require('./constants/pathConstants');
 
 // .env config
@@ -35,33 +34,22 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // Routes
-const authRoutes = require('./routes/auth');
 const mediaRoutes = require('./routes/media');
-const profileRoutes = require('./routes/profile');
+const usersRoutes = require('./routes/users');
 const feedbackRoutes = require('./routes/feedback');
+const backofficeUsersRoutes = require('./routes/backofficeUsers');
 
 // Setting general model route
-router.use(AUTH_SERVICE_ROUTES_PATH, authRoutes);
 router.use(MEDIA_SERVICE_ROUTES_PATH, mediaRoutes);
-router.use(PROFILE_SERVICE_ROUTES_PATH, profileRoutes);
+router.use(USERS_SERVICE_ROUTES_PATH, usersRoutes);
 router.use(FEEDBACK_SERVICE_ROUTES_PATH, feedbackRoutes);
+router.use(BACKOFFICE_USERS_SERVICE_ROUTES_PATH, backofficeUsersRoutes);
 
 // Append /api for our http requests
 app.use('/service', router);
 
 // Init server (for socket to listen)
 const server = http.createServer(app);
-// const io = socketIO.listen(server);
-
-/*
-// Controllers
-const {liveMethod} = require('./controllers/liveController');
-
-// Bring live methods
-io.on('connection', (socket) => {
-    liveMethod(socket);
-});
- */
 
 // Server listening request port
 const appPort = process.env.SERVER_PORT || 4000;
