@@ -1,5 +1,5 @@
 const {FORM_DATA_ERROR} = require("../constants/reponseConstants");
-const {getUserMainImageById, addImageByCaseId} = require("../helpers/mediasHelper");
+const {getUserMainImageById, addImageByCaseId, getChatroomImageById} = require("../helpers/mediasHelper");
 
 // GET: User main image
 module.exports.userMainImage = async function(req, res) {
@@ -23,6 +23,18 @@ module.exports.uploadImage = async function(req, res) {
     const {chatroomId} = req.params;
     // Add image into media by case id
     const imageResponse = await addImageByCaseId(chatroomId, filename);
+    // Response
+    if(imageResponse.status) res.send(imageResponse.data);
+    else res.status(400).send({message: imageResponse.message});
+};
+
+
+// GET: Chatroom media image by id
+module.exports.chatroomImage = async function(req, res) {
+    // Params data
+    const {mediaId} = req.params;
+    // Fetch user main image by id
+    const imageResponse = await getChatroomImageById(mediaId);
     // Response
     if(imageResponse.status) res.send(imageResponse.data);
     else res.status(400).send({message: imageResponse.message});

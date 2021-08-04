@@ -13,6 +13,16 @@ module.exports.getUserMainImageById = async (id) => {
         : {status: false, message: MEDIA_NOT_FOUND}
 }
 
+// Get chatroom media image by id
+module.exports.getChatroomImageById = async (id) => {
+    // Search
+    const needleData = MEDIAS.find(media => media.mediaId === parseInt(id));
+    // Response
+    return needleData
+        ? await imageToBytes(needleData.name)
+        : {status: false, message: MEDIA_NOT_FOUND}
+}
+
 // Add image into media using case id
 module.exports.addImageByCaseId = async (caseId, filename) => {
     // Add media
