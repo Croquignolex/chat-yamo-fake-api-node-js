@@ -1,5 +1,5 @@
 const {BACKOFFICE_USERS} = require("../data/backoffficeUsers");
-const {USER_NOT_FOUND} = require("../constants/reponseConstants");
+const {BACKOFFICE_USER_NOT_FOUND} = require("../constants/reponseConstants");
 
 // Get backoffice user by login
 module.exports.getBackofficeUserByLogin = (login) => {
@@ -8,5 +8,5 @@ module.exports.getBackofficeUserByLogin = (login) => {
     // Response
     return needleData
         ? {status: true, data: needleData}
-        : {status: false, message: USER_NOT_FOUND}
+        : {status: false, message: BACKOFFICE_USER_NOT_FOUND}
 }

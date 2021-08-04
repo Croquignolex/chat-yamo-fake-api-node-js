@@ -9,13 +9,13 @@ const {
     USER_AUTHENTICATED,
 } = require('../constants/reponseConstants');
 
-// POST: Admin login
+// POST: Backoffice user login
 module.exports.login = function(req, res) {
     // Form data
     const {login, password} = req.body;
     // Form checker
     if(requiredChecker(login) && requiredChecker(password)) {
-        // Fetch backoffice users
+        // Fetch backoffice user by login
         const backofficeUserResponse = getBackofficeUserByLogin(login);
         if(backofficeUserResponse.status) {
             const backofficeUserData = backofficeUserResponse.data;
@@ -30,12 +30,12 @@ module.exports.login = function(req, res) {
     } else res.status(400).send({message: FORM_DATA_ERROR});
 };
 
-// POST: Admin logout
+// POST: Backoffice user logout
 module.exports.logout = function(req, res) {
     res.send({message: USER_LOGGED_OUT});
 }
 
-// GET: Admin profile
+// GET: Backoffice user profile
 module.exports.profile = function(req, res) {
     // Params data
     const login = req.login;
