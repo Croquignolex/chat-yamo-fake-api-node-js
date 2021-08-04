@@ -1,5 +1,5 @@
 const {getMessages} = require("../helpers/messagesHelper");
-const {getCaseByUserIdWithMessages} = require("../helpers/casesHelper");
+const {getCaseByUserIdWithMessages, getCasesWithLastMessage} = require("../helpers/casesHelper");
 
 // GET: Feedback messages
 module.exports.messages = async function(req, res) {
@@ -19,6 +19,15 @@ module.exports.userCaseMessages = async function(req, res) {
     // Response
     if(caseResponse.status) res.send(caseResponse.data);
     else res.status(400).send({message: caseResponse.message});
+};
+
+// GET: cases with last message
+module.exports.cases = async function(req, res) {
+    // Fetch backoffice user by login
+    const casesResponse = getCasesWithLastMessage();
+    // Response
+    if(casesResponse.status) res.send(casesResponse.data);
+    else res.status(400).send({message: casesResponse.message});
 };
 
 
