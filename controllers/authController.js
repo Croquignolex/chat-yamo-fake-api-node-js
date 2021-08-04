@@ -10,13 +10,13 @@ const {
 } = require('../constants/reponseConstants');
 
 // POST: Admin login
-module.exports.login = async function(req, res) {
+module.exports.login = function(req, res) {
     // Form data
     const {login, password} = req.body;
     // Form checker
     if(requiredChecker(login) && requiredChecker(password)) {
         // Fetch user into database
-        const backofficeUserResponse = await getBackofficeUserByLogin(login);
+        const backofficeUserResponse = getBackofficeUserByLogin(login);
         if(backofficeUserResponse.status) {
             const backofficeUserData = backofficeUserResponse.data;
             // Check login and password match
@@ -31,33 +31,17 @@ module.exports.login = async function(req, res) {
 };
 
 // POST: Admin logout
-module.exports.logout = async function(req, res) {
+module.exports.logout = function(req, res) {
     res.send({message: USER_LOGGED_OUT});
 }
 
 // GET: Admin profile
-module.exports.profile = async function(req, res) {
+module.exports.profile = function(req, res) {
     // Params data
     const login = req.login;
     // Fetch user into database
-    const adminResponse = await getAdminByLogin(login);
-    if(adminResponse.status) {
-        const admin = adminResponse.data;
-        res.send(buildUserResponseData(admin));
-    } else res.status(400).send({message: adminResponse.message});
+    const backofficeUserResponse = getBackofficeUserByLogin(login);
+    // Response
+    if(backofficeUserResponse.status) res.send(backofficeUserResponse.data);
+    else res.status(400).send({message: backofficeUserResponse.message});
 };
-
-// Format admin response
-function buildUserResponseData(user) {
-    return {
-        name: user.name,
-        userId: user.id,
-        login: user.login,
-        phone: user.phone,
-        email: user.email,
-        gender: user.gender,
-        address: user.address,
-        description: user.description,
-    }
-}
-

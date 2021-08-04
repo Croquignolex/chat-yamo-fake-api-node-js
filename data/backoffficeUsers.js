@@ -1,5 +1,6 @@
 module.exports.BACKOFFICE_USERS = [
     {
+        id: 1,
         login: 'croquignolex',
         password: 'croquignolex',
         name: 'Croquignolex',
@@ -8,6 +9,7 @@ module.exports.BACKOFFICE_USERS = [
         description: 'Ask not what your country can do for you; ask what you can do for your country',
     },
     {
+        id: 2,
         login: 'patriossol',
         password: 'patriossol',
         name: 'Patriossol',
