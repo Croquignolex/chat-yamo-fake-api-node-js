@@ -8,19 +8,27 @@ module.exports.getMessages = () => {
 
 // Add message
 module.exports.addMessages = (senderId, receiverId, content, mediaId) => {
-    if([senderId, receiverId].includes(process.env.BACKOFFICE_USER_ID )) {
-        // Extract case id
-        const caseId = senderId === process.env.BACKOFFICE_USER_ID
-            ? `${receiverId}:${senderId}`
-            : `${senderId}:${receiverId}` ;
+    // Check if the backend user is there
+    if([senderId, receiverId].includes(process.env.BACKOFFICE_USER_ID)) {
+        // Extract useful data
+        let caseId, authorId, userId;
+        if(senderId === process.env.BACKOFFICE_USER_ID) {
+            caseId = `${receiverId}:${senderId}`;
+            authorId = senderId;
+            userId =  parseInt(receiverId);
+        } else {
+            caseId = `${senderId}:${receiverId}`;
+            authorId = parseInt(senderId);
+            userId =  receiverId;
+        }
         // Add message
         MESSAGES.push({
-            messageId: MESSAGES.length,
-            userId: parseInt(receiverId),
+            messageId: MESSAGES.length + 1,
             createdAt: new Date().getTime(),
-            authorId: parseInt(senderId),
+            userId,
+            authorId,
             content,
-            caseId: caseId,
+            caseId,
             mediaId
         })
         return {status: true};

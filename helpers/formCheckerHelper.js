@@ -6,7 +6,7 @@ module.exports.emailChecker = function(input) {
 
 // Required field checker
 module.exports.requiredChecker = function(input) {
-    return inRange(input, 1, 255)
+    return inRange(input, 1, 255) || (typeof input === 'number')
 };
 
 // Private in range checker
