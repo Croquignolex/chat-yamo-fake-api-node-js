@@ -8,7 +8,7 @@ const imageStorage = multer.diskStorage({
         callback(null, dir);
     },
     filename: (req, file, callback) => {
-        callback(null, generateRandomString());
+        callback(null, generateRandomString() + '.jpg');
     }
 });
 
