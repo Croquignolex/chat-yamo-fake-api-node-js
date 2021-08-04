@@ -1,4 +1,5 @@
 const multer = require("multer");
+
 const {BAD_IMAGE_TYPE} = require("../constants/reponseConstants");
 const {generateRandomString} = require("../helpers/functionsHelper");
 
@@ -16,14 +17,16 @@ const imageStorage = multer.diskStorage({
 // Image filter type
 const imageFilter = function(req, file, callback) {
     // Accept jpg image files only
-    if (!file.originalname.match(/jpg/)) {
+    if (['image/jpeg', 'image/jpeg'].includes(file.mimetype)) callback(null, true)
+    else {
         req.picture = BAD_IMAGE_TYPE;
         callback(null, false);
     }
-    callback(null, true);
-    // return callback(new Error('Only jgp files are allowed!'), false);
 };
 
 module.exports = {
-    imageMulter: multer({storage: imageStorage, fileFilter: imageFilter}).single('picture')
+    mediaMiddleware: multer({
+        storage: imageStorage,
+        fileFilter: imageFilter
+    }).single('picture')
 };
