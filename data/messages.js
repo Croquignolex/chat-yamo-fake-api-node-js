@@ -6,7 +6,7 @@ module.exports.MESSAGES = [
         authorId: 2,
         content: 'Good morning team Chat&Yamo, i have an issue on my profile picture display.',
         caseId: `2:${process.env.BACKOFFICE_USER_ID}`,
-        mediaId: null
+        mediaId: ''
     },
     {
         messageId: 2,
@@ -22,9 +22,9 @@ module.exports.MESSAGES = [
         userId: 2,
         createdAt: new Date().getTime(),
         authorId: process.env.BACKOFFICE_USER_ID,
-        content: 'Hi Lili, please can u specify the issue u have on your profile picture display?',
+        content: 'Hi Lili, please can you specify the issue you have on your profile picture display?',
         caseId: `2:${process.env.BACKOFFICE_USER_ID}`,
-        mediaId: null
+        mediaId: ''
     },
     {
         messageId: 4,
@@ -33,6 +33,6 @@ module.exports.MESSAGES = [
         authorId: 1,
         content: "Hello team Chat&Yamo, i can't no more match with other members.",
         caseId: `1:${process.env.BACKOFFICE_USER_ID}`,
-        mediaId: null
+        mediaId: ''
     }
 ];
