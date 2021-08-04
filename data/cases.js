@@ -7,6 +7,7 @@ module.exports.CASES = [
         name: "Good morning team Chat&Yamo, i have an issue on my profile picture display.",
         createdAt: new Date().getTime(),
         status: OPEN,
-        closedAt: null
+        closedAt: null,
+        updatedAt: new Date().getTime()
     }
 ];
