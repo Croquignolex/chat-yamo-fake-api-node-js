@@ -1,4 +1,5 @@
 const multer = require("multer");
+const {BAD_IMAGE_TYPE} = require("../constants/reponseConstants");
 const {generateRandomString} = require("../helpers/functionsHelper");
 
 // Store image
@@ -16,9 +17,11 @@ const imageStorage = multer.diskStorage({
 const imageFilter = function(req, file, callback) {
     // Accept jpg image files only
     if (!file.originalname.match(/jpg/)) {
-        return callback(new Error('Only jgp files are allowed!'), false);
+        req.picture = BAD_IMAGE_TYPE;
+        callback(null, false);
     }
     callback(null, true);
+    // return callback(new Error('Only jgp files are allowed!'), false);
 };
 
 module.exports = {
