@@ -17,7 +17,6 @@ module.exports.getUserMainImageById = async (id) => {
 const imageToBytes = (imagePath) => {
     return new Promise((resolve) => {
         fs.readFile(`medias\\${imagePath}`, function(error, data) {
-            console.log({error, data})
             if (error) resolve({status: false, message: FILE_SYSTEM_ERROR});
             return resolve({status: true, data});
         });
