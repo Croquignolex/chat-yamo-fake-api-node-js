@@ -10,7 +10,7 @@ module.exports.requiredChecker = function(input) {
 };
 
 // Private in range checker
-function inRange(input, min = 2, max = 255) {
+const inRange = (input, min = 2, max = 255) => {
     try {
         const length = input.length;
         return (length <= max && length >= min)

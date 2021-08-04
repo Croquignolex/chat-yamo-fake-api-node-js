@@ -1,10 +1,9 @@
 const jwt = require('jsonwebtoken');
 
 const {requiredChecker} = require('../helpers/formCheckerHelper');
-const {mysqlDatabaseConnection} = require("../helpers/mysqlDatabaseHelper");
+const {getBackofficeUserByLogin} = require("../helpers/backofficeUsersHelper");
 const {
     AUTH_FAILED,
-    USER_NOT_FOUND,
     USER_LOGGED_OUT,
     FORM_DATA_ERROR,
     USER_AUTHENTICATED,
@@ -17,17 +16,17 @@ module.exports.login = async function(req, res) {
     // Form checker
     if(requiredChecker(login) && requiredChecker(password)) {
         // Fetch user into database
-        const adminResponse = await getAdminByLogin(login);
-        if(adminResponse.status) {
-            const admin = adminResponse.data;
+        const backofficeUserResponse = await getBackofficeUserByLogin(login);
+        if(backofficeUserResponse.status) {
+            const backofficeUserData = backofficeUserResponse.data;
             // Check login and password match
-            if((login === admin.login) && (password === admin.password)) {
+            if((login === backofficeUserData.login) && (password === backofficeUserData.password)) {
                 // Generate user token according to his login since is an unique field
-                const token = jwt.sign({login: admin.login}, process.env.TOKEN_SECRET);
+                const token = jwt.sign({login: backofficeUserData.login}, process.env.TOKEN_SECRET);
                 // Response
                 res.send({token, message: USER_AUTHENTICATED});
             } else res.status(400).send({message: AUTH_FAILED});
-        } else res.status(400).send({message: adminResponse.message});
+        } else res.status(400).send({message: backofficeUserResponse.message});
     } else res.status(400).send({message: FORM_DATA_ERROR});
 };
 
@@ -47,18 +46,6 @@ module.exports.profile = async function(req, res) {
         res.send(buildUserResponseData(admin));
     } else res.status(400).send({message: adminResponse.message});
 };
-
-// Get admin by login
-async function getAdminByLogin(login) {
-    const selectSqlQuery = `SELECT * FROM admins WHERE login = ? LIMIT 1`;
-    const mysqlDatabaseResponse = await mysqlDatabaseConnection(selectSqlQuery, [login]);
-    // Response
-    if(mysqlDatabaseResponse.status) {
-        return mysqlDatabaseResponse.data.length > 0
-            ? {status: true, data: mysqlDatabaseResponse.data[0]}
-            : {status: false, message: USER_NOT_FOUND};
-    } else return {status: false, message: mysqlDatabaseResponse.message};
-}
 
 // Format admin response
 function buildUserResponseData(user) {
