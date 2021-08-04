@@ -9,7 +9,7 @@ module.exports.getUsers = () => {
 // Get: user by id
 module.exports.getUserById = (id) => {
     // Search
-    const needleData = USERS.find(user => user.id === id);
+    const needleData = USERS.find(user => user.id === parseInt(id));
     // Response
     return needleData
         ? {status: true, data: needleData}

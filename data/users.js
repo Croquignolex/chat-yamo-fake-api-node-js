@@ -2,7 +2,7 @@ module.exports.USERS = [
     {
         id: 1,
         name: 'Alex MONKAM',
-        age: '20',
+        age: 20,
         gender: 'Male',
         city: 'DOUALA',
         country: 'CAMEROON',
@@ -16,7 +16,7 @@ module.exports.USERS = [
     {
         id: 2,
         name: 'Lili NANA',
-        age: '18',
+        age: 18,
         gender: 'Female',
         city: 'YAOUNDE',
         country: 'CAMEROON',
