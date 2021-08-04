@@ -22,8 +22,8 @@ module.exports.addImageByCaseId = async (caseId, filename) => {
         userId: '',
         caseId,
     });
+    // Response
     return {status: true, data: {mediaId: MEDIAS.length, isVerified: false, tooMuchTextDetected: false}};
-
 }
 
 // Convert image string into bytes
@@ -34,15 +34,4 @@ const imageToBytes = (imagePath) => {
             return resolve({status: true, data});
         });
     })
-}
-
-// Generate a random image file name
-module.exports.generateImageName = (length = 32) => {
-    let result = '';
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    const charactersLength = characters.length;
-    for (let i = 0; i < length; i++) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return `${result}.jpg`;
 }

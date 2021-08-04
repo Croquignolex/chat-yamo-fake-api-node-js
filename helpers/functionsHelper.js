@@ -1,7 +1,10 @@
-const moment = require('moment-timezone');
-const {JS_DATE_FORMAT} = require("../constants/generalConstants");
-
-// Convert API date to string
-module.exports.mysqlDateForResponse = function(date, timezone ='UTC') {
-    return date && moment(date).tz(timezone).format(JS_DATE_FORMAT);
+// Generate a random image file name
+module.exports.generateRandomString = (length = 32) => {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
 }

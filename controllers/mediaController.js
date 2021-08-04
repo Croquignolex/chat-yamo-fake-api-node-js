@@ -1,5 +1,3 @@
-const {fileChecker} = require("../helpers/formCheckerHelper");
-const {FORM_DATA_ERROR} = require("../constants/reponseConstants");
 const {getUserMainImageById, addImageByCaseId} = require("../helpers/mediasHelper");
 
 // GET: User main image
@@ -17,6 +15,7 @@ module.exports.userMainImage = async function(req, res) {
 module.exports.uploadImage = async function(req, res) {
     // Params data
     const {chatroomId} = req.params;
+    // File data from multer
     const {filename} = req.file;
     // Add image into media by case id
     const imageResponse = await addImageByCaseId(chatroomId, filename);

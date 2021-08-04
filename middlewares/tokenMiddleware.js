@@ -13,8 +13,6 @@ module.exports.tokenMiddleware = function(req, res, next) {
         const token = bearToken.split(' ');
         const jwtData = jwt.verify(token[1], process.env.TOKEN_SECRET);
         req.login = jwtData.login;
-        // For manual database token blacklist
-        req.token = token;
         next();
     } catch (e) {
         res.status(500).send({message: INVALID_TOKEN_ERROR});

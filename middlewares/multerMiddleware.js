@@ -1,30 +1,26 @@
 const multer = require("multer");
-const {generateImageName} = require("../helpers/mediasHelper");
+const {generateRandomString} = require("../helpers/functionsHelper");
 
+// Store image
 const imageStorage = multer.diskStorage({
     destination: (req, file, callback) => {
         const dir = "medias";
         callback(null, dir);
-        // callback(null, 'config');
     },
     filename: (req, file, callback) => {
-
-        callback(null, generateImageName());
+        callback(null, generateRandomString());
     }
 });
 
-const imageFilter = function(req, file, cb) {
-    // Accept video only
+// Image filter type
+const imageFilter = function(req, file, callback) {
+    // Accept jpg image files only
     if (!file.originalname.match(/jpg/)) {
-        req.fileValidationError = 'Only video files are allowed!';
-        return cb(new Error('Only video files are allowed!'), false);
+        return callback(new Error('Only jgp files are allowed!'), false);
     }
-    cb(null, true);
+    callback(null, true);
 };
 
 module.exports = {
-    imageMulter: multer({
-        storage: imageStorage,
-        fileFilter: imageFilter,
-    }).single('picture'), // 'audioFile' is the name of the file
+    imageMulter: multer({storage: imageStorage, fileFilter: imageFilter}).single('picture')
 };
