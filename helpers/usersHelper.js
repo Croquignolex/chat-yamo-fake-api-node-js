@@ -1,15 +1,15 @@
 const {USERS} = require("../data/users");
 const {USER_NOT_FOUND} = require("../constants/reponseConstants");
 
-// Get: users
+// Get users
 module.exports.getUsers = () => {
     return {status: true, data: USERS};
 }
 
-// Get: user by id
+// Get user by id
 module.exports.getUserById = (id) => {
     // Search
-    const needleData = USERS.find(user => user.id === parseInt(id));
+    const needleData = USERS.find(user => user.userId === parseInt(id));
     // Response
     return needleData
         ? {status: true, data: needleData}

@@ -1,6 +1,6 @@
 module.exports.USERS = [
     {
-        id: 1,
+        userId: 1,
         name: 'Alex MONKAM',
         age: 20,
         gender: 'Male',
@@ -14,7 +14,7 @@ module.exports.USERS = [
         isPremium: true
     },
     {
-        id: 2,
+        userId: 2,
         name: 'Lili NANA',
         age: 18,
         gender: 'Female',
