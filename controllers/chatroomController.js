@@ -1,4 +1,4 @@
-const {addMessages} = require("../helpers/messagesHelper");
+const {addMessage} = require("../helpers/messagesHelper");
 const {requiredChecker} = require("../helpers/formCheckerHelper");
 const {FORM_DATA_ERROR} = require("../constants/reponseConstants");
 
@@ -11,7 +11,7 @@ module.exports.newMessage = function(req, res) {
     const {feedbackText, mediaId} = req.body;
     if(requiredChecker(feedbackText) || requiredChecker(mediaId)) {
         // Add message
-        const userResponse = addMessages(sendId, receiverId, feedbackText, mediaId);
+        const userResponse = addMessage(sendId, receiverId, feedbackText, mediaId);
         // Response
         if(userResponse.status) res.send();
         else res.status(400).send({message: userResponse.message});

@@ -3,8 +3,18 @@ const fs = require("fs");
 const {MEDIAS} = require("../data/medias");
 const {MEDIA_NOT_FOUND, FILE_SYSTEM_ERROR} = require("../constants/reponseConstants");
 
-// Get user by id
+// Get user main image by id
 module.exports.getUserMainImageById = async (id) => {
+    // Search
+    const needleData = MEDIAS.find(media => (media.userId === parseInt(id)) && (media.caseId === ""));
+    // Response
+    return needleData
+        ? await imageToBytes(needleData.name)
+        : {status: false, message: MEDIA_NOT_FOUND}
+}
+
+// Add image into media using case id
+module.exports.addImageByCaseId = async (id) => {
     // Search
     const needleData = MEDIAS.find(media => (media.userId === parseInt(id)) && (media.caseId === ""));
     // Response

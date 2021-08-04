@@ -7,7 +7,7 @@ module.exports.getMessages = () => {
 }
 
 // Add message
-module.exports.addMessages = (senderId, receiverId, content, mediaId) => {
+module.exports.addMessage = (senderId, receiverId, content, mediaId) => {
     // Check if the backend user is there
     if([senderId, receiverId].includes(process.env.BACKOFFICE_USER_ID)) {
         // Extract useful data
