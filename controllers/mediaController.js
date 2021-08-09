@@ -32,9 +32,9 @@ module.exports.uploadImage = async function(req, res) {
 // GET: Chatroom media image by id
 module.exports.chatroomImage = async function(req, res) {
     // Params data
-    const {mediaId} = req.params;
+    const {mediaId, chatroomId} = req.params;
     // Fetch user main image by id
-    const imageResponse = await getChatroomImageById(mediaId);
+    const imageResponse = await getChatroomImageById(chatroomId, mediaId);
     // Response
     if(imageResponse.status) res.send(imageResponse.data);
     else res.status(400).send({message: imageResponse.message});

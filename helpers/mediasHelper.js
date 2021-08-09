@@ -14,9 +14,9 @@ module.exports.getUserMainImageById = async (id) => {
 }
 
 // Get chatroom media image by id
-module.exports.getChatroomImageById = async (id) => {
+module.exports.getChatroomImageById = async (chatroomId, id) => {
     // Search
-    const needleData = MEDIAS.find(media => media.mediaId === parseInt(id));
+    const needleData = MEDIAS.find(media => (media.mediaId === parseInt(id)) && (media.caseId === chatroomId));
     // Response
     return needleData
         ? await imageToBytes(needleData.name)
