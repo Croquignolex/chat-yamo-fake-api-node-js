@@ -1,22 +1,41 @@
-const {OPEN} = require("../constants/generalConstants");
-
 module.exports.CASES = [
     {
         caseId: `2:${process.env.BACKOFFICE_USER_ID}`,
         userId: 2,
-        name: "Good morning team Chat&Yamo, i have an issue on my profile picture display.",
+        name: "",
         createdAt: new Date().getTime(),
-        status: OPEN,
-        closedAt: '',
-        updatedAt: new Date().getTime()
+        mediaId: '',
+        content: '',
+        messageId: '',
     },
     {
         caseId: `1:${process.env.BACKOFFICE_USER_ID}`,
         userId: 1,
-        name: "Good morning team Chat&Yamo, i have an issue on my profile picture display.",
+        authorId: 1,
+        name: "",
         createdAt: new Date().getTime(),
-        status: OPEN,
-        closedAt: '',
-        updatedAt: new Date().getTime()
+        mediaId: '',
+        content: '',
+        messageId: '',
+    },
+    {
+        caseId: `3:${process.env.BACKOFFICE_USER_ID}`,
+        userId: 3,
+        authorId: 3,
+        name: "",
+        createdAt: new Date().getTime(),
+        mediaId: '',
+        content: '',
+        messageId: '',
+    },
+    {
+        caseId: `4:${process.env.BACKOFFICE_USER_ID}`,
+        userId: 4,
+        authorId: 4,
+        name: "",
+        createdAt: new Date().getTime(),
+        mediaId: '',
+        content: '',
+        messageId: '',
     }
 ];

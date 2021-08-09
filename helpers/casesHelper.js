@@ -19,5 +19,4 @@ module.exports.getCaseByUserIdWithMessages = (id) => {
 // Get cases
 module.exports.getCases = () => {
     return {status: true, data: CASES};
-
 }
