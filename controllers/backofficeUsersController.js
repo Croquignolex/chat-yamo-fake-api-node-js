@@ -34,14 +34,3 @@ module.exports.login = function(req, res) {
 module.exports.logout = function(req, res) {
     res.send({message: USER_LOGGED_OUT});
 }
-
-// GET: Backoffice user profile
-module.exports.profile = function(req, res) {
-    // Params data
-    const login = req.login;
-    // Fetch user into database
-    const backofficeUserResponse = getBackofficeUserByLogin(login);
-    // Response
-    if(backofficeUserResponse.status) res.send(backofficeUserResponse.data);
-    else res.status(400).send({message: backofficeUserResponse.message});
-};
