@@ -1,11 +1,6 @@
 const {MESSAGES} = require("../data/messages");
 const {CASE_NOT_FOUND} = require("../constants/reponseConstants");
 
-// Get messages
-module.exports.getMessages = () => {
-    return {status: true, data: MESSAGES};
-}
-
 // Add message
 module.exports.addMessage = (senderId, receiverId, content, mediaId) => {
     // Check if the backend user is there
