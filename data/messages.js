@@ -58,8 +58,80 @@ module.exports.MESSAGES = [
         userId: process.env.BACKOFFICE_USER_ID,
         createdAt: new Date().getTime(),
         authorId: 4,
-        content: "Do what u want, stupid.",
+        content: "Do what you want, stupid.",
         caseId: `4:${process.env.BACKOFFICE_USER_ID}`,
+        mediaId: ''
+    },
+    {
+        messageId: 9,
+        userId: process.env.BACKOFFICE_USER_ID,
+        createdAt: new Date().getTime(),
+        authorId: 5,
+        content: '',
+        caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
+        mediaId: 7
+    },
+    {
+        messageId: 10,
+        userId: process.env.BACKOFFICE_USER_ID,
+        createdAt: new Date().getTime(),
+        authorId: 5,
+        content: "Happy new year team. please i request your help on my profile image.",
+        caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
+        mediaId: ''
+    },
+    {
+        messageId: 11,
+        userId: process.env.BACKOFFICE_USER_ID,
+        createdAt: new Date().getTime(),
+        authorId: 5,
+        content: "I am an premium user but my account has been disabled for some reason related to my profile image.",
+        caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
+        mediaId: ''
+    },
+    {
+        messageId: 12,
+        userId: process.env.BACKOFFICE_USER_ID,
+        createdAt: new Date().getTime(),
+        authorId: 5,
+        content: "Please can you guys help me?.",
+        caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
+        mediaId: ''
+    },
+    {
+        messageId: 13,
+        userId: 5,
+        createdAt: new Date().getTime(),
+        authorId: process.env.BACKOFFICE_USER_ID,
+        content: "happy new year Grace.",
+        caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
+        mediaId: ''
+    },
+    {
+        messageId: 14,
+        userId: 5,
+        createdAt: new Date().getTime(),
+        authorId: process.env.BACKOFFICE_USER_ID,
+        content: "Your profile image should like this exemple bellow.",
+        caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
+        mediaId: ''
+    },
+    {
+        messageId: 15,
+        userId: 5,
+        createdAt: new Date().getTime(),
+        authorId: process.env.BACKOFFICE_USER_ID,
+        content: '',
+        caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
+        mediaId: 8
+    },
+    {
+        messageId: 16,
+        userId: 5,
+        createdAt: new Date().getTime(),
+        authorId: process.env.BACKOFFICE_USER_ID,
+        content: "Since only your mouth is visible on the picture, your account has been disable.",
+        caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
         mediaId: ''
     }
 ];

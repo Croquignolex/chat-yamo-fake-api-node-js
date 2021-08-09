@@ -54,5 +54,19 @@ module.exports.USERS = [
         homeCountry: 'MOROCCO',
         verified: false,
         isPremium: false
+    },
+    {
+        userId: 5,
+        name: 'Grace MINKO',
+        age: 26,
+        gender: 'Female',
+        city: 'PARIS',
+        country: 'FRANCE',
+        continent: 'AFRICA',
+        greetingText: 'Welcome Grace',
+        province: 'PARIS',
+        homeCountry: 'FRANCE',
+        verified: false,
+        isPremium: true
     }
 ];
