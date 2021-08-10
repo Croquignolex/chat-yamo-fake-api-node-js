@@ -16,7 +16,7 @@ module.exports.userMainImage = async function(req, res) {
 module.exports.uploadImage = async function(req, res) {
     // File data from multer (error management)
     const pictureError = req.picture;
-    if(pictureError) res.status(400).send({message: pictureError});
+    if(pictureError) res.status(415).send({message: pictureError});
     if(!req.file) res.status(400).send({message: FORM_DATA_ERROR});
     const {filename} = req.file;
     // Params data

@@ -68,5 +68,19 @@ module.exports.USERS = [
         homeCountry: 'FRANCE',
         verified: false,
         isPremium: true
+    },
+    {
+        userId: 6,
+        name: 'Sweet BEANS',
+        age: 36,
+        gender: 'Female',
+        city: 'NEW YORK',
+        country: 'USA',
+        continent: 'AMERICA',
+        greetingText: 'Welcome Sweet',
+        province: 'NEW YORK',
+        homeCountry: 'USA',
+        verified: true,
+        isPremium: true
     }
 ];

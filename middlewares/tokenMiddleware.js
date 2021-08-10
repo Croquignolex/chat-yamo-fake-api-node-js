@@ -15,6 +15,6 @@ module.exports.tokenMiddleware = function(req, res, next) {
         req.login = jwtData.login;
         next();
     } catch (e) {
-        res.status(500).send({message: INVALID_TOKEN_ERROR});
+        res.status(406).send({message: INVALID_TOKEN_ERROR});
     }
 };

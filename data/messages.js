@@ -133,5 +133,50 @@ module.exports.MESSAGES = [
         content: "Since only your mouth is visible on the picture, your account has been disable.",
         caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
         mediaId: ''
-    }
+    },
+    {
+        messageId: 17,
+        userId: process.env.BACKOFFICE_USER_ID,
+        createdAt: new Date().getTime(),
+        authorId: 6,
+        content: "Checkout my fruits creation",
+        caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
+        mediaId: ''
+    },
+    {
+        messageId: 18,
+        userId: process.env.BACKOFFICE_USER_ID,
+        createdAt: new Date().getTime(),
+        authorId: 6,
+        content: '',
+        caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
+        mediaId: 10
+    },
+    {
+        messageId: 19,
+        userId: process.env.BACKOFFICE_USER_ID,
+        createdAt: new Date().getTime(),
+        authorId: 6,
+        content: '',
+        caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
+        mediaId: 11
+    },
+    {
+        messageId: 20,
+        userId: process.env.BACKOFFICE_USER_ID,
+        createdAt: new Date().getTime(),
+        authorId: 6,
+        content: '',
+        caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
+        mediaId: 12
+    },
+    {
+        messageId: 21,
+        userId: 6,
+        createdAt: new Date().getTime(),
+        authorId: process.env.BACKOFFICE_USER_ID,
+        content: "Your creations look sweet but are aware that this a love match app?",
+        caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
+        mediaId: ''
+    },
 ];

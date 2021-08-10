@@ -7,7 +7,7 @@ module.exports.MEDIAS = [
     },
     {
         mediaId: 2,
-        name: 'QoeObEdegtepryQ5untHsPRdbTLqT1of.jpg',
+        name: 'TLqQoeObE5untHsPRddegtepryQbT1of.jpg',
         userId: 2,
         caseId: ''
     },
@@ -46,5 +46,29 @@ module.exports.MEDIAS = [
         name: 'UxxrzeBb6buF31uNbFTjvabkfZKLdivl.jpg',
         userId: '',
         caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
+    },
+    {
+        mediaId: 9,
+        name: 'F31uNbUxxuFTjvabkfZKLdirzeBb6bvl.jpg',
+        userId: 6,
+        caseId: '',
+    },
+    {
+        mediaId: 10,
+        name: 'ZKLUx1uixrzeBbNbFTjvabkfd6buF3vl.jpg',
+        userId: '',
+        caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
+    },
+    {
+        mediaId: 11,
+        name: 'KLdiUxzeBb6buF31uNbFTjvabkfZxrvl.jpg',
+        userId: '',
+        caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
+    },
+    {
+        mediaId: 12,
+        name: 'LdUxNbFTjxrzeBb6bvabkfZuF31uKivl.jpg',
+        userId: '',
+        caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
     },
 ];
