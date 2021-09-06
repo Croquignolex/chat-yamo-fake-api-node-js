@@ -179,4 +179,22 @@ module.exports.MESSAGES = [
         caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
         mediaId: ''
     },
+    {
+        messageId: 22,
+        userId: 1,
+        createdAt: new Date().getTime(),
+        authorId: 1,
+        content: "Just to figure out this part",
+        caseId: `1:${process.env.BACKOFFICE_USER_ID}`,
+        mediaId: ''
+    },
+    {
+        messageId: 23,
+        userId: 1,
+        createdAt: new Date().getTime(),
+        authorId: 1,
+        content: "This looks really awesome",
+        caseId: `1:${process.env.BACKOFFICE_USER_ID}`,
+        mediaId: ''
+    },
 ];
