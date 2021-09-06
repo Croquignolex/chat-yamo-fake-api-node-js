@@ -9,7 +9,6 @@ const {
     MEDIA_SERVICE_ROUTES_PATH,
     USERS_SERVICE_ROUTES_PATH,
     FEEDBACKS_SERVICE_ROUTES_PATH,
-    NO_PREFIX_SERVICE_ROUTES_PATH,
     BACKOFFICE_USERS_SERVICE_ROUTES_PATH,
 } = require('./constants/pathConstants');
 
@@ -44,7 +43,7 @@ const backofficeUsersRoutes = require('./routes/backofficeUsers');
 // Setting general model route
 router.use(MEDIA_SERVICE_ROUTES_PATH, mediaRoutes);
 router.use(USERS_SERVICE_ROUTES_PATH, usersRoutes);
-router.use(NO_PREFIX_SERVICE_ROUTES_PATH, chatroomRoutes);
+router.use(FEEDBACKS_SERVICE_ROUTES_PATH, chatroomRoutes);
 router.use(FEEDBACKS_SERVICE_ROUTES_PATH, feedbacksRoutes);
 router.use(BACKOFFICE_USERS_SERVICE_ROUTES_PATH, backofficeUsersRoutes);
 

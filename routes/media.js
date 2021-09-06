@@ -7,6 +7,6 @@ const {userMainImage, uploadImage, chatroomImage} = require('../controllers/medi
 
 router.get('/users/:userId/medias/main', tokenMiddleware, userMainImage);
 router.get('/chatrooms/:chatroomId/media/:mediaId', tokenMiddleware, chatroomImage);
-router.post('/chatrooms/:chatroomId/medias', [mediaMiddleware, tokenMiddleware], uploadImage);
+router.put('/chatrooms/:chatroomId/medias', [mediaMiddleware, tokenMiddleware], uploadImage);
 
 module.exports = router;
