@@ -24,7 +24,7 @@ module.exports.login = function(req, res) {
                 // Generate user token according to his login since is an unique field
                 const token = jwt.sign({login: backofficeUserData.login}, process.env.TOKEN_SECRET);
                 // Response
-                res.send({token, message: USER_AUTHENTICATED});
+                res.send({userToken: token, message: USER_AUTHENTICATED});
             } else res.status(400).send({message: AUTH_FAILED});
         } else res.status(400).send({message: backofficeUserResponse.message});
     } else res.status(400).send({message: FORM_DATA_ERROR});

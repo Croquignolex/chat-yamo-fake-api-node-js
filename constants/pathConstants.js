@@ -3,7 +3,7 @@ const NO_PREFIX_SERVICE_ROUTES_PATH = "";
 const MEDIA_SERVICE_ROUTES_PATH = "/media";
 const USERS_SERVICE_ROUTES_PATH = "/profile";
 const FEEDBACKS_SERVICE_ROUTES_PATH = "/feedbacks";
-const BACKOFFICE_USERS_SERVICE_ROUTES_PATH = "/auth";
+const BACKOFFICE_USERS_SERVICE_ROUTES_PATH = "/feedbacks/backoffice";
 
 module.exports = {
     USERS_SERVICE_ROUTES_PATH,

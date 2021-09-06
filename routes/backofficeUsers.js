@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const {tokenMiddleware} = require("../middlewares/tokenMiddleware");
+const {tokenMiddleware} = require("../middlewares/accessTokenMiddleware");
 const {login, logout} = require('../controllers/backofficeUsersController');
 
 router.post('/login', login);
