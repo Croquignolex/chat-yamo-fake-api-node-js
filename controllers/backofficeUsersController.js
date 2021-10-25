@@ -22,9 +22,9 @@ module.exports.login = function(req, res) {
             // Check login and password match
             if((login === backofficeUserData.login) && (password === backofficeUserData.password)) {
                 // Generate user token according to his login since is an unique field
-                const token = jwt.sign({login: backofficeUserData.login}, process.env.TOKEN_SECRET);
+                const token = jwt.sign({id: backofficeUserData.id}, process.env.TOKEN_SECRET);
                 // Response
-                res.send({userToken: token, message: USER_AUTHENTICATED});
+                res.send({status: 204, entityId: backofficeUserData.id, userToken: token});
             } else res.status(400).send({message: AUTH_FAILED});
         } else res.status(400).send({message: backofficeUserResponse.message});
     } else res.status(400).send({message: FORM_DATA_ERROR});

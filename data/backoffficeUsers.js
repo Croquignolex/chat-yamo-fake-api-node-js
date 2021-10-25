@@ -1,4 +1,4 @@
 module.exports.BACKOFFICE_USERS = [
-    {login: 'croquignolex', password: 'croquignolex'},
-    {login: 'patriossol', password: 'patriossol'}
+    {id: 1, login: 'croquignolex', password: 'croquignolex'},
+    {id: 2, login: 'chat&yamo', password: 'chat&yamo'}
 ];
