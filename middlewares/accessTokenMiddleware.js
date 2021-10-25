@@ -8,10 +8,13 @@ module.exports.tokenMiddleware = function(req, res, next) {
     const bearToken = req.header(TOKEN);
     if(!bearToken) return res.status(401).send({message: UNAUTHORIZED_REQUEST_ERROR});
 
-    // Verify user token in header
-    const token = bearToken.split(' ')[1];
-    if(token === process.env.BACKOFFICE_SERVICE_JWT) {
-        return next();
+    try {
+        // Verify user token in header
+        const token = bearToken.split(' ');
+        const jwtData = jwt.verify(token[1], process.env.TOKEN_SECRET);
+        req.login = jwtData.login;
+        next();
+    } catch (e) {
+        res.status(401).send({message: INVALID_TOKEN_ERROR});
     }
-    res.status(406).send({message: INVALID_TOKEN_ERROR});
 };
