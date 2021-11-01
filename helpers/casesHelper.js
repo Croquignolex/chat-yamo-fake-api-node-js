@@ -1,6 +1,5 @@
 const {CASES} = require("../data/cases");
 const {MESSAGES} = require("../data/messages");
-const {CASE_NOT_FOUND} = require("../constants/reponseConstants");
 
 // Get case by user id with messages
 module.exports.getCaseByUserIdWithMessages = (id) => {
@@ -13,7 +12,7 @@ module.exports.getCaseByUserIdWithMessages = (id) => {
         return {status: true, data: {...needleData, messages}}
     }
     // Response
-    return {status: false, message: CASE_NOT_FOUND}
+    return {status: false, message: "Case not found"}
 }
 
 // Get cases

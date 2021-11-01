@@ -1,5 +1,4 @@
 const {MESSAGES} = require("../data/messages");
-const {CASE_NOT_FOUND} = require("../constants/reponseConstants");
 
 // Add message
 module.exports.addMessage = (senderId, receiverId, content, mediaId) => {
@@ -28,5 +27,5 @@ module.exports.addMessage = (senderId, receiverId, content, mediaId) => {
         })
         return {status: true};
     }
-    return {status: false, message: CASE_NOT_FOUND};
+    return {status: false, message: "Case not found"};
 }

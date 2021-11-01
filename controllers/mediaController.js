@@ -1,4 +1,3 @@
-const {FORM_DATA_ERROR} = require("../constants/reponseConstants");
 const {getUserMainImageById, addImageByCaseId, getChatroomImageById} = require("../helpers/mediasHelper");
 
 // GET: User main image
@@ -17,7 +16,7 @@ module.exports.uploadImage = async function(req, res) {
     // File data from multer (error management)
     const pictureError = req.picture;
     if(pictureError) res.status(415).send({message: pictureError});
-    if(!req.file) res.status(400).send({message: FORM_DATA_ERROR});
+    if(!req.file) res.status(400).send({message: "Form data error"});
     const {filename} = req.file;
     // Params data
     const {chatroomId} = req.params;

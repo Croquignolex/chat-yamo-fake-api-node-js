@@ -1,6 +1,5 @@
 const {addMessage} = require("../helpers/messagesHelper");
 const {requiredChecker} = require("../helpers/formCheckerHelper");
-const {FORM_DATA_ERROR} = require("../constants/reponseConstants");
 
 // POST: Backoffice user new message (can also be use from user to backoffice user)
 module.exports.newMessage = function(req, res) {
@@ -15,5 +14,5 @@ module.exports.newMessage = function(req, res) {
         // Response
         if(userResponse.status) res.send();
         else res.status(400).send({message: userResponse.message});
-    } else res.status(400).send({message: FORM_DATA_ERROR});
+    } else res.status(400).send({message: "Form data error"});
 };

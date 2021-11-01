@@ -1,5 +1,4 @@
 const {USERS} = require("../data/users");
-const {USER_NOT_FOUND} = require("../constants/reponseConstants");
 
 // Get users
 module.exports.getUsers = () => {
@@ -13,5 +12,5 @@ module.exports.getUserById = (id) => {
     // Response
     return needleData
         ? {status: true, data: needleData}
-        : {status: false, message: USER_NOT_FOUND}
+        : {status: false, message: "user nor found"}
 }

@@ -1,17 +1,16 @@
 const jwt = require('jsonwebtoken');
 
-const {requiredChecker} = require('../helpers/formCheckerHelper');
-const {getBackofficeUserByLogin} = require("../helpers/backofficeUsersHelper");
-const {AUTH_FAILED, FORM_DATA_ERROR} = require('../constants/reponseConstants');
+const formCheckerHelper = require('../helpers/formCheckerHelper');
+const backofficeUsersHelper = require("../helpers/backofficeUsersHelper");
 
 // POST: Backoffice user login
 module.exports.login = function(req, res) {
     // Form data
     const {login, password} = req.body;
     // Form checker
-    if(requiredChecker(login) && requiredChecker(password)) {
+    if(formCheckerHelper.requiredChecker(login) && formCheckerHelper.requiredChecker(password)) {
         // Fetch backoffice user by login
-        const backofficeUserResponse = getBackofficeUserByLogin(login);
+        const backofficeUserResponse = backofficeUsersHelper.getBackofficeUserByLogin(login);
         if(backofficeUserResponse.status) {
             const backofficeUserData = backofficeUserResponse.data;
             // Check login and password match
@@ -23,8 +22,30 @@ module.exports.login = function(req, res) {
                     {expiresIn: "10h"}
                 );
                 // Response
-                res.send({status: 204, entityId: backofficeUserData.id, userToken: token});
-            } else res.status(400).send({message: AUTH_FAILED});
+                res.send({entityId: backofficeUserData.id, userToken: token});
+            } else res.status(400).send({message: "Auth error"});
         } else res.status(400).send({message: backofficeUserResponse.message});
-    } else res.status(400).send({message: FORM_DATA_ERROR});
+    } else res.status(400).send({message: "Form data error"});
+};
+
+// POST: Backoffice user password change
+module.exports.password = function(req, res) {
+    // Form data
+    const {oldPassword, newPassword} = req.body;
+    const backofficeUserId = req.params.backofficeUserId;
+    // Form checker
+    if(oldPassword === newPassword) {
+        if(formCheckerHelper.requiredChecker(oldPassword) && formCheckerHelper.requiredChecker(newPassword)) {
+            // Fetch backoffice user by login
+            const backofficeUserResponse = backofficeUsersHelper.getBackofficeUserById(backofficeUserId);
+            if (backofficeUserResponse.status) {
+                const backofficeUserData = backofficeUserResponse.data;
+                // Check old password and password match
+                if (oldPassword !== backofficeUserData.password) {
+                    // Response (mock data, update unavailable)
+                    res.send({status: true, message: "password changed"});
+                } else res.status(400).send({message: "Old password error"});
+            } else res.status(400).send({message: backofficeUserResponse.message});
+        } else res.status(400).send({message: "Form data error"});
+    }
 };

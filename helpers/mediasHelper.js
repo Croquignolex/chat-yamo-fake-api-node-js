@@ -1,7 +1,6 @@
 const fs = require("fs");
 
 const {MEDIAS} = require("../data/medias");
-const {MEDIA_NOT_FOUND, FILE_SYSTEM_ERROR} = require("../constants/reponseConstants");
 
 // Get user main image by id
 module.exports.getUserMainImageById = async (id) => {
@@ -10,7 +9,7 @@ module.exports.getUserMainImageById = async (id) => {
     // Response
     return needleData
         ? await imageToBytes(needleData.name)
-        : {status: false, message: MEDIA_NOT_FOUND}
+        : {status: false, message: "Media not found"}
 }
 
 // Get chatroom media image by id
@@ -20,7 +19,7 @@ module.exports.getChatroomImageById = async (chatroomId, id) => {
     // Response
     return needleData
         ? await imageToBytes(needleData.name)
-        : {status: false, message: MEDIA_NOT_FOUND}
+        : {status: false, message: "Media not found"}
 }
 
 // Add image into media using case id
@@ -40,7 +39,7 @@ module.exports.addImageByCaseId = async (caseId, filename) => {
 const imageToBytes = (imagePath) => {
     return new Promise((resolve) => {
         fs.readFile(`medias//${imagePath}`, function(error, data) {
-            if (error) resolve({status: false, message: FILE_SYSTEM_ERROR});
+            if (error) resolve({status: false, message: "File system error"});
             return resolve({status: true, data});
         });
     })
