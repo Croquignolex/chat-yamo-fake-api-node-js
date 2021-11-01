@@ -13,7 +13,7 @@ module.exports.getBackofficeUserByLogin = (login) => {
 // Get backoffice user by id
 module.exports.getBackofficeUserById = (id) => {
     // Search
-    const needleData = BACKOFFICE_USERS.find(backofficeUser => backofficeUser.id === id);
+    const needleData = BACKOFFICE_USERS.find(backofficeUser => backofficeUser.id.toString() === id.toString());
     // Response
     return needleData
         ? {status: true, data: needleData}

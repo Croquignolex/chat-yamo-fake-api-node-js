@@ -1,6 +1,5 @@
 const multer = require("multer");
 
-const {BAD_IMAGE_TYPE} = require("../constants/reponseConstants");
 const {generateRandomString} = require("../helpers/functionsHelper");
 
 // Store image
@@ -19,7 +18,7 @@ const imageFilter = function(req, file, callback) {
     // Accept jpg image files only
     if (['image/jpeg', 'image/jpeg'].includes(file.mimetype)) callback(null, true)
     else {
-        req.picture = BAD_IMAGE_TYPE;
+        req.picture = "Bad image type";
         callback(null, false);
     }
 };

@@ -30,22 +30,23 @@ module.exports.login = function(req, res) {
 
 // POST: Backoffice user password change
 module.exports.password = function(req, res) {
+    console.log("into this route")
     // Form data
     const {oldPassword, newPassword} = req.body;
     const backofficeUserId = req.params.backofficeUserId;
     // Form checker
-    if(oldPassword === newPassword) {
+    if(oldPassword !== newPassword) {
         if(formCheckerHelper.requiredChecker(oldPassword) && formCheckerHelper.requiredChecker(newPassword)) {
             // Fetch backoffice user by login
             const backofficeUserResponse = backofficeUsersHelper.getBackofficeUserById(backofficeUserId);
             if (backofficeUserResponse.status) {
                 const backofficeUserData = backofficeUserResponse.data;
                 // Check old password and password match
-                if (oldPassword !== backofficeUserData.password) {
+                if (oldPassword === backofficeUserData.password) {
                     // Response (mock data, update unavailable)
                     res.send({status: true, message: "password changed"});
                 } else res.status(400).send({message: "Old password error"});
             } else res.status(400).send({message: backofficeUserResponse.message});
         } else res.status(400).send({message: "Form data error"});
-    }
+    } else res.status(400).send({message: "New password must be different from old password"});
 };

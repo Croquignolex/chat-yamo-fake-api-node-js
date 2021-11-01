@@ -1,12 +1,11 @@
 const jwt = require('jsonwebtoken');
 
 const {TOKEN} = require('../constants/generalConstants');
-const {INVALID_TOKEN_ERROR, UNAUTHORIZED_REQUEST_ERROR} = require('../constants/reponseConstants');
 
 module.exports.tokenMiddleware = function(req, res, next) {
     // Check token existence
     const bearToken = req.header(TOKEN);
-    if(!bearToken) return res.status(401).send({message: UNAUTHORIZED_REQUEST_ERROR});
+    if(!bearToken) return res.status(401).send({message: "Unauthorized request error"});
 
     try {
         // Verify user token in header
@@ -15,6 +14,6 @@ module.exports.tokenMiddleware = function(req, res, next) {
         req.login = jwtData.login;
         next();
     } catch (e) {
-        res.status(401).send({message: INVALID_TOKEN_ERROR});
+        res.status(401).send({message: "Invalid token error"});
     }
 };
