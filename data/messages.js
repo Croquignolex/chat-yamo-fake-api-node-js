@@ -1,7 +1,7 @@
 module.exports.MESSAGES = [
     {
         messageId: 1,
-        userId: process.env.BACKOFFICE_USER_ID,
+        userId: 2,
         createdAt: new Date().getTime(),
         authorId: 2,
         content: 'Good morning team Chat&Yamo, i have an issue on my profile picture display.',
@@ -10,7 +10,7 @@ module.exports.MESSAGES = [
     },
     {
         messageId: 2,
-        userId: process.env.BACKOFFICE_USER_ID,
+        userId: 2,
         createdAt: new Date().getTime(),
         authorId: 2,
         content: '',
@@ -28,7 +28,7 @@ module.exports.MESSAGES = [
     },
     {
         messageId: 5,
-        userId: process.env.BACKOFFICE_USER_ID,
+        userId: 3,
         createdAt: new Date().getTime(),
         authorId: 3,
         content: "Hello, my name is Ema and i am new.",
@@ -37,7 +37,7 @@ module.exports.MESSAGES = [
     },
     {
         messageId: 6,
-        userId: process.env.BACKOFFICE_USER_ID,
+        userId: 4,
         createdAt: new Date().getTime(),
         authorId: 4,
         content: "Hey! some idiot came and suspend one of my match.",
@@ -55,7 +55,7 @@ module.exports.MESSAGES = [
     },
     {
         messageId: 8,
-        userId: process.env.BACKOFFICE_USER_ID,
+        userId: 4,
         createdAt: new Date().getTime(),
         authorId: 4,
         content: "Do what you want, stupid.",
@@ -64,7 +64,7 @@ module.exports.MESSAGES = [
     },
     {
         messageId: 9,
-        userId: process.env.BACKOFFICE_USER_ID,
+        userId: 5,
         createdAt: new Date().getTime(),
         authorId: 5,
         content: '',
@@ -73,7 +73,7 @@ module.exports.MESSAGES = [
     },
     {
         messageId: 10,
-        userId: process.env.BACKOFFICE_USER_ID,
+        userId: 5,
         createdAt: new Date().getTime(),
         authorId: 5,
         content: "Happy new year team. please i request your help on my profile image.",
@@ -82,7 +82,7 @@ module.exports.MESSAGES = [
     },
     {
         messageId: 11,
-        userId: process.env.BACKOFFICE_USER_ID,
+        userId: 5,
         createdAt: new Date().getTime(),
         authorId: 5,
         content: "I am an premium user but my account has been disabled for some reason related to my profile image.",
@@ -91,7 +91,7 @@ module.exports.MESSAGES = [
     },
     {
         messageId: 12,
-        userId: process.env.BACKOFFICE_USER_ID,
+        userId: 5,
         createdAt: new Date().getTime(),
         authorId: 5,
         content: "Please can you guys help me?.",
@@ -136,7 +136,7 @@ module.exports.MESSAGES = [
     },
     {
         messageId: 17,
-        userId: process.env.BACKOFFICE_USER_ID,
+        userId: 6,
         createdAt: new Date().getTime(),
         authorId: 6,
         content: "Checkout my fruits creation",
@@ -145,7 +145,7 @@ module.exports.MESSAGES = [
     },
     {
         messageId: 18,
-        userId: process.env.BACKOFFICE_USER_ID,
+        userId: 6,
         createdAt: new Date().getTime(),
         authorId: 6,
         content: '',
@@ -154,7 +154,7 @@ module.exports.MESSAGES = [
     },
     {
         messageId: 19,
-        userId: process.env.BACKOFFICE_USER_ID,
+        userId: 6,
         createdAt: new Date().getTime(),
         authorId: 6,
         content: '',
@@ -163,7 +163,7 @@ module.exports.MESSAGES = [
     },
     {
         messageId: 20,
-        userId: process.env.BACKOFFICE_USER_ID,
+        userId: 6,
         createdAt: new Date().getTime(),
         authorId: 6,
         content: '',
