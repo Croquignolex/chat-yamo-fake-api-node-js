@@ -5,7 +5,7 @@ const {TOKEN} = require('../constants/generalConstants');
 module.exports.tokenMiddleware = function(req, res, next) {
     // Check token existence
     const bearToken = req.header(TOKEN);
-    if(!bearToken) return res.status(401).send({message: "Unauthorized request error"});
+    if(!bearToken) return res.status(403).send({message: "Unauthorized request error"});
 
     try {
         // Verify user token in header
@@ -14,6 +14,6 @@ module.exports.tokenMiddleware = function(req, res, next) {
         req.login = jwtData.login;
         next();
     } catch (e) {
-        res.status(401).send({message: "Invalid token error"});
+        res.status(403).send({message: "Invalid token error"});
     }
 };
