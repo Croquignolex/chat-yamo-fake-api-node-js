@@ -137,7 +137,7 @@ module.exports.MESSAGES = [
     {
         messageId: 17,
         userId: 6,
-        createdAt: new Date().getTime(),
+        createdAt: new Date("December 17, 1995 03:24:00").getTime(),
         authorId: 6,
         content: "Checkout my fruits creation",
         caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
@@ -146,7 +146,7 @@ module.exports.MESSAGES = [
     {
         messageId: 18,
         userId: 6,
-        createdAt: new Date().getTime(),
+        createdAt: new Date("December 18, 1995 04:24:00").getTime(),
         authorId: 6,
         content: '',
         caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
@@ -155,7 +155,7 @@ module.exports.MESSAGES = [
     {
         messageId: 19,
         userId: 6,
-        createdAt: new Date().getTime(),
+        createdAt: new Date("December 18, 1995 04:30:00").getTime(),
         authorId: 6,
         content: '',
         caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
@@ -164,7 +164,7 @@ module.exports.MESSAGES = [
     {
         messageId: 20,
         userId: 6,
-        createdAt: new Date().getTime(),
+        createdAt: new Date("December 19, 1995 05:24:00").getTime(),
         authorId: 6,
         content: '',
         caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
@@ -173,7 +173,7 @@ module.exports.MESSAGES = [
     {
         messageId: 21,
         userId: 6,
-        createdAt: new Date().getTime(),
+        createdAt: new Date("December 22, 1995 06:24:00").getTime(),
         authorId: process.env.BACKOFFICE_USER_ID,
         content: "Your creations look sweet but are aware that this a love match app?",
         caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
