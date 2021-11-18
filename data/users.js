@@ -11,7 +11,8 @@ module.exports.USERS = [
         province: 'LITTORAL',
         homeCountry: 'CAMEROON',
         verified: true,
-        isPremium: true
+        isPremium: true,
+        subscriptionEnd: new Date("December 14, 2021 04:24:00").getTime()
     },
     {
         userId: 2,
@@ -25,7 +26,8 @@ module.exports.USERS = [
         province: 'CENTER',
         homeCountry: 'CAMEROON',
         verified: true,
-        isPremium: false
+        isPremium: false,
+        subscriptionEnd: ""
     },
     {
         userId: 3,
@@ -39,7 +41,8 @@ module.exports.USERS = [
         province: 'DJAMENA',
         homeCountry: 'TCHAD',
         verified: false,
-        isPremium: false
+        isPremium: false,
+        subscriptionEnd: ""
     },
     {
         userId: 4,
@@ -53,7 +56,8 @@ module.exports.USERS = [
         province: 'CASA',
         homeCountry: 'MOROCCO',
         verified: false,
-        isPremium: false
+        isPremium: false,
+        subscriptionEnd: ""
     },
     {
         userId: 5,
@@ -67,7 +71,8 @@ module.exports.USERS = [
         province: 'PARIS',
         homeCountry: 'FRANCE',
         verified: false,
-        isPremium: true
+        isPremium: true,
+        subscriptionEnd: new Date("December 20, 2020 04:24:00").getTime()
     },
     {
         userId: 6,
@@ -81,6 +86,7 @@ module.exports.USERS = [
         province: 'NEW YORK',
         homeCountry: 'USA',
         verified: true,
-        isPremium: true
+        isPremium: true,
+        subscriptionEnd: new Date("December 18, 2021 04:24:00").getTime()
     }
 ];
