@@ -71,4 +71,16 @@ module.exports.MEDIAS = [
         userId: '',
         caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
     },
+    {
+        mediaId: 13,
+        name: 'TLqQoePbE5untHsPRddegtepryQbT1of.jpg',
+        userId: 7,
+        caseId: ''
+    },
+    {
+        mediaId: 14,
+        name: 'LdUxNbFT45rzeBb6bvabkfZuF31uKivl.jpg',
+        userId: '',
+        caseId: `7:${process.env.BACKOFFICE_USER_ID}`,
+    },
 ];

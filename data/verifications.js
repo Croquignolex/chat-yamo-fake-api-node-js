@@ -2,7 +2,7 @@ module.exports.VERIFICATIONS = [
     {
         userId: 1,
         mediaPath: 2,
-        mediaId: 1,
+        mediaId: 13,
         compressedUrl: "",
         originalUrl: "",
     },
@@ -23,7 +23,7 @@ module.exports.VERIFICATIONS = [
     {
         userId: 1,
         mediaPath: 2,
-        mediaId: 4,
+        mediaId: 14,
         compressedUrl: "",
         originalUrl: "",
     },
@@ -37,7 +37,7 @@ module.exports.VERIFICATIONS = [
     {
         userId: 2,
         mediaPath: 2,
-        mediaId: 6,
+        mediaId: 13,
         compressedUrl: "",
         originalUrl: "",
     },
@@ -86,7 +86,7 @@ module.exports.VERIFICATIONS = [
     {
         userId: 4,
         mediaPath: 2,
-        mediaId: 1,
+        mediaId: 14,
         compressedUrl: "",
         originalUrl: "",
     },
@@ -135,7 +135,7 @@ module.exports.VERIFICATIONS = [
     {
         userId: 7,
         mediaPath: 2,
-        mediaId: 9,
+        mediaId: 14,
         compressedUrl: "",
         originalUrl: "",
     },
@@ -149,7 +149,7 @@ module.exports.VERIFICATIONS = [
     {
         userId: 7,
         mediaPath: 2,
-        mediaId: 4,
+        mediaId: 13,
         compressedUrl: "",
         originalUrl: "",
     },
