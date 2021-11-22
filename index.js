@@ -38,11 +38,13 @@ const mediaRoutes = require('./routes/media');
 const usersRoutes = require('./routes/users');
 const chatroomRoutes = require('./routes/chatroom');
 const feedbacksRoutes = require('./routes/feedbacks');
+const validationRoutes = require('./routes/validation');
 const backofficeUsersRoutes = require('./routes/backofficeUsers');
 
 // Setting general model route
 router.use(MEDIA_SERVICE_ROUTES_PATH, mediaRoutes);
 router.use(USERS_SERVICE_ROUTES_PATH, usersRoutes);
+router.use(MEDIA_SERVICE_ROUTES_PATH, validationRoutes);
 router.use(FEEDBACKS_SERVICE_ROUTES_PATH, chatroomRoutes);
 router.use(FEEDBACKS_SERVICE_ROUTES_PATH, feedbacksRoutes);
 router.use(BACKOFFICE_USERS_SERVICE_ROUTES_PATH, backofficeUsersRoutes);

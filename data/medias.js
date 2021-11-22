@@ -3,7 +3,7 @@ module.exports.MEDIAS = [
         mediaId: 1,
         name: 'QoeObEdegtepryQ5untHsPRdbTLqT1of.jpg',
         userId: 1,
-        caseId: ''
+        caseId: '',
     },
     {
         mediaId: 2,

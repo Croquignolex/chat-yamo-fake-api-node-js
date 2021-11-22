@@ -35,6 +35,24 @@ module.exports.addImageByCaseId = async (caseId, filename) => {
     return {status: true, data: {mediaId: MEDIAS.length, isVerified: false, tooMuchTextDetected: false}};
 }
 
+// Delete user image by id
+module.exports.deleteUserImageById = async (userId, id) => {
+    // Response
+    return {status: true, message: "Image deleted"};
+}
+
+// Delete user image by id
+module.exports.verifiedUserImageById = async (userId, id, mediaPath, verified) => {
+    // Response
+    return {status: true, message: "Image verification done"};
+}
+
+// Images for verification list
+module.exports.getImagesForVerification = async () => {
+    // Response
+    return {status: true, message: "Image verification done"};
+}
+
 // Convert image string into bytes
 const imageToBytes = (imagePath) => {
     return new Promise((resolve) => {
