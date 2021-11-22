@@ -1,6 +1,7 @@
 const fs = require("fs");
 
 const {MEDIAS} = require("../data/medias");
+const {VERIFICATIONS} = require("../data/verifications");
 
 // Get user main image by id
 module.exports.getUserMainImageById = async (id) => {
@@ -49,8 +50,7 @@ module.exports.verifiedUserImageById = async (userId, id, mediaPath, verified) =
 
 // Images for verification list
 module.exports.getImagesForVerification = async () => {
-    // Response
-    return {status: true, message: "Image verification done"};
+    return {status: true, data: VERIFICATIONS};
 }
 
 // Convert image string into bytes

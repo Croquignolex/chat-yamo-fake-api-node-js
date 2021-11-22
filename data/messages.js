@@ -197,4 +197,22 @@ module.exports.MESSAGES = [
         caseId: `1:${process.env.BACKOFFICE_USER_ID}`,
         mediaId: ''
     },
+    {
+        messageId: 24,
+        userId: 7,
+        createdAt: new Date().getTime(),
+        authorId: 7,
+        content: "This is the most quiet place, be ready for some mess",
+        caseId: `7:${process.env.BACKOFFICE_USER_ID}`,
+        mediaId: ''
+    },
+    {
+        messageId: 25,
+        userId: 7,
+        createdAt: new Date("December 28, 1995 06:24:00").getTime(),
+        authorId: process.env.BACKOFFICE_USER_ID,
+        content: "Please dont mess with this app",
+        caseId: `7:${process.env.BACKOFFICE_USER_ID}`,
+        mediaId: ''
+    },
 ];

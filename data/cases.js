@@ -57,5 +57,15 @@ module.exports.CASES = [
         mediaId: '',
         content: '',
         messageId: '',
+    },
+    {
+        caseId: `7:${process.env.BACKOFFICE_USER_ID}`,
+        userId: 7,
+        authorId: 7,
+        name: "",
+        createdAt: new Date().getTime(),
+        mediaId: '',
+        content: '',
+        messageId: '',
     }
 ];

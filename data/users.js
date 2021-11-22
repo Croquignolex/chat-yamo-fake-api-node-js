@@ -88,5 +88,20 @@ module.exports.USERS = [
         verified: true,
         isPremium: true,
         subscriptionEnd: new Date("December 18, 2021 04:24:00").getTime()
+    },
+    {
+        userId: 7,
+        name: 'Danger MAN',
+        age: 17,
+        gender: 'Male',
+        city: 'TOKYO',
+        country: 'JAPAN',
+        continent: 'ASIA',
+        greetingText: 'Welcome Danger',
+        province: 'TOKYO',
+        homeCountry: 'JAPAN',
+        verified: true,
+        isPremium: true,
+        subscriptionEnd: new Date("December 29, 2021 04:24:00").getTime()
     }
 ];
