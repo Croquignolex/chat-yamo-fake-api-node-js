@@ -22,7 +22,16 @@ module.exports.login = function(req, res) {
                     {expiresIn: "10h"}
                 );
                 // Response
-                res.send({entityId: backofficeUserData.id, userToken: token});
+                res.send({
+                    entityId: backofficeUserData.id,
+                    userToken: token,
+                    userDetails: {
+                        username: backofficeUserData.username,
+                        firstName: backofficeUserData.firstName,
+                        lastName: backofficeUserData.lastName,
+                        roles: []
+                    }
+                });
             } else res.status(400).send({message: "Auth error"});
         } else res.status(400).send({message: backofficeUserResponse.message});
     } else res.status(400).send({message: "Form data error"});
