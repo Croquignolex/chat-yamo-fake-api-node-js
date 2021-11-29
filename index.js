@@ -52,6 +52,9 @@ router.use(BACKOFFICE_USERS_SERVICE_ROUTES_PATH, backofficeUsersRoutes);
 // Append /api for our http requests
 app.use('/service', router);
 
+// For static files
+app.use('/medias', express.static('medias'));
+
 // Init server (for socket to listen)
 const server = http.createServer(app);
 
