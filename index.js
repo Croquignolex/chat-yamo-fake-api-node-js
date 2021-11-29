@@ -24,10 +24,9 @@ const router = express.Router();
 // Middleware
 const corsOptions = {
     // Authorized header to the client
-    allowedHeaders: "Accept,Content-Type,Accept-Charset,Authorization",
+    allowedHeaders: "*",
     optionsSuccessStatus: 200,
     methods: "GET,PUT,POST",
-    exposedHeaders: TOKEN,
     "origin": "*",
 };
 app.use(cors(corsOptions));
