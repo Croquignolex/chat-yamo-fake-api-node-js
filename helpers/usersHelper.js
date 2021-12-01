@@ -9,8 +9,13 @@ module.exports.getUsers = () => {
 module.exports.getUserById = (id) => {
     // Search
     const needleData = USERS.find(user => user.userId === parseInt(id));
+    if(needleData) {
+        const returnedUser = {
+            ...needleData,
+            userId: (needleData.name !== "chat_yamo_deleted_account") ? needleData.userId : ""
+        }
+        return {status: true, data: returnedUser}
+    }
     // Response
-    return needleData
-        ? {status: true, data: needleData}
-        : {status: false, message: "user nor found"}
+    return {status: false, message: "user nor found"};
 }
