@@ -26,7 +26,7 @@ const corsOptions = {
     // Authorized header to the client
     allowedHeaders: "*",
     optionsSuccessStatus: 200,
-    methods: "GET,PUT,POST",
+    methods: "GET,PUT,POST,DELETE",
     "origin": "*",
 };
 app.use(cors(corsOptions));
