@@ -1,0 +1,67 @@
+const baseUrl = `${process.env.APP_URL}/medias/`;
+
+module.exports.MEDIAS_URL = [
+    {
+        userId: 1,
+        main: true,
+        mediaId: 1,
+        verified: false,
+        mediaPath: "somevalue-path",
+        compressedUrl: `${baseUrl}QoeObEdegtepryQ5untHsPRdbTLqT1of.jpg`,
+        originalUrl: `${baseUrl}QoeObEdegtepryQ5untHsPRdbTLqT1of.jpg`,
+    },
+    {
+        userId: 2,
+        main: true,
+        mediaId: 2,
+        verified: false,
+        mediaPath: "somevalue-path",
+        compressedUrl: `${baseUrl}TLqQoeObE5untHsPRddegtepryQbT1of.jpg`,
+        originalUrl: `${baseUrl}TLqQoeObE5untHsPRddegtepryQbT1of.jpg`,
+    },
+    {
+        userId: 3,
+        main: true,
+        mediaId: 4,
+        verified: false,
+        mediaPath: "somevalue-path",
+        compressedUrl: `${baseUrl}QontHsPR1ofeObEdegtepdbTLqTryQ5u.jpg`,
+        originalUrl: `${baseUrl}QontHsPR1ofeObEdegtepdbTLqTryQ5u.jpg`,
+    },
+    {
+        userId: 4,
+        main: true,
+        mediaId: 5,
+        verified: false,
+        mediaPath: "somevalue-path",
+        compressedUrl: `${baseUrl}ObEdeQ5unQoebTLqTgttHsPRdepry1of.jpg`,
+        originalUrl: `${baseUrl}ObEdeQ5unQoebTLqTgttHsPRdepry1of.jpg`,
+    },
+    {
+        userId: 5,
+        main: true,
+        mediaId: 6,
+        verified: false,
+        mediaPath: "somevalue-path",
+        compressedUrl: `${baseUrl}PRd5unQoebTLqTgteprObEdeQtHsy1of.jpg`,
+        originalUrl: `${baseUrl}PRd5unQoebTLqTgteprObEdeQtHsy1of.jpg`,
+    },
+    {
+        userId: 6,
+        main: true,
+        mediaId: 9,
+        verified: false,
+        mediaPath: "somevalue-path",
+        compressedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
+        originalUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
+    },
+    {
+        userId: 7,
+        main: true,
+        mediaId: 13,
+        verified: false,
+        mediaPath: "somevalue-path",
+        compressedUrl: `${baseUrl}TLqQoePbE5untHsPRddegtepryQbT1of.jpg`,
+        originalUrl: `${baseUrl}TLqQoePbE5untHsPRddegtepryQbT1of.jpg`,
+    }
+];

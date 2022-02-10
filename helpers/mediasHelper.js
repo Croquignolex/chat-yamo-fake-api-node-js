@@ -1,6 +1,7 @@
 const fs = require("fs");
 
 const {MEDIAS} = require("../data/medias");
+const {MEDIAS_URL} = require("../data/mediasUrl");
 const {VERIFICATIONS} = require("../data/verifications");
 
 // Get user main image by id
@@ -10,6 +11,16 @@ module.exports.getUserMainImageById = async (id) => {
     // Response
     return needleData
         ? await imageToBytes(needleData.name)
+        : {status: false, message: "Media not found"}
+}
+
+// Get user main image url by id
+module.exports.getUserMainImageUrlById = async (id) => {
+    // Search
+    const needleData = MEDIAS_URL.find(media => (media.userId === parseInt(id)));
+    // Response
+    return needleData
+        ? needleData
         : {status: false, message: "Media not found"}
 }
 

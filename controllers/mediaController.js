@@ -1,4 +1,9 @@
-const {getUserMainImageById, addImageByCaseId, getChatroomImageById} = require("../helpers/mediasHelper");
+const {
+    addImageByCaseId,
+    getUserMainImageById,
+    getChatroomImageById,
+    getUserMainImageUrlById
+} = require("../helpers/mediasHelper");
 
 // GET: User main image
 module.exports.userMainImage = async function(req, res) {
@@ -6,6 +11,17 @@ module.exports.userMainImage = async function(req, res) {
     const {userId} = req.params;
     // Fetch user main image by id
     const imageResponse = await getUserMainImageById(userId);
+    // Response
+    if(imageResponse.status) res.send(imageResponse.data);
+    else res.status(400).send({message: imageResponse.message});
+};
+
+// GET: User main image url
+module.exports.userMainImageUrl = async function(req, res) {
+    // Params data
+    const {userId} = req.params;
+    // Fetch user main image by id
+    const imageResponse = await getUserMainImageUrlById(userId);
     // Response
     if(imageResponse.status) res.send(imageResponse.data);
     else res.status(400).send({message: imageResponse.message});
