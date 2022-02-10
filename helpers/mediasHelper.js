@@ -20,7 +20,7 @@ module.exports.getUserMainImageUrlById = async (id) => {
     const needleData = MEDIAS_URL.find(media => (media.userId === parseInt(id)));
     // Response
     return needleData
-        ? needleData
+        ? {status: true, data: needleData}
         : {status: false, message: "Media not found"}
 }
 
