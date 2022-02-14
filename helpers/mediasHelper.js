@@ -14,10 +14,10 @@ module.exports.getUserMainImageById = async (id) => {
         : {status: false, message: "Media not found"}
 }
 
-// Get user main image url by id
+// Get user main image url by id url
 module.exports.getUserMainImageUrlById = async (id) => {
     // Search
-    const needleData = MEDIAS_URL.find(media => (media.userId === parseInt(id)));
+    const needleData = MEDIAS_URL.find(media => (media.userId === parseInt(id)) && (media.caseId === ""));
     // Response
     return needleData
         ? {status: true, data: needleData}
@@ -31,6 +31,16 @@ module.exports.getChatroomImageById = async (chatroomId, id) => {
     // Response
     return needleData
         ? await imageToBytes(needleData.name)
+        : {status: false, message: "Media not found"}
+}
+
+// Get chatroom media image by id url
+module.exports.getChatroomImageUrlById = async (chatroomId, id) => {
+    // Search
+    const needleData = MEDIAS_URL.find(media => (media.mediaId === parseInt(id)) && (media.caseId === chatroomId));
+    // Response
+    return needleData
+        ? {status: true, data: needleData}
         : {status: false, message: "Media not found"}
 }
 

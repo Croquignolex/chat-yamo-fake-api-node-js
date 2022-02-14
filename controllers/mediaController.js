@@ -2,6 +2,7 @@ const {
     addImageByCaseId,
     getUserMainImageById,
     getChatroomImageById,
+    getChatroomImageUrlById,
     getUserMainImageUrlById
 } = require("../helpers/mediasHelper");
 
@@ -50,6 +51,17 @@ module.exports.chatroomImage = async function(req, res) {
     const {mediaId, chatroomId} = req.params;
     // Fetch user main image by id
     const imageResponse = await getChatroomImageById(chatroomId, mediaId);
+    // Response
+    if(imageResponse.status) res.send(imageResponse.data);
+    else res.status(400).send({message: imageResponse.message});
+};
+
+// GET: Chatroom media image by id url
+module.exports.chatroomImageUrl = async function(req, res) {
+    // Params data
+    const {mediaId, chatroomId} = req.params;
+    // Fetch user main image by id
+    const imageResponse = await getChatroomImageUrlById(chatroomId, mediaId);
     // Response
     if(imageResponse.status) res.send(imageResponse.data);
     else res.status(400).send({message: imageResponse.message});
