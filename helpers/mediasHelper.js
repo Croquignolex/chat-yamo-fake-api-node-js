@@ -46,15 +46,20 @@ module.exports.getChatroomImageUrlById = async (chatroomId, id) => {
 
 // Add image into media using case id
 module.exports.addImageByCaseId = async (caseId, filename) => {
+    const baseUrl = `${process.env.APP_URL}/medias/`;
     // Add media
-    MEDIAS.push({
-        mediaId: MEDIAS.length + 1,
-        name: filename,
+    MEDIAS_URL.push({
         userId: '',
-        caseId,
-    });
+        main: true,
+        mediaId: MEDIAS_URL.length + 1,
+        verified: false,
+        mediaPath: "somevalue-path",
+        compressedPreSignedUrl: `${baseUrl}${filename}`,
+        originalPreSignedUrl: `${baseUrl}${filename}`,
+        caseId
+    })
     // Response
-    return {status: true, data: {mediaId: MEDIAS.length, isVerified: false, tooMuchTextDetected: false}};
+    return {status: true, data: {mediaId: MEDIAS_URL.length, isVerified: false, tooMuchTextDetected: false}};
 }
 
 // Delete user image by id
