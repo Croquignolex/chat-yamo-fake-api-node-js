@@ -39,7 +39,6 @@ module.exports.login = function(req, res) {
 
 // POST: Backoffice user password change
 module.exports.password = function(req, res) {
-    console.log("into this route")
     // Form data
     const {oldPassword, newPassword} = req.body;
     const backofficeUserId = req.params.backofficeUserId;

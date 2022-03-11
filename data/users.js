@@ -12,6 +12,7 @@ module.exports.USERS = [
         homeCountry: 'CAMEROON',
         verified: true,
         isPremium: true,
+        phone: "691503072",
         subscriptionEnd: new Date("December 14, 2021 04:24:00").getTime()
     },
     {
@@ -27,6 +28,7 @@ module.exports.USERS = [
         homeCountry: 'CAMEROON',
         verified: true,
         isPremium: false,
+        email: "gpetitalex10@gmail.com",
         subscriptionEnd: ""
     },
     {
