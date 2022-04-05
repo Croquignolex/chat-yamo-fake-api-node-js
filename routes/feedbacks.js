@@ -4,7 +4,7 @@ const router = express.Router();
 const {tokenMiddleware} = require("../middlewares/accessTokenMiddleware");
 const {cases, userCaseMessages} = require('../controllers/feedbacksController');
 
-router.get('/cases/messages', tokenMiddleware, cases);
+router.get('/cases/messages/from', tokenMiddleware, cases);
 router.get('/:userId/case', tokenMiddleware, userCaseMessages);
 
 module.exports = router;

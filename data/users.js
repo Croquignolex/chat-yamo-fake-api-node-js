@@ -13,7 +13,12 @@ module.exports.USERS = [
         verified: true,
         isPremium: true,
         phone: "691503072",
-        subscriptionEnd: new Date("December 14, 2021 04:24:00").getTime()
+        subscriptionEnd: new Date("December 14, 2021 04:24:00").getTime(),
+        metadata: {
+            identifier: '691503072',
+            oldPhoneNumber: '691503072',
+            createdAt: new Date("December 14, 2021 04:24:00").getTime()
+        }
     },
     {
         userId: 2,
@@ -29,7 +34,12 @@ module.exports.USERS = [
         verified: true,
         isPremium: false,
         email: "gpetitalex10@gmail.com",
-        subscriptionEnd: ""
+        subscriptionEnd: "",
+        metadata: {
+            identifier: 'gpetitalex10@gmail.com',
+            oldPhoneNumber: '691503072',
+            createdAt: new Date("December 14, 2021 04:24:00").getTime()
+        }
     },
     {
         userId: 3,
@@ -44,7 +54,12 @@ module.exports.USERS = [
         homeCountry: 'TCHAD',
         verified: false,
         isPremium: false,
-        subscriptionEnd: ""
+        subscriptionEnd: "",
+        metadata: {
+            identifier: 'gpetitalex10@gmail.com',
+            oldPhoneNumber: '691503072',
+            createdAt: new Date("December 14, 2021 04:24:00").getTime()
+        }
     },
     {
         userId: 4,
@@ -59,7 +74,12 @@ module.exports.USERS = [
         homeCountry: '',
         verified: false,
         isPremium: false,
-        subscriptionEnd: ""
+        subscriptionEnd: "",
+        metadata: {
+            identifier: 'gpetitalex10@gmail.com',
+            oldPhoneNumber: '691503072',
+            createdAt: new Date("December 14, 2021 04:24:00").getTime()
+        }
     },
     {
         userId: 5,
@@ -74,7 +94,12 @@ module.exports.USERS = [
         homeCountry: 'FRANCE',
         verified: false,
         isPremium: true,
-        subscriptionEnd: new Date("December 20, 2020 04:24:00").getTime()
+        subscriptionEnd: new Date("December 20, 2020 04:24:00").getTime(),
+        metadata: {
+            identifier: 'gpetitalex10@gmail.com',
+            oldPhoneNumber: '691503072',
+            createdAt: new Date("December 14, 2021 04:24:00").getTime()
+        }
     },
     {
         userId: 6,
@@ -89,7 +114,12 @@ module.exports.USERS = [
         homeCountry: 'USA',
         verified: true,
         isPremium: true,
-        subscriptionEnd: new Date("December 18, 2021 04:24:00").getTime()
+        subscriptionEnd: new Date("December 18, 2021 04:24:00").getTime(),
+        metadata: {
+            identifier: 'gpetitalex10@gmail.com',
+            oldPhoneNumber: '691503072',
+            createdAt: new Date("December 14, 2021 04:24:00").getTime()
+        }
     },
     {
         userId: 7,
@@ -104,6 +134,11 @@ module.exports.USERS = [
         homeCountry: 'JAPAN',
         verified: true,
         isPremium: true,
-        subscriptionEnd: new Date("December 29, 2021 04:24:00").getTime()
+        subscriptionEnd: new Date("December 29, 2021 04:24:00").getTime(),
+        metadata: {
+            identifier: 'gpetitalex10@gmail.com',
+            oldPhoneNumber: '691503072',
+            createdAt: new Date("December 14, 2021 04:24:00").getTime()
+        }
     }
 ];

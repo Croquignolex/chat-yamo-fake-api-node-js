@@ -9,6 +9,7 @@ const {
     MEDIA_SERVICE_ROUTES_PATH,
     USERS_SERVICE_ROUTES_PATH,
     FEEDBACKS_SERVICE_ROUTES_PATH,
+    AUTHENTICATION_SERVICE_ROUTES_PATH,
     BACKOFFICE_USERS_SERVICE_ROUTES_PATH,
 } = require('./constants/pathConstants');
 
@@ -38,6 +39,7 @@ const usersRoutes = require('./routes/users');
 const chatroomRoutes = require('./routes/chatroom');
 const feedbacksRoutes = require('./routes/feedbacks');
 const validationRoutes = require('./routes/validation');
+const authenticationRoutes = require('./routes/authentication');
 const backofficeUsersRoutes = require('./routes/backofficeUsers');
 
 // Setting general model route
@@ -46,6 +48,7 @@ router.use(USERS_SERVICE_ROUTES_PATH, usersRoutes);
 router.use(MEDIA_SERVICE_ROUTES_PATH, validationRoutes);
 router.use(FEEDBACKS_SERVICE_ROUTES_PATH, chatroomRoutes);
 router.use(FEEDBACKS_SERVICE_ROUTES_PATH, feedbacksRoutes);
+router.use(AUTHENTICATION_SERVICE_ROUTES_PATH, authenticationRoutes);
 router.use(BACKOFFICE_USERS_SERVICE_ROUTES_PATH, backofficeUsersRoutes);
 
 // Append /api for our http requests
