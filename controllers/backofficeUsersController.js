@@ -29,7 +29,7 @@ module.exports.login = function(req, res) {
                         username: backofficeUserData.username,
                         firstName: backofficeUserData.firstName,
                         lastName: backofficeUserData.lastName,
-                        roles: []
+                        roles: backofficeUserData.roles
                     }
                 });
             } else res.status(400).send({message: "Auth error"});
