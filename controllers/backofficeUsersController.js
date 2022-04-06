@@ -59,11 +59,22 @@ module.exports.password = function(req, res) {
     } else res.status(400).send({message: "New password must be different from old password"});
 };
 
-// GET: Backoffice Users
+// GET: Backoffice users
 module.exports.backofficeUsers = function(req, res) {
     // Fetch backoffice users
     const backofficeUsersResponse = backofficeUsersHelper.getBackofficeUsers();
     // Response
     if(backofficeUsersResponse.status) res.send(backofficeUsersResponse.data);
     else res.status(400).send({message: backofficeUsersResponse.message});
+};
+
+// DELETE: Delete backoffice user
+module.exports.deleteBackofficeUser = async function(req, res) {
+    // Params data
+    const {userId} = req.params;
+    // Fetch user main image by id
+    const imageResponse = await backofficeUsersHelper.deleteBackofficeUser(userId);
+    // Response
+    if(imageResponse.status) res.send(imageResponse.data);
+    else res.status(400).send({message: imageResponse.message});
 };

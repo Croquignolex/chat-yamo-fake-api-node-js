@@ -24,3 +24,9 @@ module.exports.getBackofficeUserById = (id) => {
 module.exports.getBackofficeUsers = () => {
     return {status: true, data: BACKOFFICE_USERS};
 }
+
+// Delete user image by id
+module.exports.deleteBackofficeUser = async (userId) => {
+    // Response
+    return {status: true, message: "Backoffice user deleted"};
+}
