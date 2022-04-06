@@ -58,3 +58,12 @@ module.exports.password = function(req, res) {
         } else res.status(400).send({message: "Form data error"});
     } else res.status(400).send({message: "New password must be different from old password"});
 };
+
+// GET: Backoffice Users
+module.exports.backofficeUsers = function(req, res) {
+    // Fetch backoffice users
+    const backofficeUsersResponse = backofficeUsersHelper.getBackofficeUsers();
+    // Response
+    if(backofficeUsersResponse.status) res.send(backofficeUsersResponse.data);
+    else res.status(400).send({message: backofficeUsersResponse.message});
+};

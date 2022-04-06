@@ -19,3 +19,8 @@ module.exports.getBackofficeUserById = (id) => {
         ? {status: true, data: needleData}
         : {status: false, message: "Back office user nor found"}
 }
+
+// Get backoffice users
+module.exports.getBackofficeUsers = () => {
+    return {status: true, data: BACKOFFICE_USERS};
+}
