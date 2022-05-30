@@ -24,7 +24,8 @@ module.exports.MESSAGES = [
         authorId: process.env.BACKOFFICE_USER_ID,
         content: 'Hi Lili, please can you specify the issue you have on your profile picture display?',
         caseId: `2:${process.env.BACKOFFICE_USER_ID}`,
-        mediaId: ''
+        mediaId: '',
+		backofficeUserName: 'Croquy Yamo'
     },
     {
         messageId: 5,
@@ -51,7 +52,8 @@ module.exports.MESSAGES = [
         authorId: process.env.BACKOFFICE_USER_ID,
         content: "Hi, please be polite or we will be forced ti delete your account",
         caseId: `4:${process.env.BACKOFFICE_USER_ID}`,
-        mediaId: ''
+        mediaId: '',
+		backofficeUserName: 'Alex Toto'
     },
     {
         messageId: 8,
@@ -105,7 +107,8 @@ module.exports.MESSAGES = [
         authorId: process.env.BACKOFFICE_USER_ID,
         content: "happy new year Grace.",
         caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
-        mediaId: ''
+        mediaId: '',
+		backofficeUserName: 'Petit Oni'
     },
     {
         messageId: 14,
@@ -114,7 +117,8 @@ module.exports.MESSAGES = [
         authorId: process.env.BACKOFFICE_USER_ID,
         content: "Your profile image should like this exemple bellow.",
         caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
-        mediaId: ''
+        mediaId: '',
+		backofficeUserName: 'Papa Momo'
     },
     {
         messageId: 15,
@@ -123,7 +127,8 @@ module.exports.MESSAGES = [
         authorId: process.env.BACKOFFICE_USER_ID,
         content: '',
         caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
-        mediaId: 8
+        mediaId: 8,
+		backofficeUserName: 'Fanta Kelly'
     },
     {
         messageId: 16,
@@ -132,7 +137,8 @@ module.exports.MESSAGES = [
         authorId: process.env.BACKOFFICE_USER_ID,
         content: "Since only your mouth is visible on the picture, your account has been disable.",
         caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
-        mediaId: ''
+        mediaId: '',
+		backofficeUserName: 'CY'
     },
     {
         messageId: 17,
