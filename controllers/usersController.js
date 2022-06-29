@@ -1,5 +1,5 @@
 const formCheckerHelper = require("../helpers/formCheckerHelper");
-const {getUserById, getUserByEmailOrPhone, getUserMetadataById} = require("../helpers/usersHelper");
+const {getUserById, getUserByEmailOrPhone, getUserMetadataById, getUserSouscriptionsById} = require("../helpers/usersHelper");
 
 // GET: User profile details
 module.exports.details = function(req, res) {
@@ -18,6 +18,17 @@ module.exports.metadata = function(req, res) {
     const {userId} = req.params;
     // Fetch backoffice user by login
     const userResponse = getUserMetadataById(userId);
+    // Response
+    if(userResponse.status) res.send(userResponse.data);
+    else res.status(400).send({message: userResponse.message});
+};
+
+// GET: User souscription history
+module.exports.souscriptions = function(req, res) {
+    // Params data
+    const {userId} = req.params;
+    // Fetch backoffice user by login
+    const userResponse = getUserSouscriptionsById(userId);
     // Response
     if(userResponse.status) res.send(userResponse.data);
     else res.status(400).send({message: userResponse.message});

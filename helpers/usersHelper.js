@@ -31,6 +31,17 @@ module.exports.getUserMetadataById = (id) => {
     return {status: false, message: "user nor found"};
 }
 
+// Get user souscriptions by id
+module.exports.getUserSouscriptionsById = (id) => {
+    // Search
+    const needleData = USERS.find(user => user.userId === parseInt(id));
+    if(needleData) {
+        return {status: true, data: needleData?.souscriptions}
+    }
+    // Response
+    return {status: false, message: "user nor found"};
+}
+
 // Get user by phone or email
 module.exports.getUserByEmailOrPhone = (attr) => {
     // Search

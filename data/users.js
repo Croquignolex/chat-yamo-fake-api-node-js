@@ -18,7 +18,24 @@ module.exports.USERS = [
             identifier: '691503072',
             oldPhoneNumber: '691503072',
             createdAt: new Date("December 14, 2021 04:24:00").getTime()
-        }
+        },
+        souscriptions: [
+            {
+                subscriptionType: 'SOLO', 
+                subscriptionStart: new Date("December 14, 2021 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 24, 2021 04:24:00").getTime()
+            },
+            {
+                subscriptionType: 'PREMIUM', 
+                subscriptionStart: new Date("December 10, 2021 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 30, 2021 04:24:00").getTime()
+            },
+            {
+                subscriptionType: 'MuLTIPLE', 
+                subscriptionStart: new Date("December 04, 2021 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 14, 2021 04:24:00").getTime()
+            },
+        ]
     },
     {
         userId: 2,
@@ -39,7 +56,14 @@ module.exports.USERS = [
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
             createdAt: new Date("December 14, 2021 04:24:00").getTime()
-        }
+        },
+        souscriptions: [
+            {
+                subscriptionType: 'MuLTIPLE', 
+                subscriptionStart: new Date("December 04, 2020 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 14, 2020 04:24:00").getTime()
+            },
+        ]
     },
     {
         userId: 3,
@@ -59,7 +83,14 @@ module.exports.USERS = [
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
             createdAt: new Date("December 14, 2021 04:24:00").getTime()
-        }
+        },
+        souscriptions: [
+            {
+                subscriptionType: 'SOLO', 
+                subscriptionStart: new Date("December 14, 2021 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 15, 2021 04:24:00").getTime()
+            }
+        ]
     },
     {
         userId: 4,
@@ -79,7 +110,24 @@ module.exports.USERS = [
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
             createdAt: new Date("December 14, 2021 04:24:00").getTime()
-        }
+        },
+        souscriptions: [
+            {
+                subscriptionType: 'SOLO', 
+                subscriptionStart: new Date("December 03, 2020 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 04, 2020 04:24:00").getTime()
+            },
+            {
+                subscriptionType: 'PREMIUM', 
+                subscriptionStart: new Date("December 10, 2020 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 11, 2020 04:24:00").getTime()
+            },
+            {
+                subscriptionType: 'MuLTIPLE', 
+                subscriptionStart: new Date("December 04, 2020 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 05, 2020 04:24:00").getTime()
+            },
+        ]
     },
     {
         userId: 5,
@@ -99,7 +147,19 @@ module.exports.USERS = [
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
             createdAt: new Date("December 14, 2021 04:24:00").getTime()
-        }
+        },
+        souscriptions: [
+            {
+                subscriptionType: 'SOLO', 
+                subscriptionStart: new Date("December 19, 2021 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 31, 2021 04:24:00").getTime()
+            },
+            {
+                subscriptionType: 'MuLTIPLE', 
+                subscriptionStart: new Date("December 22, 2021 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 23, 2021 04:24:00").getTime()
+            },
+        ]
     },
     {
         userId: 6,
@@ -119,7 +179,19 @@ module.exports.USERS = [
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
             createdAt: new Date("December 14, 2021 04:24:00").getTime()
-        }
+        },
+        souscriptions: [
+            {
+                subscriptionType: 'SOLO', 
+                subscriptionStart: new Date("December 15, 2021 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 28, 2021 04:24:00").getTime()
+            },
+            {
+                subscriptionType: 'PREMIUM', 
+                subscriptionStart: new Date("December 01, 2021 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 22, 2021 04:24:00").getTime()
+            },
+        ]
     },
     {
         userId: 7,
@@ -139,6 +211,18 @@ module.exports.USERS = [
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
             createdAt: new Date("December 14, 2021 04:24:00").getTime()
-        }
+        },
+        souscriptions: [ 
+            {
+                subscriptionType: 'PREMIUM', 
+                subscriptionStart: new Date("December 08, 2021 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 22, 2021 04:24:00").getTime()
+            },
+            {
+                subscriptionType: 'MuLTIPLE', 
+                subscriptionStart: new Date("December 09, 2021 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 15, 2021 04:24:00").getTime()
+            },
+        ]
     }
 ];
