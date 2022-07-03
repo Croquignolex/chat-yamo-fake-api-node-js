@@ -47,3 +47,8 @@ module.exports.search = function(req, res) {
         else res.status(400).send({message: userResponse.message});
     } else res.status(400).send({message: "Form data error"});
 };
+
+// POST: Block user profile
+module.exports.block = function(req, res) { 
+    res.send({status: true, data: null});
+};
