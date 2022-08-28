@@ -1,6 +1,7 @@
 module.exports.USERS = [
     {
         userId: 1,
+        blocked: false,
         name: 'Alex MONKAM',
         age: 20,
         gender: 'Male',
@@ -40,6 +41,7 @@ module.exports.USERS = [
     {
         userId: 2,
         name: 'Lili NANA',
+        blocked: false,
         age: 18,
         gender: 'Female',
         city: 'YAOUNDE',
@@ -67,6 +69,7 @@ module.exports.USERS = [
     },
     {
         userId: 3,
+        blocked: true,
         name: 'Ema KONDE',
         age: 22,
         gender: 'Female',
@@ -94,6 +97,7 @@ module.exports.USERS = [
     },
     {
         userId: 4,
+        blocked: true,
         name: 'chat_yamo_deleted_account',
         age: 0,
         gender: '',
@@ -131,6 +135,7 @@ module.exports.USERS = [
     },
     {
         userId: 5,
+        blocked: false,
         name: 'Grace MINKO',
         age: 26,
         gender: 'Female',
@@ -163,6 +168,7 @@ module.exports.USERS = [
     },
     {
         userId: 6,
+        blocked: false,
         name: 'Sweet BEANS',
         age: 36,
         gender: 'Female',
@@ -195,6 +201,7 @@ module.exports.USERS = [
     },
     {
         userId: 7,
+        blocked: true,
         name: 'Danger MAN',
         age: 17,
         gender: 'Male',
