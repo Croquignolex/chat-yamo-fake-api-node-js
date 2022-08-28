@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const {metadata, block, souscriptions} = require('../controllers/usersController');
+const {metadata, block, blockState, souscriptions} = require('../controllers/usersController');
 const {tokenMiddleware} = require("../middlewares/accessTokenMiddleware");
 
 router.delete('/user/:userId/block', tokenMiddleware, block);
