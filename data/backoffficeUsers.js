@@ -7,16 +7,26 @@ module.exports.BACKOFFICE_USERS = [
         firstName: 'Croquignolex',
         lastName: 'Croquignolex',
         entityId: "1",
-        roles: ['admin', 'writer']
+        roles: ['admin', 'writer', 'reader', 'imagechecker', 'imageverifier']
     },
     {
         id: "2",
-        login: 'chat&yamo',
-        password: 'chat&yamo',
-        username: 'Chat&yamo@chat-yamo.com',
-        firstName: 'Chat&yamo',
+        login: 'checker',
+        password: 'checker',
+        username: 'checker@chat-yamo.com',
+        firstName: 'Checker',
         lastName: 'Chat&yamo',
         entityId: "2",
-        roles: ['writer']
+        roles: ['imagechecker']
+    },
+    {
+        id: "3",
+        login: 'verifier',
+        password: 'verifier',
+        username: 'verifier@chat-yamo.com',
+        firstName: 'Verifier',
+        lastName: 'Chat&yamo',
+        entityId: "3",
+        roles: ['imageverifier']
     }
 ];
