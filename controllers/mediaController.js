@@ -17,6 +17,11 @@ module.exports.userMainImage = async function(req, res) {
     else res.status(400).send({message: imageResponse.message});
 };
 
+// GET: Images to be verified count
+module.exports.imagesToBeVerifiedCount = async function(req, res) {
+    res.send({count: 25});
+};
+
 // GET: User main image url
 module.exports.userMainImageUrl = async function(req, res) {
     // Params data
