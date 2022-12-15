@@ -36,6 +36,18 @@ module.exports.USERS = [
                 subscriptionStart: new Date("December 04, 2021 04:24:00").getTime(), 
                 subscriptionEnd: new Date("December 14, 2021 04:24:00").getTime()
             },
+        ],
+        history: [
+            {
+                status: 'deleted',
+                note: "Exemple note 1",
+                createdAt: "2022-10-09 18:52"
+            },
+            {
+                status: 'bloqued',
+                note: "Exemple note 2",
+                createdAt: "2022-10-09 18:52"
+            },
         ]
     },
     {
@@ -65,6 +77,18 @@ module.exports.USERS = [
                 subscriptionStart: new Date("December 04, 2020 04:24:00").getTime(), 
                 subscriptionEnd: new Date("December 14, 2020 04:24:00").getTime()
             },
+        ],
+        history: [
+            {
+                status: 'deleted',
+                note: "Exemple note 1",
+                createdAt: "2022-10-09 18:52"
+            },
+            {
+                status: 'bloqued',
+                note: "Exemple note 2",
+                createdAt: "2022-10-09 18:52"
+            },
         ]
     },
     {
@@ -93,6 +117,18 @@ module.exports.USERS = [
                 subscriptionStart: new Date("December 14, 2021 04:24:00").getTime(), 
                 subscriptionEnd: new Date("December 15, 2021 04:24:00").getTime()
             }
+        ],
+        history: [
+            {
+                status: 'deleted',
+                note: "Exemple note 1",
+                createdAt: "2022-10-09 18:52"
+            },
+            {
+                status: 'bloqued',
+                note: "Exemple note 2",
+                createdAt: "2022-10-09 18:52"
+            },
         ]
     },
     {
@@ -131,6 +167,18 @@ module.exports.USERS = [
                 subscriptionStart: new Date("December 04, 2020 04:24:00").getTime(), 
                 subscriptionEnd: new Date("December 05, 2020 04:24:00").getTime()
             },
+        ],
+        history: [
+            {
+                status: 'deleted',
+                note: "Exemple note 1",
+                createdAt: "2022-10-09 18:52"
+            },
+            {
+                status: 'bloqued',
+                note: "Exemple note 2",
+                createdAt: "2022-10-09 18:52"
+            },
         ]
     },
     {
@@ -163,6 +211,18 @@ module.exports.USERS = [
                 subscriptionType: 'MuLTIPLE', 
                 subscriptionStart: new Date("December 22, 2021 04:24:00").getTime(), 
                 subscriptionEnd: new Date("December 23, 2021 04:24:00").getTime()
+            },
+        ],
+        history: [
+            {
+                status: 'deleted',
+                note: "Exemple note 1",
+                createdAt: "2022-10-09 18:52"
+            },
+            {
+                status: 'bloqued',
+                note: "Exemple note 2",
+                createdAt: "2022-10-09 18:52"
             },
         ]
     },
@@ -197,6 +257,18 @@ module.exports.USERS = [
                 subscriptionStart: new Date("December 01, 2021 04:24:00").getTime(), 
                 subscriptionEnd: new Date("December 22, 2021 04:24:00").getTime()
             },
+        ],
+        history: [
+            {
+                status: 'deleted',
+                note: "Exemple note 1",
+                createdAt: "2022-10-09 18:52"
+            },
+            {
+                status: 'bloqued',
+                note: "Exemple note 2",
+                createdAt: "2022-10-09 18:52"
+            },
         ]
     },
     {
@@ -229,6 +301,18 @@ module.exports.USERS = [
                 subscriptionType: 'MuLTIPLE', 
                 subscriptionStart: new Date("December 09, 2021 04:24:00").getTime(), 
                 subscriptionEnd: new Date("December 15, 2021 04:24:00").getTime()
+            },
+        ],
+        history: [
+            {
+                status: 'deleted',
+                note: "Exemple note 1",
+                createdAt: "2022-10-09 18:52"
+            },
+            {
+                status: 'bloqued',
+                note: "Exemple note 2",
+                createdAt: "2022-10-09 18:52"
             },
         ]
     }
