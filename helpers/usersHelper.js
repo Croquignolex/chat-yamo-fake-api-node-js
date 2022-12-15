@@ -47,7 +47,7 @@ module.exports.getUserStatusHistoryById = (id) => {
     // Search
     const needleData = USERS.find(user => user.userId === parseInt(id));
     if(needleData) {
-        return {status: true, data: needleData?.status}
+        return {status: true, data: needleData?.history}
     }
     // Response
     return {status: false, message: "user nor found"};

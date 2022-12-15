@@ -6,6 +6,7 @@ const {tokenMiddleware} = require("../middlewares/accessTokenMiddleware");
 const {userMainImage, uploadImage, chatroomImage, userMainImageUrl, chatroomImageUrl} = require('../controllers/mediaController');
 
 router.get('/users/:userId/medias/main', tokenMiddleware, userMainImage);
+router.get('/alltonote/:userId/medias/main', tokenMiddleware, userMainImage);
 router.get('/users/:userId/medias/main/info', tokenMiddleware, userMainImageUrl);
 router.get('/chatrooms/:chatroomId/medias/:mediaId', tokenMiddleware, chatroomImage);
 router.get('/chatrooms/:chatroomId/medias/:mediaId/info', tokenMiddleware, chatroomImageUrl);
