@@ -1,5 +1,6 @@
 const {
     addImageByCaseId,
+    getUserImagesById,
     getUserMainImageById,
     getChatroomImageById,
     getChatroomImageUrlById,
@@ -12,6 +13,17 @@ module.exports.userMainImage = async function(req, res) {
     const {userId} = req.params;
     // Fetch user main image by id
     const imageResponse = await getUserMainImageById(userId);
+    // Response
+    if(imageResponse.status) res.send(imageResponse.data);
+    else res.status(400).send({message: imageResponse.message});
+};
+
+// GET: User images
+module.exports.userImages = async function(req, res) {
+    // Params data
+    const {userId} = req.params;
+    // Fetch user main image by id
+    const imageResponse = await getUserImagesById(userId);
     // Response
     if(imageResponse.status) res.send(imageResponse.data);
     else res.status(400).send({message: imageResponse.message});

@@ -12,6 +12,16 @@ module.exports.MEDIAS_URL = [
         caseId: '',
     },
     {
+        userId: 1,
+        main: true,
+        mediaId: 2,
+        verified: true,
+        mediaPath: "somevalue-path",
+        compressedPreSignedUrl: `${baseUrl}TLqQoeObE5untHsPRddegtepryQbT1of.jpg`,
+        originalPreSignedUrl: `${baseUrl}TLqQoeObE5untHsPRddegtepryQbT1of.jpg`,
+        caseId: '',
+    },
+    {
         userId: 2,
         main: true,
         mediaId: 2,

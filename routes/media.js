@@ -4,6 +4,7 @@ const router = express.Router();
 const {mediaMiddleware} = require("../middlewares/mediaMiddleware");
 const {tokenMiddleware} = require("../middlewares/accessTokenMiddleware");
 const {
+    userImages,
     uploadImage,
     userMainImage,
     chatroomImage,
@@ -13,6 +14,7 @@ const {
     imagesToBeVerifiedCount
 } = require('../controllers/mediaController');
 
+router.get('/users/:userId/medias', tokenMiddleware, userImages);
 router.get('/users/:userId/medias/main', tokenMiddleware, userMainImage);
 router.get('/alltonote/:userId/medias/main', tokenMiddleware, userMainImage);
 router.get('/users/:userId/medias/main/info', tokenMiddleware, userMainImageUrl);

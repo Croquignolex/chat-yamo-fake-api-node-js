@@ -14,6 +14,16 @@ module.exports.getUserMainImageById = async (id) => {
         : {status: false, message: "Media not found"}
 }
 
+// Get user images by id
+module.exports.getUserImagesById = async (id) => {
+    // Search
+    const needleData = MEDIAS_URL.filter(media => (media.userId === parseInt(id)));
+    // Response
+    return needleData
+        ? {status: true, data: needleData}
+        : {status: false, message: "Media not found"}
+}
+
 // Get user main image url by id url
 module.exports.getUserMainImageUrlById = async (id) => {
     // Search
