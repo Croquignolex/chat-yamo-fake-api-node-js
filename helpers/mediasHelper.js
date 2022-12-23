@@ -73,13 +73,13 @@ module.exports.addImageByCaseId = async (caseId, filename) => {
 }
 
 // Delete user image by id
-module.exports.deleteUserImageById = async (userId, id) => {
+module.exports.deleteUserImageById = async () => {
     // Response
     return {status: true, message: "Image deleted"};
 }
 
 // Delete user image by id
-module.exports.verifiedUserImageById = async (userId, id, mediaPath, verified) => {
+module.exports.verifiedUserImageById = async () => {
     // Response
     return {status: true, message: "Image verification done"};
 }

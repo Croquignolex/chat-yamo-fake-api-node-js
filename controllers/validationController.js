@@ -13,10 +13,8 @@ module.exports.deleteUserImage = async function(req, res) {
 
 // PUT: Verify user image
 module.exports.verifyImage = async function(req, res) {
-    // Params data
-    const {userId, mediaId, mediaPath, verified} = req.params;
     // Fetch user main image by id
-    const imageResponse = await verifiedUserImageById(userId, mediaId, mediaPath, verified);
+    const imageResponse = await verifiedUserImageById();
     // Response
     if(imageResponse.status) res.send(imageResponse.data);
     else res.status(400).send({message: imageResponse.message});

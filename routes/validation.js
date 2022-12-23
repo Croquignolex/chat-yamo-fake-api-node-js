@@ -5,6 +5,7 @@ const {tokenMiddleware} = require("../middlewares/accessTokenMiddleware");
 const {deleteUserImage, imagesToBeVerified, verifyImage} = require('../controllers/validationController');
 
 router.get('/alltonote', tokenMiddleware, imagesToBeVerified);
+router.post('/users/:userId/medias/note', tokenMiddleware, verifyImage);
 router.get('/users/toBeNotedMedia', tokenMiddleware, imagesToBeVerified);
 router.get('/users/toBeVerifiedMedia', tokenMiddleware, imagesToBeVerified);
 router.get('/users/allToBeNotedMedias', tokenMiddleware, imagesToBeVerified);
