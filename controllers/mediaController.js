@@ -31,12 +31,12 @@ module.exports.userImages = async function(req, res) {
 
 // GET: Images to be verified count
 module.exports.imagesToBeVerifiedCount = async function(req, res) {
-    res.send({totalImagesToProcess: 25});
+    res.send();
 };
 
 // GET: Images verified count
 module.exports.imagesVerifiedCount = async function(req, res) {
-    res.send({count: 3});
+    res.send({count: 50});
 };
 
 // GET: User main image url

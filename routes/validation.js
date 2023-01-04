@@ -3,8 +3,9 @@ const router = express.Router();
 
 const {tokenMiddleware} = require("../middlewares/accessTokenMiddleware");
 const {deleteUserImage, imagesToBeVerified, verifyImage} = require('../controllers/validationController');
+const {imagesVerifiedCount} = require('../controllers/mediaController');
 
-router.get('/alltonote', tokenMiddleware, imagesToBeVerified);
+router.get('/alltonote', tokenMiddleware, imagesVerifiedCount);
 router.post('/users/:userId/medias/note', tokenMiddleware, verifyImage);
 router.get('/users/toBeNotedMedia', tokenMiddleware, imagesToBeVerified);
 router.get('/users/toBeVerifiedMedia', tokenMiddleware, imagesToBeVerified);
