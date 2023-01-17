@@ -7,7 +7,7 @@ module.exports.BACKOFFICE_USERS = [
         firstName: 'Croquignolex',
         lastName: 'Croquignolex',
         entityId: "1",
-        roles: ['admin', 'writer', 'reader', 'imagechecker', 'imageverifier']
+        roles: ['admin', 'writer', 'reader']
     },
     {
         id: "2",
