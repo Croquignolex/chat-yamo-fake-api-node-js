@@ -29,6 +29,11 @@ module.exports.metadata = function(req, res) {
     else res.status(400).send({message: userResponse.message});
 };
 
+// GET: User metadata details
+module.exports.status = function(req, res) {
+    res.send({deleted: false, blocked: false});
+};
+
 // GET: User souscription history
 module.exports.souscriptions = function(req, res) {
     // Params data
