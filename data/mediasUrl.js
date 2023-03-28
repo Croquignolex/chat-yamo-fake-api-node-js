@@ -81,7 +81,16 @@ module.exports.MEDIAS_URL = [
         originalPreSignedUrl: `${baseUrl}TLqQoePbE5untHsPRddegtepryQbT1of.jpg`,
         caseId: '',
     },
-
+	{
+        userId: 8,
+        main: true,
+        mediaId: 3,
+        verified: false,
+        mediaPath: "somevalue-path",
+        compressedPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
+        originalPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
+        caseId: '',
+    },
     {
         userId: '',
         main: true,

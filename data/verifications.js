@@ -43,12 +43,19 @@ module.exports.VERIFICATIONS = [
         compressedUrl: `${baseUrl}ObEdeQ5unQoebTLqTgttHsPRdepry1of.jpg`,
         originalUrl: `${baseUrl}ObEdeQ5unQoebTLqTgttHsPRdepry1of.jpg`,
     },
+	{
+        userId: 2,
+        mediaPath: 2,
+        mediaId: 13,
+        compressedUrl: `${baseUrl}ObEdeQ5unQoebTLqTgttHsPRdepry1of.jpg`,
+        originalUrl: `${baseUrl}ObEdeQ5unQoebTLqTgttHsPRdepry1of.jpg`,
+    },
     {
         userId: 2,
         mediaPath: 2,
-        mediaId: 7,
-        compressedUrl: `${baseUrl}PRd5unQoebTLqTgteprObEdeQtHsy1of.jpg`,
-        originalUrl: `${baseUrl}PRd5unQoebTLqTgteprObEdeQtHsy1of.jpg`,
+        mediaId: 10,
+        compressedUrl: `${baseUrl}RC37NXFbATKFWMgULxsIpZWbX8wjXeG3.jpg`,
+        originalUrl: `${baseUrl}RC37NXFbATKFWMgULxsIpZWbX8wjXeG3.jpg`,
     },
     {
         userId: 3,
@@ -73,6 +80,13 @@ module.exports.VERIFICATIONS = [
     },
     {
         userId: 7,
+        mediaPath: 2,
+        mediaId: 11,
+        compressedUrl: `${baseUrl}TLqQoeObE5untHsPRddegtepryQbT1of.jpg`,
+        originalUrl: `${baseUrl}TLqQoeObE5untHsPRddegtepryQbT1of.jpg`,
+    },
+	{
+        userId: 4,
         mediaPath: 2,
         mediaId: 11,
         compressedUrl: `${baseUrl}TLqQoeObE5untHsPRddegtepryQbT1of.jpg`,
@@ -150,6 +164,20 @@ module.exports.VERIFICATIONS = [
     },
     {
         userId: 7,
+        mediaPath: 2,
+        mediaId: 13,
+        compressedUrl: null,
+        originalUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
+    },
+	{
+        userId: "EMPTY_USER_ID",
+        mediaPath: 2,
+        mediaId: 13,
+        compressedUrl: null,
+        originalUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
+    },
+	{
+        userId: 8,
         mediaPath: 2,
         mediaId: 13,
         compressedUrl: null,

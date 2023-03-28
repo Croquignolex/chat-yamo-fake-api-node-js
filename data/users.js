@@ -323,5 +323,51 @@ module.exports.USERS = [
                 createdAt: "2022-10-09 18:52"
             },
         ]
+    },
+	{
+        userId: 8,
+        blocked: true,
+        name: 'chat_yamo_deleted_account',
+        status: {deleted: false, blocked: false},
+        age: 17,
+        gender: 'Male',
+        city: 'TOKYO',
+        country: 'JAPAN',
+        continent: 'ASIA',
+        greetingText: 'Welcome Danger',
+        province: 'TOKYO',
+        homeCountry: 'JAPAN',
+        verified: true,
+        isPremium: true,
+        subscriptionEnd: new Date("December 29, 2021 04:24:00").getTime(),
+        metadata: {
+            identifier: 'gpetitalex10@gmail.com',
+            oldPhoneNumber: '691503072',
+            createdAt: new Date("December 14, 2021 04:24:00").getTime()
+        },
+        souscriptions: [ 
+            {
+                subscriptionType: 'PREMIUM', 
+                subscriptionStart: new Date("December 08, 2021 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 22, 2021 04:24:00").getTime()
+            },
+            {
+                subscriptionType: 'MuLTIPLE', 
+                subscriptionStart: new Date("December 09, 2021 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 15, 2021 04:24:00").getTime()
+            },
+        ],
+        history: [
+            {
+                status: 'deleted',
+                note: "Exemple note 1",
+                createdAt: "2022-10-09 18:52"
+            },
+            {
+                status: 'bloqued',
+                note: "Exemple note 2",
+                createdAt: "2022-10-09 18:52"
+            },
+        ]
     }
 ];
