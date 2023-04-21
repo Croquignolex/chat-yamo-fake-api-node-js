@@ -2,6 +2,7 @@ module.exports.CASES = [
     {
         caseId: `2:${process.env.BACKOFFICE_USER_ID}`,
         userId: 2,
+		authorId: process.env.BACKOFFICE_USER_ID,
         name: "",
         createdAt: new Date().getTime(),
         mediaId: '',
@@ -41,7 +42,7 @@ module.exports.CASES = [
     {
         caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
         userId: 5,
-        authorId: 5,
+        authorId: process.env.BACKOFFICE_USER_ID,
         name: "",
         createdAt: new Date().getTime(),
         mediaId: '',
@@ -51,7 +52,7 @@ module.exports.CASES = [
     {
         caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
         userId: 6,
-        authorId: 6,
+        authorId: process.env.BACKOFFICE_USER_ID,
         name: "",
         createdAt: new Date().getTime(),
         mediaId: '',
