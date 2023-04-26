@@ -1,6 +1,5 @@
 const {getCaseByUserIdWithMessages, getCases} = require("../helpers/casesHelper");
 const formCheckerHelper = require("../helpers/formCheckerHelper");
-const {getUserByEmailOrPhone} = require("../helpers/usersHelper");
 
 // GET: User case with messages
 module.exports.userCaseMessages = function(req, res) {
@@ -38,11 +37,12 @@ module.exports.roles = function(req, res) {
             "imageverifier",
             "admin",
             "writer",
+            "reader",
             "imagechecker",
             "userlistviewer",
             "subcriptionactivator"
         ]
     };
-    res.send({status: true, data});
+    res.send(data);
 };
 
