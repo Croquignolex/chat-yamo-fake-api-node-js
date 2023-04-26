@@ -32,4 +32,17 @@ module.exports.report = function(req, res) {
     } else res.status(400).send({message: "Form data error"});
 };
 
+module.exports.roles = function(req, res) {
+    const data = {
+        roles: [
+            "imageverifier",
+            "admin",
+            "writer",
+            "imagechecker",
+            "userlistviewer",
+            "subcriptionactivator"
+        ]
+    };
+    res.send({status: true, data});
+};
 
