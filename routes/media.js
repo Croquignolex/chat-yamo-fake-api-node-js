@@ -6,6 +6,7 @@ const {tokenMiddleware} = require("../middlewares/accessTokenMiddleware");
 const {
     userImages,
     uploadImage,
+    uploadVideo,
     userMainImage,
     chatroomImage,
     userMainImageUrl,
@@ -23,5 +24,6 @@ router.get('/users/:backofficeUserId/allnoted', tokenMiddleware, imagesVerifiedC
 router.post('/users/:backofficeUserId/noted', tokenMiddleware, imagesToBeVerifiedCount);
 router.get('/chatrooms/:chatroomId/medias/:mediaId/info', tokenMiddleware, chatroomImageUrl);
 router.put('/chatrooms/:chatroomId/medias', [mediaMiddleware, tokenMiddleware], uploadImage);
+router.put('/chatrooms/:chatroomId/audios', [mediaMiddleware, tokenMiddleware], uploadVideo);
 
 module.exports = router;

@@ -9,16 +9,17 @@ const imageStorage = multer.diskStorage({
         callback(null, dir);
     },
     filename: (req, file, callback) => {
-        callback(null, generateRandomString() + '.jpg');
+        callback(null, generateRandomString());
+        // callback(null, generateRandomString() + '.jpg');
     }
 });
 
 // Image filter type
 const imageFilter = function(req, file, callback) {
     // Accept jpg image files only
-    if (['image/jpeg', 'image/jpeg'].includes(file.mimetype)) callback(null, true)
+    if (['image/jpg', 'image/jpeg', 'image/png', 'video/mp4', 'video/webm', 'video/x-msvideo'].includes(file.mimetype)) callback(null, true)
     else {
-        req.picture = "Bad image type";
+        req.media = "Bad media type";
         callback(null, false);
     }
 };

@@ -1,5 +1,5 @@
 const {
-    addImageByCaseId,
+    addMediaByCaseId,
     getUserImagesById,
     getUserMainImageById,
     getChatroomImageById,
@@ -53,19 +53,34 @@ module.exports.userMainImageUrl = async function(req, res) {
 // POST: Upload an image from a chatroom
 module.exports.uploadImage = async function(req, res) {
     // File data from multer (error management)
-    const pictureError = req.picture;
-    if(pictureError) res.status(415).send({message: pictureError});
+    const mediaError = req.media;
+    if(mediaError) res.status(415).send({message: mediaError});
     if(!req.file) res.status(400).send({message: "Form data error"});
     const {filename} = req.file;
     // Params data
     const {chatroomId} = req.params;
-    // Add image into media by case id
-    const imageResponse = await addImageByCaseId(chatroomId, filename);
+    // Add media into media by case id
+    const mediaResponse = await addMediaByCaseId(chatroomId, filename);
     // Response
-    if(imageResponse.status) res.send(imageResponse.data);
-    else res.status(400).send({message: imageResponse.message});
+    if(mediaResponse.status) res.send(mediaResponse.data);
+    else res.status(400).send({message: mediaResponse.message});
 };
 
+// POST: Upload a video from a chatroom
+module.exports.uploadVideo = async function(req, res) {
+    // File data from multer (error management)
+    const mediaError = req.media;
+    if(mediaError) res.status(415).send({message: mediaError});
+    if(!req.file) res.status(400).send({message: "Form data error"});
+    const {filename} = req.file;
+    // Params data
+    const {chatroomId} = req.params;
+    // Add media into media by case id
+    const mediaResponse = await addMediaByCaseId(chatroomId, filename);
+    // Response
+    if(mediaResponse.status) res.send(mediaResponse.data);
+    else res.status(400).send({message: mediaResponse.message});
+};
 
 // GET: Chatroom media image by id
 module.exports.chatroomImage = async function(req, res) {

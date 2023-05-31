@@ -54,8 +54,8 @@ module.exports.getChatroomImageUrlById = async (chatroomId, id) => {
         : {status: false, message: "Media not found"}
 }
 
-// Add image into media using case id
-module.exports.addImageByCaseId = async (caseId, filename) => {
+// Add media into media using case id
+module.exports.addMediaByCaseId = async (caseId, filename) => {
     const baseUrl = `${process.env.APP_URL}/medias/`;
     // Add media
     MEDIAS_URL.push({
