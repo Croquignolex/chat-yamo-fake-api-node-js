@@ -103,3 +103,8 @@ module.exports.chatroomImageUrl = async function(req, res) {
     if(imageResponse.status) res.send(imageResponse.data);
     else res.status(400).send({message: imageResponse.message});
 };
+
+// GET: User metadata details
+module.exports.identity = function(req, res) {
+    res.send({userId: '', identityVerified: false});
+};

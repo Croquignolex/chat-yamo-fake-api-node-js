@@ -7,10 +7,11 @@ module.exports.newMessage = function(req, res) {
     const receiverId = req.params.userId;
     const sendId = req.params.backofficeUserid;
     // Form data
-    const {feedbackText, mediaId} = req.body;
-    if(requiredChecker(feedbackText) || requiredChecker(mediaId)) {
+    const {feedbackText, mediaId, videoId} = req.body;
+    const media = videoId || mediaId;
+    if(requiredChecker(feedbackText) || requiredChecker(media)) {
         // Add message
-        const userResponse = addMessage(sendId, receiverId, feedbackText, mediaId);
+        const userResponse = addMessage(sendId, receiverId, feedbackText, media);
         // Response
         if(userResponse.status) res.send();
         else res.status(400).send({message: userResponse.message});
