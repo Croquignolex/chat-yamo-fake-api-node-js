@@ -1,7 +1,7 @@
 const {MESSAGES} = require("../data/messages");
 
 // Add message
-module.exports.addMessage = (senderId, receiverId, content, mediaId) => {
+module.exports.addMessage = (senderId, receiverId, content, mediaId, videoId) => {
     // Check if the backend user is there
     if([senderId, receiverId].includes(process.env.BACKOFFICE_USER_ID)) {
         // Extract useful data
@@ -23,7 +23,8 @@ module.exports.addMessage = (senderId, receiverId, content, mediaId) => {
             authorId,
             content,
             caseId,
-            mediaId
+            mediaId,
+            videoId
         })
         return {status: true};
     }

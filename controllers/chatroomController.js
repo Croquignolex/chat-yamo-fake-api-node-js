@@ -8,12 +8,9 @@ module.exports.newMessage = function(req, res) {
     const sendId = req.params.backofficeUserid;
     // Form data
     const {feedbackText, mediaId, videoId} = req.body;
-    const media = videoId || mediaId;
-    if(requiredChecker(feedbackText) || requiredChecker(media)) {
-        // Add message
-        const userResponse = addMessage(sendId, receiverId, feedbackText, media);
-        // Response
-        if(userResponse.status) res.send();
-        else res.status(400).send({message: userResponse.message});
-    } else res.status(400).send({message: "Form data error"});
+    // Add message
+    const userResponse = addMessage(sendId, receiverId, feedbackText, mediaId, videoId);
+    // Response
+    if(userResponse.status) res.send();
+    else res.status(400).send({message: userResponse.message});
 };
