@@ -19,6 +19,11 @@ module.exports.userMainImage = async function(req, res) {
 };
 
 // GET: User images
+module.exports.suspiciousState = async function(req, res) {
+    res.send(false)
+};
+
+// GET: User images
 module.exports.userImages = async function(req, res) {
     // Params data
     const {userId} = req.params;
