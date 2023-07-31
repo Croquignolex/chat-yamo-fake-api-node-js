@@ -85,3 +85,21 @@ module.exports.blockState = function(req, res) {
     if(userResponse.status) res.send(userResponse.data);
     else res.status(400).send({message: userResponse.message});
 };
+
+// GET: User metadata details
+module.exports.appData = function(req, res) {
+    res.send({
+        status : 'Available',
+        deviceType : "Iphone",
+        languageCode : 'EN',
+        appVersion : '10.23.6',
+        release : 'R-251',
+        sdkInt : '5935',
+        manufacturer : 'Apple',
+        model : 'Iphone Xs Mas',
+        hardware : 'Iphone Pro',
+        device : 'Iphone',
+        deviceConsistentId : '26354651654566',
+        deviceCountryIsoCode : 'CM',
+    });
+};

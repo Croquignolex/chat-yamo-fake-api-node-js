@@ -4,11 +4,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 // Constants
-const {TOKEN} = require('./constants/generalConstants');
 const {
     MEDIA_SERVICE_ROUTES_PATH,
     USERS_SERVICE_ROUTES_PATH,
     FEEDBACKS_SERVICE_ROUTES_PATH,
+    NOTIFICATION_SERVICE_ROUTES_PATH,
     AUTHENTICATION_SERVICE_ROUTES_PATH,
     BACKOFFICE_USERS_SERVICE_ROUTES_PATH,
 } = require('./constants/pathConstants');
@@ -39,6 +39,7 @@ const usersRoutes = require('./routes/users');
 const chatroomRoutes = require('./routes/chatroom');
 const feedbacksRoutes = require('./routes/feedbacks');
 const validationRoutes = require('./routes/validation');
+const notificationRoutes = require('./routes/notification');
 const authenticationRoutes = require('./routes/authentication');
 const backofficeUsersRoutes = require('./routes/backofficeUsers');
 
@@ -48,6 +49,7 @@ router.use(USERS_SERVICE_ROUTES_PATH, usersRoutes);
 router.use(MEDIA_SERVICE_ROUTES_PATH, validationRoutes);
 router.use(FEEDBACKS_SERVICE_ROUTES_PATH, chatroomRoutes);
 router.use(FEEDBACKS_SERVICE_ROUTES_PATH, feedbacksRoutes);
+router.use(NOTIFICATION_SERVICE_ROUTES_PATH, notificationRoutes);
 router.use(AUTHENTICATION_SERVICE_ROUTES_PATH, authenticationRoutes);
 router.use(BACKOFFICE_USERS_SERVICE_ROUTES_PATH, backofficeUsersRoutes);
 

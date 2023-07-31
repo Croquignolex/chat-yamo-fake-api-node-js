@@ -111,5 +111,5 @@ module.exports.chatroomImageUrl = async function(req, res) {
 
 // GET: User metadata details
 module.exports.identity = function(req, res) {
-    res.send({userId: '', identityVerified: false});
+    res.send({userId: '', identityVerified: true});
 };
