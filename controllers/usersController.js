@@ -34,6 +34,11 @@ module.exports.status = function(req, res) {
     res.send({deleted: false, blocked: false});
 };
 
+// GET: User metadata details
+module.exports.exportCVS = function(req, res) {
+    res.send();
+};
+
 // GET: User souscription history
 module.exports.souscriptions = function(req, res) {
     // Params data
