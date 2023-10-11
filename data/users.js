@@ -19,6 +19,7 @@ module.exports.USERS = [
         metadata: {
             identifier: '691503072',
             oldPhoneNumber: '691503072',
+            accountCreationDate: '2020-10-03',
             createdAt: new Date("December 14, 2021 04:24:00").getTime()
         },
         souscriptions: [
@@ -71,6 +72,7 @@ module.exports.USERS = [
         metadata: {
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
+            accountCreationDate: '2020-10-03',
             createdAt: new Date("December 14, 2021 04:24:00").getTime()
         },
         souscriptions: [
@@ -112,6 +114,7 @@ module.exports.USERS = [
         metadata: {
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
+            accountCreationDate: '2020-10-03',
             createdAt: new Date("December 14, 2021 04:24:00").getTime()
         },
         souscriptions: [
@@ -154,6 +157,7 @@ module.exports.USERS = [
         metadata: {
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
+            accountCreationDate: '2020-10-03',
             createdAt: new Date("December 14, 2021 04:24:00").getTime()
         },
         souscriptions: [
@@ -205,6 +209,7 @@ module.exports.USERS = [
         metadata: {
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
+            accountCreationDate: '2020-10-03',
             createdAt: new Date("December 14, 2021 04:24:00").getTime()
         },
         souscriptions: [
@@ -251,6 +256,7 @@ module.exports.USERS = [
         metadata: {
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
+            accountCreationDate: '2020-10-03',
             createdAt: new Date("December 14, 2021 04:24:00").getTime()
         },
         souscriptions: [
@@ -297,6 +303,7 @@ module.exports.USERS = [
         metadata: {
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
+            accountCreationDate: '2020-10-03',
             createdAt: new Date("December 14, 2021 04:24:00").getTime()
         },
         souscriptions: [ 
@@ -343,6 +350,7 @@ module.exports.USERS = [
         metadata: {
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
+            accountCreationDate: '2020-10-03',
             createdAt: new Date("December 14, 2021 04:24:00").getTime()
         },
         souscriptions: [ 

@@ -11,6 +11,7 @@ const {
     NOTIFICATION_SERVICE_ROUTES_PATH,
     AUTHENTICATION_SERVICE_ROUTES_PATH,
     BACKOFFICE_USERS_SERVICE_ROUTES_PATH,
+    CHATROOM_SERVICE_ROUTES_PATH
 } = require('./constants/pathConstants');
 
 // .env config
@@ -37,6 +38,7 @@ app.use(bodyParser.json());
 const mediaRoutes = require('./routes/media');
 const usersRoutes = require('./routes/users');
 const chatroomRoutes = require('./routes/chatroom');
+const chatroom2Routes = require('./routes/chatroom2');
 const feedbacksRoutes = require('./routes/feedbacks');
 const validationRoutes = require('./routes/validation');
 const notificationRoutes = require('./routes/notification');
@@ -48,6 +50,7 @@ router.use(MEDIA_SERVICE_ROUTES_PATH, mediaRoutes);
 router.use(USERS_SERVICE_ROUTES_PATH, usersRoutes);
 router.use(MEDIA_SERVICE_ROUTES_PATH, validationRoutes);
 router.use(FEEDBACKS_SERVICE_ROUTES_PATH, chatroomRoutes);
+router.use(CHATROOM_SERVICE_ROUTES_PATH, chatroom2Routes);
 router.use(FEEDBACKS_SERVICE_ROUTES_PATH, feedbacksRoutes);
 router.use(NOTIFICATION_SERVICE_ROUTES_PATH, notificationRoutes);
 router.use(AUTHENTICATION_SERVICE_ROUTES_PATH, authenticationRoutes);

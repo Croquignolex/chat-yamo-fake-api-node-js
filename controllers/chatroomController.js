@@ -14,3 +14,7 @@ module.exports.newMessage = function(req, res) {
     if(userResponse.status) res.send();
     else res.status(400).send({message: userResponse.message});
 };
+
+module.exports.freeChatroomState = function(req, res) {
+    res.send({userId: 1, count: 3});
+};
