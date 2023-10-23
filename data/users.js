@@ -15,28 +15,28 @@ module.exports.USERS = [
         verified: true,
         isPremium: true,
         phone: "691503072",
-        subscriptionEnd: new Date("December 14, 2021 04:24:00").getTime(),
+        subscriptionEnd: new Date("December 14, 2023 04:24:00").getTime(),
         metadata: {
             identifier: '691503072',
             oldPhoneNumber: '691503072',
             accountCreationDate: '2020-10-03',
-            createdAt: new Date("December 14, 2021 04:24:00").getTime()
+            createdAt: new Date("December 14, 2023 04:24:00").getTime()
         },
         souscriptions: [
             {
                 subscriptionType: 'SOLO', 
-                subscriptionStart: new Date("December 14, 2021 04:24:00").getTime(), 
-                subscriptionEnd: new Date("December 24, 2021 04:24:00").getTime()
+                subscriptionStart: new Date("December 14, 2023 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 24, 2023 04:24:00").getTime()
             },
             {
                 subscriptionType: 'PREMIUM', 
-                subscriptionStart: new Date("December 10, 2021 04:24:00").getTime(), 
-                subscriptionEnd: new Date("December 30, 2021 04:24:00").getTime()
+                subscriptionStart: new Date("December 10, 2023 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 30, 2023 04:24:00").getTime()
             },
             {
                 subscriptionType: 'MuLTIPLE', 
-                subscriptionStart: new Date("December 04, 2021 04:24:00").getTime(), 
-                subscriptionEnd: new Date("December 14, 2021 04:24:00").getTime()
+                subscriptionStart: new Date("December 04, 2023 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 14, 2023 04:24:00").getTime()
             },
         ],
         history: [
@@ -73,7 +73,7 @@ module.exports.USERS = [
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
             accountCreationDate: '2020-10-03',
-            createdAt: new Date("December 14, 2021 04:24:00").getTime()
+            createdAt: new Date("December 14, 2023 04:24:00").getTime()
         },
         souscriptions: [
             {
@@ -115,13 +115,13 @@ module.exports.USERS = [
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
             accountCreationDate: '2020-10-03',
-            createdAt: new Date("December 14, 2021 04:24:00").getTime()
+            createdAt: new Date("December 14, 2023 04:24:00").getTime()
         },
         souscriptions: [
             {
                 subscriptionType: 'SOLO', 
-                subscriptionStart: new Date("December 14, 2021 04:24:00").getTime(), 
-                subscriptionEnd: new Date("December 15, 2021 04:24:00").getTime()
+                subscriptionStart: new Date("December 14, 2023 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 15, 2023 04:24:00").getTime()
             }
         ],
         history: [
@@ -158,7 +158,7 @@ module.exports.USERS = [
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
             accountCreationDate: '2020-10-03',
-            createdAt: new Date("December 14, 2021 04:24:00").getTime()
+            createdAt: new Date("December 14, 2023 04:24:00").getTime()
         },
         souscriptions: [
             {
@@ -210,18 +210,18 @@ module.exports.USERS = [
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
             accountCreationDate: '2020-10-03',
-            createdAt: new Date("December 14, 2021 04:24:00").getTime()
+            createdAt: new Date("December 14, 2023 04:24:00").getTime()
         },
         souscriptions: [
             {
                 subscriptionType: 'SOLO', 
-                subscriptionStart: new Date("December 19, 2021 04:24:00").getTime(), 
-                subscriptionEnd: new Date("December 31, 2021 04:24:00").getTime()
+                subscriptionStart: new Date("December 19, 2023 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 31, 2023 04:24:00").getTime()
             },
             {
                 subscriptionType: 'MuLTIPLE', 
-                subscriptionStart: new Date("December 22, 2021 04:24:00").getTime(), 
-                subscriptionEnd: new Date("December 23, 2021 04:24:00").getTime()
+                subscriptionStart: new Date("December 22, 2023 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 23, 2023 04:24:00").getTime()
             },
         ],
         history: [
@@ -252,23 +252,23 @@ module.exports.USERS = [
         homeCountry: 'USA',
         verified: true,
         isPremium: true,
-        subscriptionEnd: new Date("December 18, 2021 04:24:00").getTime(),
+        subscriptionEnd: new Date("December 18, 2023 04:24:00").getTime(),
         metadata: {
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
             accountCreationDate: '2020-10-03',
-            createdAt: new Date("December 14, 2021 04:24:00").getTime()
+            createdAt: new Date("December 14, 2023 04:24:00").getTime()
         },
         souscriptions: [
             {
                 subscriptionType: 'SOLO', 
-                subscriptionStart: new Date("December 15, 2021 04:24:00").getTime(), 
-                subscriptionEnd: new Date("December 28, 2021 04:24:00").getTime()
+                subscriptionStart: new Date("December 15, 2023 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 28, 2023 04:24:00").getTime()
             },
             {
                 subscriptionType: 'PREMIUM', 
-                subscriptionStart: new Date("December 01, 2021 04:24:00").getTime(), 
-                subscriptionEnd: new Date("December 22, 2021 04:24:00").getTime()
+                subscriptionStart: new Date("December 01, 2023 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 22, 2023 04:24:00").getTime()
             },
         ],
         history: [
@@ -299,23 +299,23 @@ module.exports.USERS = [
         homeCountry: 'JAPAN',
         verified: true,
         isPremium: true,
-        subscriptionEnd: new Date("December 29, 2021 04:24:00").getTime(),
+        subscriptionEnd: new Date("December 29, 2023 04:24:00").getTime(),
         metadata: {
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
             accountCreationDate: '2020-10-03',
-            createdAt: new Date("December 14, 2021 04:24:00").getTime()
+            createdAt: new Date("December 14, 2023 04:24:00").getTime()
         },
         souscriptions: [ 
             {
                 subscriptionType: 'PREMIUM', 
-                subscriptionStart: new Date("December 08, 2021 04:24:00").getTime(), 
-                subscriptionEnd: new Date("December 22, 2021 04:24:00").getTime()
+                subscriptionStart: new Date("December 08, 2023 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 22, 2023 04:24:00").getTime()
             },
             {
                 subscriptionType: 'MuLTIPLE', 
-                subscriptionStart: new Date("December 09, 2021 04:24:00").getTime(), 
-                subscriptionEnd: new Date("December 15, 2021 04:24:00").getTime()
+                subscriptionStart: new Date("December 09, 2023 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 15, 2023 04:24:00").getTime()
             },
         ],
         history: [
@@ -346,23 +346,23 @@ module.exports.USERS = [
         homeCountry: 'JAPAN',
         verified: true,
         isPremium: true,
-        subscriptionEnd: new Date("December 29, 2021 04:24:00").getTime(),
+        subscriptionEnd: new Date("December 29, 2023 04:24:00").getTime(),
         metadata: {
             identifier: 'gpetitalex10@gmail.com',
             oldPhoneNumber: '691503072',
             accountCreationDate: '2020-10-03',
-            createdAt: new Date("December 14, 2021 04:24:00").getTime()
+            createdAt: new Date("December 14, 2023 04:24:00").getTime()
         },
         souscriptions: [ 
             {
                 subscriptionType: 'PREMIUM', 
-                subscriptionStart: new Date("December 08, 2021 04:24:00").getTime(), 
-                subscriptionEnd: new Date("December 22, 2021 04:24:00").getTime()
+                subscriptionStart: new Date("December 08, 2023 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 22, 2023 04:24:00").getTime()
             },
             {
                 subscriptionType: 'MuLTIPLE', 
-                subscriptionStart: new Date("December 09, 2021 04:24:00").getTime(), 
-                subscriptionEnd: new Date("December 15, 2021 04:24:00").getTime()
+                subscriptionStart: new Date("December 09, 2023 04:24:00").getTime(), 
+                subscriptionEnd: new Date("December 15, 2023 04:24:00").getTime()
             },
         ],
         history: [
