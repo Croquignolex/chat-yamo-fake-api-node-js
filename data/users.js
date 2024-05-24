@@ -9,7 +9,7 @@ module.exports.USERS = [
         city: 'DOUALA',
         country: 'CAMEROON',
         continent: 'AFRICA',
-        greetingText: 'Welcome Alex',
+        greetingText: 'Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex Welcome Alex ',
         province: 'LITTORAL',
         homeCountry: 'CAMEROON',
         verified: true,
