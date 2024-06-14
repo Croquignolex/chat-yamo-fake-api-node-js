@@ -14,10 +14,12 @@ const {
     userMainImageUrl,
     chatroomImageUrl,
     imagesVerifiedCount,
+    mediasscore,
     imagesToBeVerifiedCount
 } = require('../controllers/mediaController');
 
 router.get('/users/:userId/medias', tokenMiddleware, userImages);
+router.get('/users/:userId/mediasscore', tokenMiddleware, mediasscore);
 router.get('/users/:userId/medias/main', tokenMiddleware, userMainImage);
 router.get('/users/:userId/identityVerification', tokenMiddleware, identity);
 router.get('/alltonote/:userId/medias/main', tokenMiddleware, userMainImage);

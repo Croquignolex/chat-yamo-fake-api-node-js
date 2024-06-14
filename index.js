@@ -11,7 +11,8 @@ const {
     NOTIFICATION_SERVICE_ROUTES_PATH,
     AUTHENTICATION_SERVICE_ROUTES_PATH,
     BACKOFFICE_USERS_SERVICE_ROUTES_PATH,
-    CHATROOM_SERVICE_ROUTES_PATH
+    CHATROOM_SERVICE_ROUTES_PATH,
+    PROPOSAL_SERVICE_ROUTES_PATH
 } = require('./constants/pathConstants');
 
 // .env config
@@ -44,6 +45,7 @@ const validationRoutes = require('./routes/validation');
 const notificationRoutes = require('./routes/notification');
 const authenticationRoutes = require('./routes/authentication');
 const backofficeUsersRoutes = require('./routes/backofficeUsers');
+const proposalRoutes = require('./routes/proposal');
 
 // Setting general model route
 router.use(MEDIA_SERVICE_ROUTES_PATH, mediaRoutes);
@@ -51,6 +53,7 @@ router.use(USERS_SERVICE_ROUTES_PATH, usersRoutes);
 router.use(MEDIA_SERVICE_ROUTES_PATH, validationRoutes);
 router.use(FEEDBACKS_SERVICE_ROUTES_PATH, chatroomRoutes);
 router.use(CHATROOM_SERVICE_ROUTES_PATH, chatroom2Routes);
+router.use(PROPOSAL_SERVICE_ROUTES_PATH, proposalRoutes);
 router.use(FEEDBACKS_SERVICE_ROUTES_PATH, feedbacksRoutes);
 router.use(NOTIFICATION_SERVICE_ROUTES_PATH, notificationRoutes);
 router.use(AUTHENTICATION_SERVICE_ROUTES_PATH, authenticationRoutes);

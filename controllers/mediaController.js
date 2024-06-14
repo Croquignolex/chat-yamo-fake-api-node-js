@@ -34,6 +34,10 @@ module.exports.userImages = async function(req, res) {
     else res.status(400).send({message: imageResponse.message});
 };
 
+module.exports.mediasscore = async function(req, res) {
+    res.send([{mediaId: 1, score: 5}]);
+};
+
 // GET: Images to be verified count
 module.exports.imagesToBeVerifiedCount = async function(req, res) {
     res.send();
