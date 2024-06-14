@@ -9,6 +9,7 @@ module.exports.MEDIAS_URL = [
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}QoeObEdegtepryQ5untHsPRdbTLqT1of.jpg`,
         originalPreSignedUrl: `${baseUrl}QoeObEdegtepryQ5untHsPRdbTLqT1of.jpg`,
+        enhancedPreSignedUrl: `${baseUrl}QoeObEdegtepryQ5untHsPRdbTLqT1of.jpg`,
         caseId: '',
     },
     {
@@ -19,6 +20,7 @@ module.exports.MEDIAS_URL = [
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}TLqQoeObE5untHsPRddegtepryQbT1of.jpg`,
         originalPreSignedUrl: `${baseUrl}TLqQoeObE5untHsPRddegtepryQbT1of.jpg`,
+        enhancedPreSignedUrl: `${baseUrl}TLqQoeObE5untHsPRddegtepryQbT1of.jpg`,
         caseId: '',
     },
     {
@@ -29,6 +31,7 @@ module.exports.MEDIAS_URL = [
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}TLqQoeObE5untHsPRddegtepryQbT1of.jpg`,
         originalPreSignedUrl: `${baseUrl}TLqQoeObE5untHsPRddegtepryQbT1of.jpg`,
+        enhancedPreSignedUrl: `${baseUrl}TLqQoeObE5untHsPRddegtepryQbT1of.jpg`,
         caseId: '',
     },
     {
@@ -39,6 +42,7 @@ module.exports.MEDIAS_URL = [
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}QontHsPR1ofeObEdegtepdbTLqTryQ5u.jpg`,
         originalPreSignedUrl: `${baseUrl}QontHsPR1ofeObEdegtepdbTLqTryQ5u.jpg`,
+        enhancedPreSignedUrl: `${baseUrl}QontHsPR1ofeObEdegtepdbTLqTryQ5u.jpg`,
         caseId: '',
     },
     {
@@ -49,6 +53,7 @@ module.exports.MEDIAS_URL = [
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}ObEdeQ5unQoebTLqTgttHsPRdepry1of.jpg`,
         originalPreSignedUrl: `${baseUrl}ObEdeQ5unQoebTLqTgttHsPRdepry1of.jpg`,
+        enhancedPreSignedUrl: `${baseUrl}ObEdeQ5unQoebTLqTgttHsPRdepry1of.jpg`,
         caseId: '',
     },
     {
@@ -59,6 +64,7 @@ module.exports.MEDIAS_URL = [
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}PRd5unQoebTLqTgteprObEdeQtHsy1of.jpg`,
         originalPreSignedUrl: `${baseUrl}PRd5unQoebTLqTgteprObEdeQtHsy1of.jpg`,
+        enhancedPreSignedUrl: `${baseUrl}PRd5unQoebTLqTgteprObEdeQtHsy1of.jpg`,
         caseId: '',
     },
     {
@@ -69,6 +75,7 @@ module.exports.MEDIAS_URL = [
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
         originalPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
+        enhancedPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
         caseId: '',
     },
     {
@@ -79,6 +86,7 @@ module.exports.MEDIAS_URL = [
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}TLqQoePbE5untHsPRddegtepryQbT1of.jpg`,
         originalPreSignedUrl: `${baseUrl}TLqQoePbE5untHsPRddegtepryQbT1of.jpg`,
+        enhancedPreSignedUrl: `${baseUrl}TLqQoePbE5untHsPRddegtepryQbT1of.jpg`,
         caseId: '',
     },
 	{
@@ -89,6 +97,7 @@ module.exports.MEDIAS_URL = [
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
         originalPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
+        enhancedPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
         caseId: '',
     },
     {
@@ -99,6 +108,7 @@ module.exports.MEDIAS_URL = [
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
         originalPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
+        enhancedPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
         caseId: `2:${process.env.BACKOFFICE_USER_ID}`,
     },
     {
@@ -109,6 +119,7 @@ module.exports.MEDIAS_URL = [
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}ZKLdivTjvaF31ubkfzeBlUxxrNbFb6bu.jpg`,
         originalPreSignedUrl: `${baseUrl}ZKLdivTjvaF31ubkfzeBlUxxrNbFb6bu.jpg`,
+        enhancedPreSignedUrl: `${baseUrl}ZKLdivTjvaF31ubkfzeBlUxxrNbFb6bu.jpg`,
         caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
     },
     {
@@ -119,6 +130,7 @@ module.exports.MEDIAS_URL = [
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}UxxrzeBb6buF31uNbFTjvabkfZKLdivl.jpg`,
         originalPreSignedUrl: `${baseUrl}UxxrzeBb6buF31uNbFTjvabkfZKLdivl.jpg`,
+        enhancedPreSignedUrl: `${baseUrl}UxxrzeBb6buF31uNbFTjvabkfZKLdivl.jpg`,
         caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
     },
     {
@@ -129,6 +141,7 @@ module.exports.MEDIAS_URL = [
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}ZKLUx1uixrzeBbNbFTjvabkfd6buF3vl.jpg`,
         originalPreSignedUrl: `${baseUrl}ZKLUx1uixrzeBbNbFTjvabkfd6buF3vl.jpg`,
+        enhancedPreSignedUrl: `${baseUrl}ZKLUx1uixrzeBbNbFTjvabkfd6buF3vl.jpg`,
         caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
     },
     {
@@ -139,6 +152,7 @@ module.exports.MEDIAS_URL = [
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}KLdiUxzeBb6buF31uNbFTjvabkfZxrvl.jpg`,
         originalPreSignedUrl: `${baseUrl}KLdiUxzeBb6buF31uNbFTjvabkfZxrvl.jpg`,
+        enhancedPreSignedUrl: `${baseUrl}KLdiUxzeBb6buF31uNbFTjvabkfZxrvl.jpg`,
         caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
     },
     {
@@ -149,6 +163,7 @@ module.exports.MEDIAS_URL = [
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}LdUxNbFTjxrzeBb6bvabkfZuF31uKivl.jpg`,
         originalPreSignedUrl: `${baseUrl}LdUxNbFTjxrzeBb6bvabkfZuF31uKivl.jpg`,
+        enhancedPreSignedUrl: `${baseUrl}LdUxNbFTjxrzeBb6bvabkfZuF31uKivl.jpg`,
         caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
     },
     {
@@ -159,6 +174,7 @@ module.exports.MEDIAS_URL = [
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}LdUxNbFT45rzeBb6bvabkfZuF31uKivl.jpg`,
         originalPreSignedUrl: `${baseUrl}LdUxNbFT45rzeBb6bvabkfZuF31uKivl.jpg`,
+        enhancedPreSignedUrl: `${baseUrl}LdUxNbFT45rzeBb6bvabkfZuF31uKivl.jpg`,
         caseId: `7:${process.env.BACKOFFICE_USER_ID}`,
     }
 ];

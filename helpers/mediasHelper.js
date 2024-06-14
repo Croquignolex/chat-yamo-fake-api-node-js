@@ -66,6 +66,7 @@ module.exports.addMediaByCaseId = async (caseId, filename) => {
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}${filename}`,
         originalPreSignedUrl: `${baseUrl}${filename}`,
+        enhancedPreSignedUrl: `${baseUrl}${filename}`,
         caseId
     })
     // Response
