@@ -74,8 +74,8 @@ module.exports.MEDIAS_URL = [
         verified: false,
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
-        originalPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
-        enhancedPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
+        originalPreSignedUrl: `https://duoqfv8zwvfy2.cloudfront.net/d702c6e0-e562-3895-9298-a156bd8a7bb0_93620d32-63bf-3ee2-9ef4-8b0cdc825cae/ffe6a6dd-a336-48be-afb5-623549d6e188`,
+        enhancedPreSignedUrl: `https://duoqfv8zwvfy2.cloudfront.net/d702c6e0-e562-3895-9298-a156bd8a7bb0_93620d32-63bf-3ee2-9ef4-8b0cdc825cae/ffe6a6dd-a336-48be-afb5-623549d6e188`,
         caseId: '',
     },
     {
@@ -96,8 +96,8 @@ module.exports.MEDIAS_URL = [
         verified: false,
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
-        originalPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
-        enhancedPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
+        originalPreSignedUrl: `https://duoqfv8zwvfy2.cloudfront.net/d702c6e0-e562-3895-9298-a156bd8a7bb0_93620d32-63bf-3ee2-9ef4-8b0cdc825cae/ffe6a6dd-a336-48be-afb5-623549d6e188`,
+        enhancedPreSignedUrl: `https://duoqfv8zwvfy2.cloudfront.net/d702c6e0-e562-3895-9298-a156bd8a7bb0_93620d32-63bf-3ee2-9ef4-8b0cdc825cae/ffe6a6dd-a336-48be-afb5-623549d6e188`,
         caseId: '',
     },
     {
@@ -107,8 +107,8 @@ module.exports.MEDIAS_URL = [
         verified: false,
         mediaPath: "somevalue-path",
         compressedPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
-        originalPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
-        enhancedPreSignedUrl: `${baseUrl}F31ubkfZKLdivlUxxrNbFTjvazeBb6bu.jpg`,
+        originalPreSignedUrl: `https://duoqfv8zwvfy2.cloudfront.net/d702c6e0-e562-3895-9298-a156bd8a7bb0_93620d32-63bf-3ee2-9ef4-8b0cdc825cae/ffe6a6dd-a336-48be-afb5-623549d6e188`,
+        enhancedPreSignedUrl: `https://duoqfv8zwvfy2.cloudfront.net/d702c6e0-e562-3895-9298-a156bd8a7bb0_93620d32-63bf-3ee2-9ef4-8b0cdc825cae/ffe6a6dd-a336-48be-afb5-623549d6e188`,
         caseId: `2:${process.env.BACKOFFICE_USER_ID}`,
     },
     {
