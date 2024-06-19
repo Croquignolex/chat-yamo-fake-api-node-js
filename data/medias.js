@@ -89,4 +89,10 @@ module.exports.MEDIAS = [
         userId: 8,
         caseId: `8:${process.env.BACKOFFICE_USER_ID}`,
     },
+    {
+        mediaId: 16,
+        name: '6KLdivTjvaF31ubkfzeBlUxxttbFb6b0.mp4',
+        userId: 5,
+        caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
+    },
 ];

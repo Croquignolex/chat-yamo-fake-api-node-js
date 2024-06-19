@@ -141,6 +141,17 @@ module.exports.MESSAGES = [
 		backofficeUserName: 'CY'
     },
     {
+        messageId: 160,
+        userId: 5,
+        createdAt: new Date().getTime(),
+        authorId: process.env.BACKOFFICE_USER_ID,
+        content: "",
+        caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
+        mediaId: "",
+        videoId: 16,
+        backofficeUserName: 'CY'
+    },
+    {
         messageId: 17,
         userId: 6,
         createdAt: new Date("December 17, 1995 03:24:00").getTime(),

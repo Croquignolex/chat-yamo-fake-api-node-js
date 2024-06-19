@@ -176,5 +176,17 @@ module.exports.MEDIAS_URL = [
         originalPreSignedUrl: `${baseUrl}LdUxNbFT45rzeBb6bvabkfZuF31uKivl.jpg`,
         enhancedPreSignedUrl: `${baseUrl}LdUxNbFT45rzeBb6bvabkfZuF31uKivl.jpg`,
         caseId: `7:${process.env.BACKOFFICE_USER_ID}`,
+    },
+    {
+        userId: 5,
+        main: true,
+        mediaId: "",
+        videoId: 16,
+        verified: false,
+        mediaPath: "somevalue-path",
+        compressedPreSignedUrl: `${baseUrl}6KLdivTjvaF31ubkfzeBlUxxttbFb6b0.mp4`,
+        originalPreSignedUrl: `${baseUrl}6KLdivTjvaF31ubkfzeBlUxxttbFb6b0.mp4`,
+        enhancedPreSignedUrl: `${baseUrl}6KLdivTjvaF31ubkfzeBlUxxttbFb6b0.mp4`,
+        caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
     }
 ];

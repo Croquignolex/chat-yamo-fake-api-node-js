@@ -47,7 +47,7 @@ module.exports.getChatroomImageById = async (chatroomId, id) => {
 // Get chatroom media image by id url
 module.exports.getChatroomImageUrlById = async (chatroomId, id) => {
     // Search
-    const needleData = MEDIAS_URL.find(media => (media.mediaId === parseInt(id)) && (media.caseId === chatroomId));
+    const needleData = MEDIAS_URL.find(media => (media.mediaId === parseInt(id) || media.videoId === parseInt(id)) && (media.caseId === chatroomId));
     // Response
     return needleData
         ? {status: true, data: needleData}
