@@ -11,6 +11,7 @@ module.exports.MEDIAS_URL = [
         originalPreSignedUrl: `${baseUrl}QoeObEdegtepryQ5untHsPRdbTLqT1of.jpg`,
         enhancedPreSignedUrl: `${baseUrl}QoeObEdegtepryQ5untHsPRdbTLqT1of.jpg`,
         caseId: '',
+        isVideo: false
     },
     {
         userId: 1,
@@ -22,6 +23,7 @@ module.exports.MEDIAS_URL = [
         originalPreSignedUrl: `${baseUrl}TLqQoeObE5untHsPRddegtepryQbT1of.jpg`,
         enhancedPreSignedUrl: `${baseUrl}TLqQoeObE5untHsPRddegtepryQbT1of.jpg`,
         caseId: '',
+        isVideo: false
     },
     {
         userId: 2,
@@ -33,6 +35,7 @@ module.exports.MEDIAS_URL = [
         originalPreSignedUrl: `${baseUrl}TLqQoeObE5untHsPRddegtepryQbT1of.jpg`,
         enhancedPreSignedUrl: `${baseUrl}TLqQoeObE5untHsPRddegtepryQbT1of.jpg`,
         caseId: '',
+        isVideo: false
     },
     {
         userId: 3,
@@ -44,6 +47,7 @@ module.exports.MEDIAS_URL = [
         originalPreSignedUrl: `${baseUrl}QontHsPR1ofeObEdegtepdbTLqTryQ5u.jpg`,
         enhancedPreSignedUrl: `${baseUrl}QontHsPR1ofeObEdegtepdbTLqTryQ5u.jpg`,
         caseId: '',
+        isVideo: false
     },
     {
         userId: 4,
@@ -55,6 +59,7 @@ module.exports.MEDIAS_URL = [
         originalPreSignedUrl: `${baseUrl}ObEdeQ5unQoebTLqTgttHsPRdepry1of.jpg`,
         enhancedPreSignedUrl: `${baseUrl}ObEdeQ5unQoebTLqTgttHsPRdepry1of.jpg`,
         caseId: '',
+        isVideo: false
     },
     {
         userId: 5,
@@ -66,6 +71,7 @@ module.exports.MEDIAS_URL = [
         originalPreSignedUrl: `${baseUrl}PRd5unQoebTLqTgteprObEdeQtHsy1of.jpg`,
         enhancedPreSignedUrl: `${baseUrl}PRd5unQoebTLqTgteprObEdeQtHsy1of.jpg`,
         caseId: '',
+        isVideo: false
     },
     {
         userId: 6,
@@ -77,6 +83,7 @@ module.exports.MEDIAS_URL = [
         originalPreSignedUrl: `https://duoqfv8zwvfy2.cloudfront.net/d702c6e0-e562-3895-9298-a156bd8a7bb0_93620d32-63bf-3ee2-9ef4-8b0cdc825cae/ffe6a6dd-a336-48be-afb5-623549d6e188`,
         enhancedPreSignedUrl: `https://duoqfv8zwvfy2.cloudfront.net/d702c6e0-e562-3895-9298-a156bd8a7bb0_93620d32-63bf-3ee2-9ef4-8b0cdc825cae/ffe6a6dd-a336-48be-afb5-623549d6e188`,
         caseId: '',
+        isVideo: false
     },
     {
         userId: 7,
@@ -88,6 +95,7 @@ module.exports.MEDIAS_URL = [
         originalPreSignedUrl: `${baseUrl}TLqQoePbE5untHsPRddegtepryQbT1of.jpg`,
         enhancedPreSignedUrl: `${baseUrl}TLqQoePbE5untHsPRddegtepryQbT1of.jpg`,
         caseId: '',
+        isVideo: false
     },
 	{
         userId: 8,
@@ -99,6 +107,7 @@ module.exports.MEDIAS_URL = [
         originalPreSignedUrl: `https://duoqfv8zwvfy2.cloudfront.net/d702c6e0-e562-3895-9298-a156bd8a7bb0_93620d32-63bf-3ee2-9ef4-8b0cdc825cae/ffe6a6dd-a336-48be-afb5-623549d6e188`,
         enhancedPreSignedUrl: `https://duoqfv8zwvfy2.cloudfront.net/d702c6e0-e562-3895-9298-a156bd8a7bb0_93620d32-63bf-3ee2-9ef4-8b0cdc825cae/ffe6a6dd-a336-48be-afb5-623549d6e188`,
         caseId: '',
+        isVideo: false
     },
     {
         userId: '',
@@ -110,6 +119,7 @@ module.exports.MEDIAS_URL = [
         originalPreSignedUrl: `https://duoqfv8zwvfy2.cloudfront.net/d702c6e0-e562-3895-9298-a156bd8a7bb0_93620d32-63bf-3ee2-9ef4-8b0cdc825cae/ffe6a6dd-a336-48be-afb5-623549d6e188`,
         enhancedPreSignedUrl: `https://duoqfv8zwvfy2.cloudfront.net/d702c6e0-e562-3895-9298-a156bd8a7bb0_93620d32-63bf-3ee2-9ef4-8b0cdc825cae/ffe6a6dd-a336-48be-afb5-623549d6e188`,
         caseId: `2:${process.env.BACKOFFICE_USER_ID}`,
+        isVideo: false
     },
     {
         userId: '',
@@ -121,6 +131,7 @@ module.exports.MEDIAS_URL = [
         originalPreSignedUrl: `${baseUrl}ZKLdivTjvaF31ubkfzeBlUxxrNbFb6bu.jpg`,
         enhancedPreSignedUrl: `${baseUrl}ZKLdivTjvaF31ubkfzeBlUxxrNbFb6bu.jpg`,
         caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
+        isVideo: false
     },
     {
         userId: '',
@@ -132,6 +143,7 @@ module.exports.MEDIAS_URL = [
         originalPreSignedUrl: `${baseUrl}UxxrzeBb6buF31uNbFTjvabkfZKLdivl.jpg`,
         enhancedPreSignedUrl: `${baseUrl}UxxrzeBb6buF31uNbFTjvabkfZKLdivl.jpg`,
         caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
+        isVideo: false
     },
     {
         userId: '',
@@ -143,6 +155,7 @@ module.exports.MEDIAS_URL = [
         originalPreSignedUrl: `${baseUrl}ZKLUx1uixrzeBbNbFTjvabkfd6buF3vl.jpg`,
         enhancedPreSignedUrl: `${baseUrl}ZKLUx1uixrzeBbNbFTjvabkfd6buF3vl.jpg`,
         caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
+        isVideo: false
     },
     {
         userId: '',
@@ -154,6 +167,7 @@ module.exports.MEDIAS_URL = [
         originalPreSignedUrl: `${baseUrl}KLdiUxzeBb6buF31uNbFTjvabkfZxrvl.jpg`,
         enhancedPreSignedUrl: `${baseUrl}KLdiUxzeBb6buF31uNbFTjvabkfZxrvl.jpg`,
         caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
+        isVideo: false
     },
     {
         userId: '',
@@ -165,6 +179,7 @@ module.exports.MEDIAS_URL = [
         originalPreSignedUrl: `${baseUrl}LdUxNbFTjxrzeBb6bvabkfZuF31uKivl.jpg`,
         enhancedPreSignedUrl: `${baseUrl}LdUxNbFTjxrzeBb6bvabkfZuF31uKivl.jpg`,
         caseId: `6:${process.env.BACKOFFICE_USER_ID}`,
+        isVideo: false
     },
     {
         userId: '',
@@ -176,6 +191,7 @@ module.exports.MEDIAS_URL = [
         originalPreSignedUrl: `${baseUrl}LdUxNbFT45rzeBb6bvabkfZuF31uKivl.jpg`,
         enhancedPreSignedUrl: `${baseUrl}LdUxNbFT45rzeBb6bvabkfZuF31uKivl.jpg`,
         caseId: `7:${process.env.BACKOFFICE_USER_ID}`,
+        isVideo: false
     },
     {
         userId: 5,
@@ -188,5 +204,6 @@ module.exports.MEDIAS_URL = [
         originalPreSignedUrl: `${baseUrl}6KLdivTjvaF31ubkfzeBlUxxttbFb6b0.mp4`,
         enhancedPreSignedUrl: `${baseUrl}6KLdivTjvaF31ubkfzeBlUxxttbFb6b0.mp4`,
         caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
+        isVideo: true
     }
 ];

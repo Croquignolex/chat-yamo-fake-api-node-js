@@ -5,6 +5,7 @@ const {adMatchesCount, searchFilter} = require('../controllers/chatroomControlle
 const {tokenMiddleware} = require("../middlewares/accessTokenMiddleware");
 
 router.get('/backoffice/users/:userId/adMatchesCount', tokenMiddleware, adMatchesCount);
+router.get('/backoffice/profile/:userId/pendingReceivedRelationshipsCount', tokenMiddleware, adMatchesCount);
 router.get('/backoffice/profile/:userId/searchFilter', tokenMiddleware, searchFilter);
 
 module.exports = router;
