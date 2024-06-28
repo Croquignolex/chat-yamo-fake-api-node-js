@@ -5,13 +5,14 @@ module.exports.MEDIAS_URL = [
         userId: 1,
         main: true,
         mediaId: 1,
+        videoId: 17,
         verified: false,
         mediaPath: "somevalue-path",
-        compressedPreSignedUrl: `${baseUrl}QoeObEdegtepryQ5untHsPRdbTLqT1of.jpg`,
-        originalPreSignedUrl: `${baseUrl}QoeObEdegtepryQ5untHsPRdbTLqT1of.jpg`,
-        enhancedPreSignedUrl: `${baseUrl}QoeObEdegtepryQ5untHsPRdbTLqT1of.jpg`,
+        compressedPreSignedUrl: `${baseUrl}6KLdivTjvaF31ubkfzeBlUxxttbFb6b0.mp4`,
+        originalPreSignedUrl: `${baseUrl}6KLdivTjvaF31ubkfzeBlUxxttbFb6b0.mp4`,
+        enhancedPreSignedUrl: `${baseUrl}6KLdivTjvaF31ubkfzeBlUxxttbFb6b0.mp4`,
         caseId: '',
-        isVideo: false
+        isVideo: true
     },
     {
         userId: 1,
@@ -205,5 +206,17 @@ module.exports.MEDIAS_URL = [
         enhancedPreSignedUrl: `${baseUrl}6KLdivTjvaF31ubkfzeBlUxxttbFb6b0.mp4`,
         caseId: `5:${process.env.BACKOFFICE_USER_ID}`,
         isVideo: true
-    }
+    },
+    {
+        userId: 6,
+        main: true,
+        mediaId: "",
+        verified: false,
+        mediaPath: "somevalue-path",
+        compressedPreSignedUrl: `${baseUrl}QoeObEdegtepryQ5untHsPRdbTLqT1of.jpg`,
+        originalPreSignedUrl: `${baseUrl}QoeObEdegtepryQ5untHsPRdbTLqT1of.jpg`,
+        enhancedPreSignedUrl: `${baseUrl}QoeObEdegtepryQ5untHsPRdbTLqT1of.jpg`,
+        caseId: '',
+        isVideo: false
+    },
 ];
