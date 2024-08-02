@@ -106,5 +106,41 @@ module.exports.appData = function(req, res) {
         device : 'Iphone',
         deviceConsistentId : '26354651654566',
         deviceCountryIsoCode : 'CM',
+
+        maybeSearchCriteria: true,
+        gender: "Male",
+        minAge: 30,
+        maxAge: 65,
+        applyAgeFilter: true,
+    });
+};
+
+// GET: User metadata details
+module.exports.lifeStyle = function(req, res) {
+    res.send({
+        userId: "userid",
+        size: "187 cm",
+        shape: "En forme",
+        wayOfLiving: "Seul",
+        activity: "Entrepreneur",
+        levelOfEducation: "Baccalauréat",
+        childrenNumber: "0",
+        lookingFor: "Amour durable",
+        smokingLevel: "Pas du tout",
+        alcoholLevel: "Juste lors des fêtes",
+        religion: "Christianisme",
+        language: "Français",
+        sizeInCM: 0, // à ignorer
+        musicGenre: "Variété,Gospel",
+        firstDateBeLike: "Petit budget",
+        followingDatesBeLike: "Tout pour ma reine 👸🏽",
+        kissMetric: "Aime les bisous",
+        aboutFuture: "C'est clair pour moi",
+        socialMood: "Aime les sorties",
+        children: "Oui; plus",
+        travels: "Beaucoup",
+        countriesVisited: "Togo,Russie",
+        nextCountryToVisit: "Afrique du Sud,Belgique,Ghana",
+        interests: "Discussions profondes,Podcast,Développement Personnel,Sape & Élégance,Promenades"
     });
 };

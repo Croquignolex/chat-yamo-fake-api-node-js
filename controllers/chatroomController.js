@@ -30,9 +30,6 @@ module.exports.adMatchesCount = function(req, res) {
 // GET: User metadata details
 module.exports.searchFilter = function(req, res) {
     res.send({
-        gender: "Male",
-        minAge: 30,
-        maxAge: 65,
         city: "Adjala-Tosorontio",
         country: "République démocratique du Congo",
         allCities: false,
@@ -42,7 +39,6 @@ module.exports.searchFilter = function(req, res) {
         premiumUsers: false,
         lookingFor: "Marriage",
         religion: "Islam",
-        applyAgeFilter: false,
         language: "fr",
     });
 };
