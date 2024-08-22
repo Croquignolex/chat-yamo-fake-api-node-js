@@ -144,3 +144,17 @@ module.exports.lifeStyle = function(req, res) {
         interests: "Discussions profondes,Podcast,Développement Personnel,Sape & Élégance,Promenades"
     });
 };
+
+// GET: User metadata details
+module.exports.customerJourney = function(req, res) {
+    res.send({
+        currentLevelName: "Nouvel utilisateur",
+        currentLevelUsedCredits: 1,
+        currentLevelTotalCredits: 1,
+        currentLevelActivationDate: "2024-08-22", // peut avoir la valeur ""
+        totalUsedCredits: 1,
+        totalCredits: 1,
+        passedLevels: "NEW DATER, PRO DATER", // peut avoir la valeur ""
+        creationDate: "2024-08-22" // peut avoir la valeur ""
+    });
+};
