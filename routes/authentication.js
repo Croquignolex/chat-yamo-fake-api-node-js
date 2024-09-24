@@ -9,7 +9,7 @@ router.get('/backoffice/user/:userId/status', tokenMiddleware, status);
 router.get('/user/:userId/userblockedstate', tokenMiddleware, blockState);
 router.get('/backoffice/user/:userId/metadata', tokenMiddleware, metadata);
 router.get('/backoffice/user/:userId/statusreason', tokenMiddleware, history);
-router.get('/user/:userId/subscriptions', tokenMiddleware, automaticPayment);
+router.get('/users/:userId/subscriptions', tokenMiddleware, automaticPayment);
 router.get('/user/:userId/subscriptionhistory', tokenMiddleware, souscriptions);
 router.post('/backoffice/user/:userId/activatesubscription', tokenMiddleware, block);
 router.get('/users/subscriptions', tokenMiddleware, exportCVS);
